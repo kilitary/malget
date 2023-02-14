@@ -1,0 +1,82 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:      24934        0x6166
+                blocks_in_file:      25202        0x6272
+                    num_relocs:      24946        0x6172
+             header_paragraphs:      29557        0x7375
+          min_extra_paragraphs:      26723        0x6863
+          max_extra_paragraphs:      17744        0x4550
+                            ss:          0             0
+                            sp:        332         0x14c
+                      checksum:          1             1
+                            ip:       5334        0x14d6
+                            cs:      18412        0x47ec
+            reloc_table_offset:          0             0
+                overlay_number:          0             0
+                     reserved0: 76280302804140032  0x10f008800000000
+                        oem_id:        267         0x10b
+                      oem_info:          6             6
+                     reserved2:       9728        0x2600
+                     reserved3:       3072         0xc00
+                     reserved4:          0             0
+                     reserved5:       8504        0x2138
+                     reserved6:       4096        0x1000
+                        lfanew:         12           0xc
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          1             1
+                 TimeDateStamp:    "2008-03-27 21:42:46"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        136          0x88
+               Characteristics:        271         0x10f  RELOCS_STRIPPED, EXECUTABLE_IMAGE
+                                                          LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      6.0
+                    SizeOfCode:       9728        0x2600
+         SizeOfInitializedData:       3072         0xc00
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:       8504        0x2138
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:         12           0xc
+                     ImageBase:    4128768      0x3f0000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:     106496       0x1a000
+                 SizeOfHeaders:       4096        0x1000
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:          5             5
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x    22e2   size:0x       28
+  RESOURCE      rva:0x       0   size:0x        0
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  kkrunchy     1000    189e5     1400     1000     0        0     0        0  e00000e0  RWX CODE IDATA UDATA

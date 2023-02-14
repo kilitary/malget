@@ -1,0 +1,301 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        256         0x100
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+    19  13       8022  1f56         4   4
+    14   e       7299  1c83         4   4
+    10   a       8047  1f6f        11   b
+     4   4       8047  1f6f         4   4
+    11   b       8569  2179         3   3
+     4   4       8569  2179         2   2
+     0   0          0     0        14   e
+     1   1          0     0       213  d5
+    19  13       8034  1f62        17  11
+    11   b       8966  2306         5   5
+     6   6       1735   6c7         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          4             4
+                 TimeDateStamp:    "1983-11-17 00:00:00"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        271         0x10f  RELOCS_STRIPPED, EXECUTABLE_IMAGE
+                                                          LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      6.0
+                    SizeOfCode:       8192        0x2000
+         SizeOfInitializedData:      28672        0x7000
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:       9986        0x2702
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:      12288        0x3000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:       4096        0x1000
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:      90112       0x16000
+                 SizeOfHeaders:       4096        0x1000
+                      CheckSum:     149447       0x247c7
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x    38c0   size:0x       8c
+  RESOURCE      rva:0x    6000   size:0x     3388
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x    3000   size:0x      20c
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000     1b15     2000     1000     0        0     0        0  e0000020  RWX CODE
+  .rdata       3000     1096     2000     3000     0        0     0        0  40000040  R-- IDATA
+  .data        5000      288     1000     5000     0        0     0        0  c0000040  RW- IDATA
+  .rsrc        6000     f4ad    10000     6000     0        0     0        0  e0000060  RWX CODE IDATA
+
+=== STRINGS ===
+
+   ID    ID  LANG  STRING
+    1     1   804  "初始化UpdateExec.dll出现错误"
+    2     2   804  "包版本:"
+    3     3   804  "\n============================\n描叙:"
+    4     4   804  "正在进行升级..."
+    5     5   804  "升级完成!点击\\\"完成\\\"启动迅雷!"
+    6     6   804  "完成(&F)"
+    7     7   804  "正在进行升级准备..."
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+     0x8268     0 0x804     4144  BITMAP        #134
+     0x61e0     0 0x804     1384  ICON          #1
+     0x6748     0 0x804     2216  ICON          #2
+     0x6ff0     0 0x804     3752  ICON          #3
+     0x9298     0 0x804      236  STRING        #1
+     0x7e98     0 0x804       48  GROUP_ICON    #128
+     0x7ec8     0 0x804      924  VERSION       #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+MFC42.DLL               acc  
+MFC42.DLL              106a  
+MFC42.DLL               219  
+MFC42.DLL              1b10  
+MFC42.DLL               3ad  
+MFC42.DLL               3ab  
+MFC42.DLL              1021  
+MFC42.DLL              188a  
+MFC42.DLL               35a  
+MFC42.DLL              10b5  
+MFC42.DLL               21c  
+MFC42.DLL               aa5  
+MFC42.DLL               39c  
+MFC42.DLL              1a07  
+MFC42.DLL               217  
+MFC42.DLL               b02  
+MFC42.DLL               320  
+MFC42.DLL               b63  
+MFC42.DLL               47f  
+MFC42.DLL               4a9  
+MFC42.DLL               490  
+MFC42.DLL               32f  
+MFC42.DLL               339  
+MFC42.DLL               231  
+MFC42.DLL               e9a  
+MFC42.DLL              1148  
+MFC42.DLL              120e  
+MFC42.DLL               ff0  
+MFC42.DLL               c07  
+MFC42.DLL               ef1  
+MFC42.DLL               ef7  
+MFC42.DLL               ef6  
+MFC42.DLL               ba0  
+MFC42.DLL               c09  
+MFC42.DLL               ba9  
+MFC42.DLL               cbe  
+MFC42.DLL               c40  
+MFC42.DLL              1171  
+MFC42.DLL               cbb  
+MFC42.DLL               c4b  
+MFC42.DLL               ba6  
+MFC42.DLL              1652  
+MFC42.DLL              14a9  
+MFC42.DLL              14bb  
+MFC42.DLL              125a  
+MFC42.DLL               fef  
+MFC42.DLL              14b6  
+MFC42.DLL              14b4  
+MFC42.DLL               d12  
+MFC42.DLL               95c  
+MFC42.DLL              144f  
+MFC42.DLL               441  
+MFC42.DLL               f52  
+MFC42.DLL              1663  
+MFC42.DLL               9d0  
+MFC42.DLL               9fa  
+MFC42.DLL              1186  
+MFC42.DLL              18e7  
+MFC42.DLL              10b2  
+MFC42.DLL              1241  
+MFC42.DLL              15c4  
+MFC42.DLL               628  
+MSVCRT.dll         8f        _acmdln
+MSVCRT.dll        249        exit
+MSVCRT.dll         48        _XcptFilter
+MSVCRT.dll         d3        _exit
+MSVCRT.dll        186        _onexit
+MSVCRT.dll         55        __dllonexit
+MSVCRT.dll         58        __getmainargs
+MSVCRT.dll        10f        _initterm
+MSVCRT.dll         83        __setusermatherr
+MSVCRT.dll        177        _mbsrchr
+MSVCRT.dll        2be        strlen
+MSVCRT.dll        299        memset
+MSVCRT.dll        297        memcpy
+MSVCRT.dll         49        __CxxFrameHandler
+MSVCRT.dll         9d        _adjust_fdiv
+MSVCRT.dll         6a        __p__commode
+MSVCRT.dll         6f        __p__fmode
+MSVCRT.dll         81        __set_app_type
+MSVCRT.dll         ca        _except_handler3
+MSVCRT.dll        1aa        _setmbcp
+MSVCRT.dll         b7        _controlfp
+KERNEL32.dll      2b0        UnmapViewOfFile
+KERNEL32.dll      1d6        MapViewOfFile
+KERNEL32.dll      1e9        OpenFileMappingA
+KERNEL32.dll       ca        GetCommandLineA
+KERNEL32.dll      265        SetEvent
+KERNEL32.dll      1e6        OpenEventA
+KERNEL32.dll      225        ReleaseMutex
+KERNEL32.dll       3f        CreateMutexA
+KERNEL32.dll      11a        GetLastError
+KERNEL32.dll       f7        GetCurrentProcess
+KERNEL32.dll      124        GetModuleFileNameA
+KERNEL32.dll      13e        GetProcAddress
+KERNEL32.dll      15d        GetSystemTime
+KERNEL32.dll      126        GetModuleHandleA
+KERNEL32.dll      150        GetStartupInfoA
+KERNEL32.dll      1fe        Process32Next
+KERNEL32.dll      1fc        Process32First
+KERNEL32.dll      296        Sleep
+KERNEL32.dll      29e        TerminateProcess
+KERNEL32.dll      1ef        OpenProcess
+KERNEL32.dll       1b        CloseHandle
+KERNEL32.dll      277        SetPriorityClass
+KERNEL32.dll       4c        CreateToolhelp32Snapshot
+USER32.dll        18c        IsIconic
+USER32.dll        26a        ShowWindow
+USER32.dll        119        GetLastActivePopup
+USER32.dll        108        GetForegroundWindow
+USER32.dll        162        GetWindowThreadProcessId
+USER32.dll          e        BringWindowToTop
+USER32.dll        230        SetForegroundWindow
+USER32.dll        271        SystemParametersInfoA
+USER32.dll        22f        SetFocus
+USER32.dll         ff        GetDesktopWindow
+USER32.dll        1de        PostMessageA
+USER32.dll        18f        IsWindow
+USER32.dll        192        IsWindowVisible
+USER32.dll          a        AttachThreadInput
+USER32.dll        200        RegisterWindowMessageA
+USER32.dll        214        SendMessageA
+SHELL32.dll        72        ShellExecuteA
+MSVCP60.dll       420        ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBDI@Z
+MSVCP60.dll       3f8        ?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEX_N@Z
+
+=== VERSION INFO ===
+
+# VS_FIXEDFILEINFO:
+  FileVersion         :  5.6.3.12
+  ProductVersion      :  5.6.3.12
+  StrucVersion        :  0x10000
+  FileFlagsMask       :  0x3f
+  FileFlags           :  0
+  FileOS              :  4
+  FileType            :  1
+  FileSubtype         :  0
+
+# StringTable 080404b0:
+  Comments            :  ""
+  CompanyName         :  "Thunder Networking Technologies,LTD"
+  FileDescription     :  ""
+  FileVersion         :  "5, 6, 3, 12"
+  InternalName        :  "Thunder"
+  LegalCopyright      :  "Copyright (c) 2003-2006 Thunder Networking Technologies,LTD"
+  LegalTrademarks     :  ""
+  OriginalFilename    :  "Thunder.EXE"
+  PrivateBuild        :  ""
+  ProductName         :  "Thunder"
+  ProductVersion      :  "5, 6, 3, 12"
+  SpecialBuild        :  ""
+
+  VarFileInfo         :  [ 0x804, 0x4b0 ]
+
+=== Packer / Compiler ===
+
+  MS Visual C++ v6.0

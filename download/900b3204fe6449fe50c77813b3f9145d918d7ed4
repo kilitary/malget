@@ -1,0 +1,394 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        240          0xf0
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+   149  95      30729  7809         7   7
+   132  84      30729  7809        16  10
+   147  93      30729  7809        15   f
+     1   1          0     0       214  d6
+   131  83      30729  7809        94  5e
+   126  7e      50727  c627         1   1
+   148  94      30729  7809         1   1
+   145  91      30729  7809         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          4             4
+                 TimeDateStamp:    "2009-07-13 23:42:43"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        258         0x102  EXECUTABLE_IMAGE, 32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      9.0
+                    SizeOfCode:      44032        0xac00
+         SizeOfInitializedData:     152064       0x25200
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:      27384        0x6af8
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:      49152        0xc000
+                     ImageBase:   16777216     0x1000000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      6.1
+                  ImageVersion:                      6.1
+              SubsystemVersion:                      5.0
+                     Reserved1:          0             0
+                   SizeOfImage:     212992       0x34000
+                 SizeOfHeaders:       1024         0x400
+                      CheckSum:     256428       0x3e9ac
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:      33088        0x8140  DYNAMIC_BASE, NX_COMPAT
+                                                          TERMINAL_SERVER_AWARE
+            SizeOfStackReserve:     262144       0x40000
+             SizeOfStackCommit:       8192        0x2000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x    ad0c   size:0x       a0
+  RESOURCE      rva:0x    f000   size:0x    23c4c
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x   33000   size:0x      828
+  DEBUG         rva:0x    12a0   size:0x       1c
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x    16f0   size:0x       40
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x    1000   size:0x      280
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000     aae4     ac00      400     0        0     0        0  60000020  R-X CODE
+  .data        c000     225c      600     b000     0        0     0        0  c0000040  RW- IDATA
+  .rsrc        f000    24000    23e00     b600     0        0     0        0  40000040  R-- IDATA
+  .reloc      33000      d98      e00    2f400     0        0     0        0  42000040  R-- IDATA DISCARDABLE
+
+=== STRINGS ===
+
+   ID    ID  LANG  STRING
+ 1000   3e8   409  "Please select a folder to store the extracted files."
+ 1001   3e9   409  "%s"
+ 1200   4b0   409  "Failed to get disk space information from: %s.\n\nSystem Message: %s."
+ 1201   4b1   409  "A required resource cannot be located."
+ 1202   4b2   409  "Are you sure you want to cancel?"
+ 1204   4b4   409  "Unable to retrieve operating system version information."
+ 1205   4b5   409  "Memory allocation request failed."
+ 1208   4b8   409  "Unable to create extraction thread."
+ 1210   4ba   409  "Cabinet is not valid."
+ 1211   4bb   409  "Filetable full."
+ 1212   4bc   409  "Can not change to destination folder."
+ 1213   4bd   409  "Setup could not find a drive with %s KB free disk space to install the program. Please free up some space first and press RETRY or press CANCEL to exit setup."
+ 1214   4be   409  "That folder is invalid. Please make sure the folder exists and is writable."
+ 1215   4bf   409  "You must specify a folder with fully qualified pathname or choose Cancel."
+ 1216   4c0   409  "Could not update folder edit box."
+ 1217   4c1   409  "Could not load functions required for browser dialog."
+ 1218   4c2   409  "Could not load Shell32.dll required for browser dialog."
+ 1220   4c4   409  "Error creating process <%s>.  Reason: %s"
+ 1221   4c5   409  "The cluster size in this system is not supported."
+ 1222   4c6   409  "A required resource appears to be corrupted."
+ 1223   4c7   409  "Windows 95 or Windows NT 4.0 Beta 2 or greater is required for this installation."
+ 1224   4c8   409  "Error loading %s"
+ 1225   4c9   409  "GetProcAddress() failed on function '%s'.  Possible reason: incorrect version of advpack.dll being used."
+ 1226   4ca   409  "Windows 95 or Windows NT is required to install"
+ 1227   4cb   409  "Could not create folder '%s'"
+ 1228   4cc   409  "To install this program, you need %s KB disk space on drive %s. It is recommended that you free up the required disk space before you continue. \n\nDo you still want to continue?"
+ 1264   4f0   409  "Error retrieving Windows folder"
+ 1269   4f5   409  "NT Shutdown: OpenProcessToken error."
+ 1270   4f6   409  "NT Shutdown: AdjustTokenPrivileges error."
+ 1271   4f7   409  "NT Shutdown: ExitWindowsEx error."
+ 1272   4f8   409  "Extracting file failed.  It is most likely caused by low memory (low disk space for swapping file) or corrupted Cabinet file."
+ 1273   4f9   409  "The setup program could not retrieve the volume information for drive (%s) . \nSystem message: %s."
+ 1274   4fa   409  "Setup could not find a drive with %s KB free disk space to install the program. Please free up some space and try again."
+ 1275   4fb   409  "The installation program appears to be damaged or corrupted.  Contact the vendor of this application."
+ 1312   520   409  "Command line option syntax error. Type Command /? for Help."
+ 1313   521   409  "Command line options:\n\n/Q -- Quiet modes for package,\n\n/T:<full path> -- Specifies temporary working folder,\n\n/C -- Extract files only to the folder when used also with /T.\n\n/C:<Cmd> -- Override Install Command defined by author.\n"
+ 1314   522   409  "You must restart your computer before the new settings will take effect.\n\nDo you want to restart your computer now?"
+ 1316   524   409  "Another copy of the '%s' package is already running on your system.  Do you want to run another copy?"
+ 1317   525   409  "Could not find the file: %s."
+ 1351   547   409  "You do not have administrator privileges on this machine. Some installations cannot be completed correctly unless they are run by an administrator."
+ 1354   54a   409  "The folder '%s' does not exist.  Do you want to create it?"
+ 1355   54b   409  "Another copy of the '%s' package is already running on your system. You can only run one copy at a time."
+ 1356   54c   409  "The '%s' package is not compatible with the version of Windows you are running."
+ 1357   54d   409  "The '%s' package is not compatible with the version of the file: %s on your system."
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+     0xbff8  1252 0x409    11802  AVI           #3001
+     0xee14  1252 0x409     1640  ICON          #1
+     0xf47c  1252 0x409      744  ICON          #2
+     0xf764  1252 0x409      488  ICON          #3
+     0xf94c  1252 0x409      296  ICON          #4
+     0xfa74  1252 0x409     3752  ICON          #5
+    0x1091c  1252 0x409     2216  ICON          #6
+    0x111c4  1252 0x409     1736  ICON          #7
+    0x1188c  1252 0x409     1384  ICON          #8
+    0x11df4  1252 0x409    55762  ICON          #9
+    0x1f7c8  1252 0x409     9640  ICON          #10
+    0x21d70  1252 0x409     4264  ICON          #11
+    0x22e18  1252 0x409     2440  ICON          #12
+    0x237a0  1252 0x409     1128  ICON          #13
+    0x23c08  1252 0x409      754  DIALOG        #2001
+    0x23efc  1252 0x409      432  DIALOG        #2002
+    0x240ac  1252 0x409      358  DIALOG        #2003
+    0x24214  1252 0x409      448  DIALOG        #2004
+    0x243d4  1252 0x409      304  DIALOG        #2005
+    0x24504  1252 0x409      288  DIALOG        #2006
+    0x24624  1252 0x409      140  STRING        #63
+    0x246b0  1252 0x409     1312  STRING        #76
+    0x24bd0  1252 0x409     1484  STRING        #77
+    0x2519c  1252 0x409     1200  STRING        #80
+    0x2564c  1252 0x409     1098  STRING        #83
+    0x25a98  1252 0x409      974  STRING        #85
+    0x25e68  1252 0x409        7  RCDATA        ADMQCMD
+    0x25e70  1252 0x409    35225  RCDATA        CABINET
+    0x2e80c  1252 0x409        4  RCDATA        EXTRACTOPT
+    0x2e810  1252 0x409       36  RCDATA        FILESIZES
+    0x2e834  1252 0x409        7  RCDATA        FINISHMSG
+    0x2e83c  1252 0x409        7  RCDATA        LICENSE
+    0x2e844  1252 0x409        4  RCDATA        PACKINSTSPACE
+    0x2e848  1252 0x409        7  RCDATA        POSTRUNPROGRAM
+    0x2e850  1252 0x409        4  RCDATA        REBOOT
+    0x2e854  1252 0x409       13  RCDATA        RUNPROGRAM
+    0x2e864  1252 0x409        4  RCDATA        SHOWWINDOW
+    0x2e868  1252 0x409        7  RCDATA        TITLE
+    0x2e870  1252 0x409        7  RCDATA        UPROMPT
+    0x2e878  1252 0x409        7  RCDATA        USRQCMD
+    0x2e880  1252 0x409      188  GROUP_ICON    #3000
+    0x2e93c  1252 0x409     1060  VERSION       #1
+    0x2ed60  1252 0x409     1260  MANIFEST      #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+ADVAPI32.dll      120        FreeSid
+ADVAPI32.dll       20        AllocateAndInitializeSid
+ADVAPI32.dll      107        EqualSid
+ADVAPI32.dll      15a        GetTokenInformation
+ADVAPI32.dll      1f7        OpenProcessToken
+ADVAPI32.dll       1f        AdjustTokenPrivileges
+ADVAPI32.dll      196        LookupPrivilegeValueA
+ADVAPI32.dll      230        RegCloseKey
+ADVAPI32.dll      247        RegDeleteValueA
+ADVAPI32.dll      260        RegOpenKeyExA
+ADVAPI32.dll      26d        RegQueryValueExA
+ADVAPI32.dll      267        RegQueryInfoKeyA
+ADVAPI32.dll      27d        RegSetValueExA
+ADVAPI32.dll      238        RegCreateKeyExA
+KERNEL32.dll      348        LocalFree
+KERNEL32.dll      344        LocalAlloc
+KERNEL32.dll      202        GetLastError
+KERNEL32.dll      1c0        GetCurrentProcess
+KERNEL32.dll      54d        lstrlenA
+KERNEL32.dll      537        _lclose
+KERNEL32.dll      539        _llseek
+KERNEL32.dll      53a        _lopen
+KERNEL32.dll      52a        WritePrivateProfileStringA
+KERNEL32.dll      2ae        GetWindowsDirectoryA
+KERNEL32.dll       7c        CreateDirectoryA
+KERNEL32.dll      1e5        GetFileAttributesA
+KERNEL32.dll      213        GetModuleFileNameA
+KERNEL32.dll      26f        GetSystemDirectoryA
+KERNEL32.dll      400        RemoveDirectoryA
+KERNEL32.dll      12e        FindClose
+KERNEL32.dll      143        FindNextFileA
+KERNEL32.dll       d3        DeleteFileA
+KERNEL32.dll      45e        SetFileAttributesA
+KERNEL32.dll      541        lstrcmpA
+KERNEL32.dll      132        FindFirstFileA
+KERNEL32.dll      11c        ExpandEnvironmentStringsA
+KERNEL32.dll      2ba        GlobalFree
+KERNEL32.dll      2c5        GlobalUnlock
+KERNEL32.dll      2be        GlobalLock
+KERNEL32.dll      2b3        GlobalAlloc
+KERNEL32.dll      2fe        IsDBCSLeadByte
+KERNEL32.dll      260        GetShortPathNameA
+KERNEL32.dll      241        GetPrivateProfileStringA
+KERNEL32.dll      23b        GetPrivateProfileIntA
+KERNEL32.dll       61        CompareStringA
+KERNEL32.dll      2a2        GetVersion
+KERNEL32.dll      218        GetModuleHandleW
+KERNEL32.dll      165        FreeResource
+KERNEL32.dll      354        LockResource
+KERNEL32.dll      341        LoadResource
+KERNEL32.dll      4b1        SizeofResource
+KERNEL32.dll       52        CloseHandle
+KERNEL32.dll      3c0        ReadFile
+KERNEL32.dll      525        WriteFile
+KERNEL32.dll      466        SetFilePointer
+KERNEL32.dll      46a        SetFileTime
+KERNEL32.dll      346        LocalFileTimeToFileTime
+KERNEL32.dll       e4        DosDateTimeToFileTime
+KERNEL32.dll       88        CreateFileA
+KERNEL32.dll      44c        SetCurrentDirectoryA
+KERNEL32.dll      282        GetTempFileNameA
+KERNEL32.dll      2a5        GetVolumeInformationA
+KERNEL32.dll      15d        FormatMessageA
+KERNEL32.dll      1be        GetCurrentDirectoryA
+KERNEL32.dll      119        ExitProcess
+KERNEL32.dll      33d        LoadLibraryExA
+KERNEL32.dll      2a3        GetVersionExA
+KERNEL32.dll      1df        GetExitCodeProcess
+KERNEL32.dll      245        GetProcAddress
+KERNEL32.dll       a4        CreateProcessA
+KERNEL32.dll      284        GetTempPathA
+KERNEL32.dll      273        GetSystemInfo
+KERNEL32.dll       9b        CreateMutexA
+KERNEL32.dll      459        SetEvent
+KERNEL32.dll       82        CreateEventA
+KERNEL32.dll       b5        CreateThread
+KERNEL32.dll      40f        ResetEvent
+KERNEL32.dll      4c1        TerminateThread
+KERNEL32.dll      1d2        GetDriveTypeA
+KERNEL32.dll      14b        FindResourceA
+KERNEL32.dll      33c        LoadLibraryA
+KERNEL32.dll      162        FreeLibrary
+KERNEL32.dll      2ec        InterlockedExchange
+KERNEL32.dll      4b2        Sleep
+KERNEL32.dll      2e9        InterlockedCompareExchange
+KERNEL32.dll      262        GetStartupInfoA
+KERNEL32.dll      418        RtlUnwind
+KERNEL32.dll      4a5        SetUnhandledExceptionFilter
+KERNEL32.dll      215        GetModuleHandleA
+KERNEL32.dll      3a7        QueryPerformanceCounter
+KERNEL32.dll      293        GetTickCount
+KERNEL32.dll      1c5        GetCurrentThreadId
+KERNEL32.dll      1c1        GetCurrentProcessId
+KERNEL32.dll      279        GetSystemTimeAsFileTime
+KERNEL32.dll      4c0        TerminateProcess
+KERNEL32.dll      4d3        UnhandledExceptionFilter
+KERNEL32.dll       fb        EnumResourceLanguagesA
+KERNEL32.dll      366        MulDiv
+KERNEL32.dll      1cc        GetDiskFreeSpaceA
+KERNEL32.dll      4f9        WaitForSingleObject
+GDI32.dll         1cb        GetDeviceCaps
+USER32.dll        272        SendDlgItemMessageA
+USER32.dll        127        GetDlgItem
+USER32.dll        293        SetForegroundWindow
+USER32.dll        2ca        SetWindowTextA
+USER32.dll        20e        MessageBoxA
+USER32.dll         a8        DialogBoxIndirectParamA
+USER32.dll        2df        ShowWindow
+USER32.dll         d8        EnableWindow
+USER32.dll        129        GetDlgItemTextA
+USER32.dll        121        GetDC
+USER32.dll        265        ReleaseDC
+USER32.dll        2c6        SetWindowPos
+USER32.dll        277        SendMessageA
+USER32.dll        232        PeekMessageA
+USER32.dll        21c        MsgWaitForMultipleObjects
+USER32.dll         ae        DispatchMessageA
+USER32.dll         1d        CallWindowProcA
+USER32.dll        195        GetWindowLongA
+USER32.dll        2c3        SetWindowLongA
+USER32.dll         32        CharPrevA
+USER32.dll         39        CharUpperA
+USER32.dll         2f        CharNextA
+USER32.dll         f5        ExitWindowsEx
+USER32.dll         da        EndDialog
+USER32.dll        123        GetDesktopWindow
+USER32.dll        1f9        LoadStringA
+USER32.dll        28f        SetDlgItemTextA
+USER32.dll        20d        MessageBeep
+USER32.dll        19c        GetWindowRect
+USER32.dll        17e        GetSystemMetrics
+msvcrt.dll        114        _cexit
+msvcrt.dll        162        _exit
+msvcrt.dll         6a        _XcptFilter
+msvcrt.dll        1f4        _ismbblead
+msvcrt.dll        48f        exit
+msvcrt.dll         e7        _acmdln
+msvcrt.dll        1d5        _initterm
+msvcrt.dll        101        _amsg_exit
+msvcrt.dll         d4        __setusermatherr
+msvcrt.dll         b9        __p__commode
+msvcrt.dll         be        __p__fmode
+msvcrt.dll         d2        __set_app_type
+msvcrt.dll         37        ?terminate@@YAXXZ
+msvcrt.dll        127        _controlfp
+msvcrt.dll         91        __getmainargs
+msvcrt.dll        4ea        memcpy
+msvcrt.dll        4ee        memset
+msvcrt.dll        3c8        _vsnprintf
+COMCTL32.dll             11  
+VERSION.dll         3        GetFileVersionInfoSizeA
+VERSION.dll         0        GetFileVersionInfoA
+VERSION.dll         d        VerQueryValueA
+
+=== VERSION INFO ===
+
+# VS_FIXEDFILEINFO:
+  FileVersion         :  8.0.7600.16385
+  ProductVersion      :  8.0.7600.16385
+  StrucVersion        :  0x10000
+  FileFlagsMask       :  0x3f
+  FileFlags           :  0
+  FileOS              :  0x40004
+  FileType            :  1
+  FileSubtype         :  0
+
+# StringTable 040904B0:
+  CompanyName         :  "Microsoft Corporation"
+  FileDescription     :  "Win32 Cabinet Self-Extractor                                           "
+  FileVersion         :  "8.00.7600.16385 (win7_rtm.090713-1255)"
+  InternalName        :  "Wextract                "
+  LegalCopyright      :  "© Microsoft Corporation. All rights reserved."
+  OriginalFilename    :  "WEXTRACT.EXE            .MUI"
+  ProductName         :  "Windows® Internet Explorer"
+  ProductVersion      :  "8.00.7600.16385"
+
+  VarFileInfo         :  [ 0x409, 0x4b0 ]
+
+=== Packer / Compiler ===
+
+  MS Visual C++ v8.0

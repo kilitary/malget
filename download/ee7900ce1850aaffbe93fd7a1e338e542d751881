@@ -1,0 +1,1046 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:         80          0x50
+                blocks_in_file:          2             2
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:         15           0xf
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:         26          0x1a
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        256         0x100
+
+=== DOS STUB ===
+
+00000000: ba 10 00 0e 1f b4 09 cd  21 b8 01 4c cd 21 90 90  |........!..L.!..|
+00000010: 54 68 69 73 20 70 72 6f  67 72 61 6d 20 6d 75 73  |This program mus|
+00000020: 74 20 62 65 20 72 75 6e  20 75 6e 64 65 72 20 57  |t be run under W|
+00000030: 69 6e 33 32 0d 0a 24 37  00 00 00 00 00 00 00 00  |in32..$7........|
+00000040: 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00  |................|
+*
+000000c0: 
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          8             8
+                 TimeDateStamp:    "1992-04-23 21:24:06"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:      33166        0x818e  EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED
+                                                          LOCAL_SYMS_STRIPPED, BYTES_REVERSED_LO
+                                                          32BIT_MACHINE, BYTES_REVERSED_HI
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     2.25
+                    SizeOfCode:     484864       0x76600
+         SizeOfInitializedData:     665600       0xa2800
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:     488600       0x77498
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     491520       0x78000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:    1175552      0x11f000
+                 SizeOfHeaders:       1024         0x400
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:      16384        0x4000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   82000   size:0x     245c
+  RESOURCE      rva:0x   90000   size:0x    8e7d4
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x   87000   size:0x     8838
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x   86000   size:0x       18
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x       0   size:0x        0
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  CODE         1000    764e0    76600      400     0        0     0        0  60000020  R-X CODE
+  DATA        78000     8d40     8e00    76a00     0        0     0        0  c0000040  RW- IDATA
+  BSS         81000      d2d        0    7f800     0        0     0        0  c0000000  RW-
+  .idata      82000     245c     2600    7f800     0        0     0        0  c0000040  RW- IDATA
+  .tls        85000       10        0    81e00     0        0     0        0  c0000000  RW-
+  .rdata      86000       18      200    81e00     0        0     0        0  50000040  R-- IDATA SHARED
+  .reloc      87000     8838     8a00    82000     0        0     0        0  50000040  R-- IDATA SHARED
+  .rsrc       90000    8e7d4    8e800    8aa00     0        0     0        0  50000040  R-- IDATA SHARED
+
+=== TLS ===
+
+ RAW_START    RAW_END    INDEX   CALLBKS  ZEROFILL     FLAGS
+    485000     485010   48170c    486010         0         0
+
+=== STRINGS ===
+
+   ID    ID  LANG  STRING
+65216  fec0     0  "Too many references, cannot splice."
+65217  fec1     0  "Connection timed out."
+65218  fec2     0  "Connection refused."
+65219  fec3     0  "Too many levels of symbolic links."
+65220  fec4     0  "File name too long."
+65221  fec5     0  "Host is down."
+65222  fec6     0  "No route to host."
+65223  fec7     0  "Directory not empty"
+65224  fec8     0  "Winsock stack"
+65232  fed0     0  "Protocol not supported."
+65233  fed1     0  "Socket type not supported."
+65234  fed2     0  "Operation not supported on socket."
+65235  fed3     0  "Protocol family not supported."
+65236  fed4     0  "Address family not supported by protocol family."
+65237  fed5     0  "Address already in use."
+65238  fed6     0  "Cannot assign requested address."
+65239  fed7     0  "Network is down."
+65240  fed8     0  "Network is unreachable."
+65241  fed9     0  "Net dropped connection or reset."
+65242  feda     0  "Software caused connection abort."
+65243  fedb     0  "Connection reset by peer."
+65244  fedc     0  "No buffer space available."
+65245  fedd     0  "Socket is already connected."
+65246  fede     0  "Socket is not connected."
+65247  fedf     0  "Cannot send or receive after socket is closed."
+65248  fee0     0  "%s is not a valid service."
+65249  fee1     0  "Socket Error # %d\r\n%s"
+65250  fee2     0  "Interrupted system call."
+65251  fee3     0  "Bad file number."
+65252  fee4     0  "Access denied."
+65253  fee5     0  "Bad address."
+65254  fee6     0  "Invalid argument."
+65255  fee7     0  "Too many open files."
+65256  fee8     0  "Operation would block. "
+65257  fee9     0  "Operation now in progress."
+65258  feea     0  "Operation already in progress."
+65259  feeb     0  "Socket operation on non-socket."
+65260  feec     0  "Destination address required."
+65261  feed     0  "Message too long."
+65262  feee     0  "Protocol wrong type for socket."
+65263  feef     0  "Bad protocol option."
+65264  fef0     0  "Length Required"
+65265  fef1     0  "Precondition Failed"
+65266  fef2     0  "Request Entity To Long"
+65267  fef3     0  "Request-URI Too Long. 256 Chars max"
+65268  fef4     0  "Unsupported Media Type"
+65269  fef5     0  "Internal Server Error"
+65270  fef6     0  "Not Implemented"
+65271  fef7     0  "Bad Gateway"
+65272  fef8     0  "Service Unavailable"
+65273  fef9     0  "Gateway timeout"
+65274  fefa     0  "HTTP version not supported"
+65275  fefb     0  "Unknown Response Code"
+65276  fefc     0  "Header has already been written."
+65277  fefd     0  "Error in parsing command."
+65278  fefe     0  "Unsupported authorization scheme."
+65279  feff     0  "Cannot change session state when the server is active."
+65280  ff00     0  "Partial Content"
+65281  ff01     0  "Moved Permanently"
+65282  ff02     0  "Moved Temporarily"
+65283  ff03     0  "See Other"
+65284  ff04     0  "Not Modified"
+65285  ff05     0  "Use Proxy"
+65286  ff06     0  "Bad Request"
+65287  ff07     0  "Unauthorized"
+65288  ff08     0  "Forbidden"
+65289  ff09     0  "Not Found"
+65290  ff0a     0  "Method not allowed"
+65291  ff0b     0  "Not Acceptable"
+65292  ff0c     0  "Proxy Authentication Required"
+65293  ff0d     0  "Request Timeout"
+65294  ff0e     0  "Conflict"
+65295  ff0f     0  "Gone"
+65296  ff10     0  "InterceptEnabled cannot be set to true when Intercept is nil."
+65297  ff11     0  "No execute handler found."
+65298  ff12     0  "No data to read."
+65299  ff13     0  "Resolving hostname %s."
+65300  ff14     0  "Connecting to %s."
+65301  ff15     0  "Connected."
+65302  ff16     0  "Disconnecting from %s."
+65303  ff17     0  "Not connected."
+65304  ff18     0  "%s"
+65305  ff19     0  "Coding table entry not found."
+65306  ff1a     0  "OK"
+65307  ff1b     0  "Created"
+65308  ff1c     0  "Accepted"
+65309  ff1d     0  "Non-authoritative Information"
+65310  ff1e     0  "No Content"
+65311  ff1f     0  "Reset Content"
+65312  ff20     0  "Error removing control from dock tree"
+65313  ff21     0  " - Dock zone not found"
+65314  ff22     0  " - Dock zone has no control"
+65315  ff23     0  "Unable to find a Table Of Contents"
+65316  ff24     0  "No help found for %s"
+65317  ff25     0  "No context-sensitive help installed"
+65318  ff26     0  "No topic-based help system installed"
+65319  ff27     0  "Cannot allocate socket."
+65320  ff28     0  "Connection Closed Gracefully."
+65321  ff29     0  "Could not bind socket. Address and port are already in use."
+65322  ff2a     0  "Not enough data in buffer."
+65323  ff2b     0  "Winsock Initialization Error."
+65324  ff2c     0  "%s could not be loaded."
+65325  ff2d     0  "Set Size Exceeded."
+65326  ff2e     0  "Thread Class Not Specified."
+65327  ff2f     0  "Only one TIdAntiFreeze can exist per application."
+65328  ff30     0  "Home"
+65329  ff31     0  "Left"
+65330  ff32     0  "Up"
+65331  ff33     0  "Right"
+65332  ff34     0  "Down"
+65333  ff35     0  "Ins"
+65334  ff36     0  "Del"
+65335  ff37     0  "Shift+"
+65336  ff38     0  "Ctrl+"
+65337  ff39     0  "Alt+"
+65338  ff3a     0  "Invalid clipboard format"
+65339  ff3b     0  "Clipboard does not support Icons"
+65340  ff3c     0  "Cannot open clipboard"
+65341  ff3d     0  "Menu '%s' is already being used by another form"
+65342  ff3e     0  "Cannot open AVI"
+65343  ff3f     0  "Docked control must have a name"
+65344  ff40     0  "Cancel"
+65345  ff41     0  "&Help"
+65346  ff42     0  "&Abort"
+65347  ff43     0  "&Retry"
+65348  ff44     0  "&Ignore"
+65349  ff45     0  "&All"
+65350  ff46     0  "N&o to All"
+65351  ff47     0  "Yes to &All"
+65352  ff48     0  "BkSp"
+65353  ff49     0  "Tab"
+65354  ff4a     0  "Esc"
+65355  ff4b     0  "Enter"
+65356  ff4c     0  "Space"
+65357  ff4d     0  "PgUp"
+65358  ff4e     0  "PgDn"
+65359  ff4f     0  "End"
+65360  ff50     0  "Abort"
+65361  ff51     0  "&All"
+65362  ff52     0  "Cannot drag a form"
+65363  ff53     0  "Metafiles"
+65364  ff54     0  "Enhanced Metafiles"
+65365  ff55     0  "Icons"
+65366  ff56     0  "Bitmaps"
+65367  ff57     0  "Invalid input value"
+65368  ff58     0  "Invalid input value.  Use escape key to abandon changes"
+65369  ff59     0  "Warning"
+65370  ff5a     0  "Error"
+65371  ff5b     0  "Information"
+65372  ff5c     0  "Confirm"
+65373  ff5d     0  "&Yes"
+65374  ff5e     0  "&No"
+65375  ff5f     0  "OK"
+65376  ff60     0  "Scrollbar property out of range"
+65377  ff61     0  "Menu index out of range"
+65378  ff62     0  "Menu inserted twice"
+65379  ff63     0  "Sub-menu is not in menu"
+65380  ff64     0  "Not enough timers available"
+65381  ff65     0  "GroupIndex cannot be less than a previous menu item's GroupIndex"
+65382  ff66     0  "Cannot create form. No MDI forms are currently active"
+65383  ff67     0  "A control cannot have itself as its parent"
+65384  ff68     0  "OK"
+65385  ff69     0  "Cancel"
+65386  ff6a     0  "&Yes"
+65387  ff6b     0  "&No"
+65388  ff6c     0  "&Help"
+65389  ff6d     0  "&Close"
+65390  ff6e     0  "&Ignore"
+65391  ff6f     0  "&Retry"
+65392  ff70     0  "Unsupported clipboard format"
+65393  ff71     0  "Out of system resources"
+65394  ff72     0  "Canvas does not allow drawing"
+65395  ff73     0  "Invalid image size"
+65396  ff74     0  "Invalid ImageList"
+65397  ff75     0  "Invalid ImageList Index"
+65398  ff76     0  "Failed to read ImageList data from stream"
+65399  ff77     0  "Failed to write ImageList data to stream"
+65400  ff78     0  "Error creating window device context"
+65401  ff79     0  "Error creating window class"
+65402  ff7a     0  "Cannot focus a disabled or invisible window"
+65403  ff7b     0  "Control '%s' has no parent window"
+65404  ff7c     0  "Parent given is not a parent of '%s'"
+65405  ff7d     0  "Cannot hide an MDI Child Form"
+65406  ff7e     0  "Cannot change Visible in OnShow or OnHide"
+65407  ff7f     0  "Cannot make a visible window modal"
+65408  ff80     0  "Stream read error"
+65409  ff81     0  "Property is read-only"
+65410  ff82     0  "Failed to get data for '%s'"
+65411  ff83     0  "Resource %s not found"
+65412  ff84     0  "%s.Seek not implemented"
+65413  ff85     0  "Operation not allowed on sorted list"
+65414  ff86     0  "Too many rows or columns deleted"
+65415  ff87     0  "%s not in a class registration group"
+65416  ff88     0  "Property %s does not exist"
+65417  ff89     0  "Stream write error"
+65418  ff8a     0  "Thread creation error: %s"
+65419  ff8b     0  "Thread Error: %s (%d)"
+65420  ff8c     0  "Bitmap image is not valid"
+65421  ff8d     0  "Icon image is not valid"
+65422  ff8e     0  "Metafile is not valid"
+65423  ff8f     0  "Cannot change the size of an icon"
+65424  ff90     0  "Fixed row count must be less than row count"
+65425  ff91     0  "Cannot open file %s"
+65426  ff92     0  "Grid too large for operation"
+65427  ff93     0  "Grid index out of range"
+65428  ff94     0  "Invalid stream format"
+65429  ff95     0  "''%s'' is not a valid component name"
+65430  ff96     0  "Invalid property value"
+65431  ff97     0  "Invalid property path"
+65432  ff98     0  "Invalid property value"
+65433  ff99     0  "Invalid data type for '%s'"
+65434  ff9a     0  "Cannot insert or delete rows from grid"
+65435  ff9b     0  "List capacity out of bounds (%d)"
+65436  ff9c     0  "List count out of bounds (%d)"
+65437  ff9d     0  "List index out of bounds (%d)"
+65438  ff9e     0  "Out of memory while expanding memory stream"
+65439  ff9f     0  "Error reading %s%s%s: %s"
+65440  ffa0     0  "Wednesday"
+65441  ffa1     0  "Thursday"
+65442  ffa2     0  "Friday"
+65443  ffa3     0  "Saturday"
+65444  ffa4     0  "Ancestor for '%s' not found"
+65445  ffa5     0  "Cannot assign a %s to a %s"
+65446  ffa6     0  "Bits index out of range"
+65447  ffa7     0  "Can't write to a read-only resource stream"
+65448  ffa8     0  "CheckSynchronize called from thread $%x, which is NOT the main thread"
+65449  ffa9     0  "Class %s not found"
+65450  ffaa     0  "A class named %s already exists"
+65451  ffab     0  "List does not allow duplicates ($0%x)"
+65452  ffac     0  "A component named %s already exists"
+65453  ffad     0  "String list does not allow duplicates"
+65454  ffae     0  "Cannot create file %s"
+65455  ffaf     0  "Fixed column count must be less than column count"
+65456  ffb0     0  "July"
+65457  ffb1     0  "August"
+65458  ffb2     0  "September"
+65459  ffb3     0  "October"
+65460  ffb4     0  "November"
+65461  ffb5     0  "December"
+65462  ffb6     0  "Sun"
+65463  ffb7     0  "Mon"
+65464  ffb8     0  "Tue"
+65465  ffb9     0  "Wed"
+65466  ffba     0  "Thu"
+65467  ffbb     0  "Fri"
+65468  ffbc     0  "Sat"
+65469  ffbd     0  "Sunday"
+65470  ffbe     0  "Monday"
+65471  ffbf     0  "Tuesday"
+65472  ffc0     0  "Mar"
+65473  ffc1     0  "Apr"
+65474  ffc2     0  "May"
+65475  ffc3     0  "Jun"
+65476  ffc4     0  "Jul"
+65477  ffc5     0  "Aug"
+65478  ffc6     0  "Sep"
+65479  ffc7     0  "Oct"
+65480  ffc8     0  "Nov"
+65481  ffc9     0  "Dec"
+65482  ffca     0  "January"
+65483  ffcb     0  "February"
+65484  ffcc     0  "March"
+65485  ffcd     0  "April"
+65486  ffce     0  "May"
+65487  ffcf     0  "June"
+65488  ffd0     0  "Read"
+65489  ffd1     0  "Write"
+65490  ffd2     0  "Error creating variant array"
+65491  ffd3     0  "Variant is not an array"
+65492  ffd4     0  "Variant array index out of bounds"
+65493  ffd5     0  "External exception %x"
+65494  ffd6     0  "Assertion failed"
+65495  ffd7     0  "Interface not supported"
+65496  ffd8     0  "Exception in safecall method"
+65497  ffd9     0  "%s (%s, line %d)"
+65498  ffda     0  "Abstract Error"
+65499  ffdb     0  "Access violation at address %p in module '%s'. %s of address %p"
+65500  ffdc     0  "System Error.  Code: %d.\r\n%s"
+65501  ffdd     0  "A call to an OS function failed"
+65502  ffde     0  "Jan"
+65503  ffdf     0  "Feb"
+65504  ffe0     0  "Floating point division by zero"
+65505  ffe1     0  "Floating point overflow"
+65506  ffe2     0  "Floating point underflow"
+65507  ffe3     0  "Invalid pointer operation"
+65508  ffe4     0  "Invalid class typecast"
+65509  ffe5     0  "Access violation at address %p. %s of address %p"
+65510  ffe6     0  "Stack overflow"
+65511  ffe7     0  "Control-C hit"
+65512  ffe8     0  "Privileged instruction"
+65513  ffe9     0  "Exception %s in module %s at %p.\n%s%s"
+65514  ffea     0  "Application Error"
+65515  ffeb     0  "Format '%s' invalid or incompatible with argument"
+65516  ffec     0  "No argument for format '%s'"
+65517  ffed     0  "Invalid variant type conversion"
+65518  ffee     0  "Invalid variant operation"
+65519  ffef     0  "Variant method calls not supported"
+65520  fff0     0  "'%s' is not a valid integer value"
+65521  fff1     0  "Invalid argument to time encode"
+65522  fff2     0  "Invalid argument to date encode"
+65523  fff3     0  "Out of memory"
+65524  fff4     0  "I/O error %d"
+65525  fff5     0  "File not found"
+65526  fff6     0  "Invalid filename"
+65527  fff7     0  "Too many open files"
+65528  fff8     0  "File access denied"
+65529  fff9     0  "Read beyond end of file"
+65530  fffa     0  "Disk full"
+65531  fffb     0  "Invalid numeric input"
+65532  fffc     0  "Division by zero"
+65533  fffd     0  "Range check error"
+65534  fffe     0  "Integer overflow"
+65535  ffff     0  "Invalid floating point operation"
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0x8cf18  1252     0      308  CURSOR        #1
+    0x8d04c  1252     0      308  CURSOR        #2
+    0x8d180  1252     0      308  CURSOR        #3
+    0x8d2b4  1252     0      308  CURSOR        #4
+    0x8d3e8  1252     0      308  CURSOR        #5
+    0x8d51c  1252     0      308  CURSOR        #6
+    0x8d650  1252     0      308  CURSOR        #7
+    0x8d784  1252     0      464  BITMAP        BBABORT
+    0x8d954  1252     0      484  BITMAP        BBALL
+    0x8db38  1252     0      464  BITMAP        BBCANCEL
+    0x8dd08  1252     0      464  BITMAP        BBCLOSE
+    0x8ded8  1252     0      464  BITMAP        BBHELP
+    0x8e0a8  1252     0      464  BITMAP        BBIGNORE
+    0x8e278  1252     0      464  BITMAP        BBNO
+    0x8e448  1252     0      464  BITMAP        BBOK
+    0x8e618  1252     0      464  BITMAP        BBRETRY
+    0x8e7e8  1252     0      464  BITMAP        BBYES
+    0x8e9b8  1252     0      232  BITMAP        PREVIEWGLYPH
+    0x8eaa0  1252     0     1640  ICON          #1
+    0x8f108  1252 0x409     1384  ICON          #1
+    0x8f670  1252     0      744  ICON          #2
+    0x8f958  1252     0      488  ICON          #3
+    0x8fb40  1252     0      296  ICON          #4
+    0x8fc68  1252     0     3752  ICON          #5
+    0x90b10  1252     0     2216  ICON          #6
+    0x913b8  1252     0     1736  ICON          #7
+    0x91a80  1252     0     1384  ICON          #8
+    0x91fe8  1252     0    40797  ICON          #9
+    0x9bf48  1252     0     9640  ICON          #10
+    0x9e4f0  1252     0     4264  ICON          #11
+    0x9f598  1252     0     2440  ICON          #12
+    0x9ff20  1252     0     1128  ICON          #13
+    0xa0388  1252     0       82  DIALOG        DLGTEMPLATE
+    0xa03dc  1252     0      432  STRING        #4077
+    0xa058c  1252     0     1004  STRING        #4078
+    0xa0978  1252     0      780  STRING        #4079
+    0xa0c84  1252     0      836  STRING        #4080
+    0xa0fc8  1252     0      480  STRING        #4081
+    0xa11a8  1252     0      640  STRING        #4082
+    0xa1428  1252     0     1052  STRING        #4083
+    0xa1844  1252     0      484  STRING        #4084
+    0xa1a28  1252     0      236  STRING        #4085
+    0xa1b14  1252     0      424  STRING        #4086
+    0xa1cbc  1252     0      708  STRING        #4087
+    0xa1f80  1252     0     1060  STRING        #4088
+    0xa23a4  1252     0      876  STRING        #4089
+    0xa2710  1252     0      976  STRING        #4090
+    0xa2ae0  1252     0      956  STRING        #4091
+    0xa2e9c  1252     0      228  STRING        #4092
+    0xa2f80  1252     0      188  STRING        #4093
+    0xa303c  1252     0      744  STRING        #4094
+    0xa3324  1252     0      948  STRING        #4095
+    0xa36d8  1252     0      708  STRING        #4096
+    0xa399c  1252 0x37c     3915  FONT          #1001
+    0xa48e8  1252 0x37c     3915  FONT          #1002
+    0xa5834  1252 0x37c     3915  FONT          #1003
+    0xa6780  1252 0x37c     3915  FONT          #1004
+    0xa76cc  1252 0x37c     3915  FONT          #1005
+    0xa8618  1252 0x37c     3915  FONT          #1006
+    0xa9564  1252 0x37c     3915  FONT          #1007
+    0xaa4b0  1252 0x37c     3915  FONT          #1008
+    0xab3fc  1252 0x37c     3915  FONT          #1009
+    0xac348  1252 0x37c     3915  FONT          #1010
+    0xad294  1252 0x37c     3915  FONT          #1011
+    0xae1e0  1252 0x37c     3915  FONT          #1012
+    0xaf12c  1252 0x37c     3915  FONT          #1013
+    0xb0078  1252 0x37c     3915  FONT          #1014
+    0xb0fc4  1252 0x37c     3915  FONT          #1015
+    0xb1f10  1252 0x37c     3915  FONT          #1016
+    0xb2e5c  1252 0x37c     3915  FONT          #1017
+    0xb3da8  1252 0x37c     3915  FONT          #1018
+    0xb4cf4  1252 0x37c     3915  FONT          #1019
+    0xb5c40  1252 0x37c     3915  FONT          #1020
+    0xb6b8c  1252 0x37c     3915  FONT          #1021
+    0xb7ad8  1252 0x37c     3915  FONT          #1022
+    0xb8a24  1252 0x37c     3915  FONT          #1023
+    0xb9970  1252 0x37c     3915  FONT          #1024
+    0xba8bc  1252 0x37c     3915  FONT          #1025
+    0xbb808  1252 0x37c     3915  FONT          #1026
+    0xbc754  1252 0x37c     3915  FONT          #1027
+    0xbd6a0  1252 0x37c     3915  FONT          #1028
+    0xbe5ec  1252 0x37c     3915  FONT          #1029
+    0xbf538  1252 0x37c     3915  FONT          #1030
+    0xc0484  1252 0x37c     3915  FONT          #1031
+    0xc13d0  1252 0x37c     3915  FONT          #1032
+    0xc231c  1252 0x37c     3915  FONT          #1033
+    0xc3268  1252 0x37c     3915  FONT          #1034
+    0xc41b4  1252 0x37c     3915  FONT          #1035
+    0xc5100  1252 0x37c     3915  FONT          #1036
+    0xc604c  1252 0x37c     3915  FONT          #1037
+    0xc6f98  1252 0x37c     3915  FONT          #1038
+    0xc7ee4  1252 0x37c     3915  FONT          #1039
+    0xc8e30  1252 0x37c     3915  FONT          #1040
+    0xc9d7c  1252 0x37c     3915  FONT          #1041
+    0xcacc8  1252 0x37c     3915  FONT          #1042
+    0xcbc14  1252 0x37c     3915  FONT          #1043
+    0xccb60  1252 0x37c     3915  FONT          #1044
+    0xcdaac  1252 0x37c     3915  FONT          #1045
+    0xce9f8  1252 0x37c     3915  FONT          #1046
+    0xcf944  1252 0x37c     3915  FONT          #1047
+    0xd0890  1252 0x37c     3915  FONT          #1048
+    0xd17dc  1252 0x37c     3915  FONT          #1049
+    0xd2728  1252 0x37c     3915  FONT          #1050
+    0xd3674  1252 0x37c     3915  FONT          #1051
+    0xd45c0  1252 0x37c     3915  FONT          #1052
+    0xd550c  1252 0x37c     3915  FONT          #1053
+    0xd6458  1252 0x37c     3915  FONT          #1054
+    0xd73a4  1252 0x37c     3915  FONT          #1055
+    0xd82f0  1252 0x37c     3915  FONT          #1056
+    0xd923c  1252 0x37c     3915  FONT          #1057
+    0xda188  1252 0x37c     3915  FONT          #1058
+    0xdb0d4  1252 0x37c     3915  FONT          #1059
+    0xdc020  1252 0x37c     3915  FONT          #1060
+    0xdcf6c  1252 0x37c     3915  FONT          #1061
+    0xddeb8  1252 0x37c     3915  FONT          #1062
+    0xdee04  1252 0x37c     3915  FONT          #1063
+    0xdfd50  1252 0x37c     3915  FONT          #1064
+    0xe0c9c  1252 0x37c     3915  FONT          #1065
+    0xe1be8  1252 0x37c     3915  FONT          #1066
+    0xe2b34  1252 0x37c     3915  FONT          #1067
+    0xe3a80  1252 0x37c     3915  FONT          #1068
+    0xe49cc  1252 0x37c     3915  FONT          #1069
+    0xe5918  1252 0x37c     3915  FONT          #1070
+    0xe6864  1252 0x37c     3915  FONT          #1071
+    0xe77b0  1252 0x37c     3915  FONT          #1072
+    0xe86fc  1252 0x37c     3915  FONT          #1073
+    0xe9648  1252 0x37c     3915  FONT          #1074
+    0xea594  1252 0x37c     3915  FONT          #1075
+    0xeb4e0  1252 0x37c     3915  FONT          #1076
+    0xec42c  1252 0x37c     3915  FONT          #1077
+    0xed378  1252 0x37c     3915  FONT          #1078
+    0xee2c4  1252 0x37c     3915  FONT          #1079
+    0xef210  1252 0x37c     3915  FONT          #1080
+    0xf015c  1252 0x37c     3915  FONT          #1081
+    0xf10a8  1252 0x37c     3915  FONT          #1082
+    0xf1ff4  1252 0x37c     3915  FONT          #1083
+    0xf2f40  1252 0x37c     3915  FONT          #1084
+    0xf3e8c  1252 0x37c     3915  FONT          #1085
+    0xf4dd8  1252 0x37c     3915  FONT          #1086
+    0xf5d24  1252 0x37c     3915  FONT          #1087
+    0xf6c70  1252 0x37c     3915  FONT          #1088
+    0xf7bbc  1252 0x37c     3915  FONT          #1089
+    0xf8b08  1252 0x37c     3915  FONT          #1090
+    0xf9a54  1252 0x37c     3915  FONT          #1091
+    0xfa9a0  1252 0x37c     3915  FONT          #1092
+    0xfb8ec  1252 0x37c     3915  FONT          #1093
+    0xfc838  1252 0x37c     3915  FONT          #1094
+    0xfd784  1252 0x37c     3915  FONT          #1095
+    0xfe6d0  1252 0x37c     3915  FONT          #1096
+    0xff61c  1252 0x37c     3915  FONT          #1097
+   0x100568  1252 0x37c     3915  FONT          #1098
+   0x1014b4  1252 0x37c     3915  FONT          #1099
+   0x102400  1252 0x37c     3915  FONT          #1100
+   0x10334c  1252 0x37c     3915  FONT          #1101
+   0x104298  1252 0x37c     3915  FONT          #1102
+   0x1051e4  1252 0x37c     3915  FONT          #1103
+   0x106130  1252 0x37c     3915  FONT          #1104
+   0x10707c  1252 0x37c     3915  FONT          #1105
+   0x107fc8  1252 0x37c     3915  FONT          #1106
+   0x108f14  1252 0x37c     3915  FONT          #1107
+   0x109e60  1252 0x37c     3915  FONT          #1108
+   0x10adac  1252 0x37c     3915  FONT          #1109
+   0x10bcf8  1252 0x37c     3915  FONT          #1110
+   0x10cc44  1252 0x37c     3915  FONT          #1111
+   0x10db90  1252 0x37c     3915  FONT          #1112
+   0x10eadc  1252 0x37c     3915  FONT          #1113
+   0x10fa28  1252 0x37c     3915  FONT          #1114
+   0x110974  1252 0x37c     3915  FONT          #1115
+   0x1118c0  1252 0x37c     3915  FONT          #1116
+   0x11280c  1252 0x37c     3915  FONT          #1117
+   0x113758  1252 0x37c     3915  FONT          #1118
+   0x1146a4  1252 0x37c     3915  FONT          #1119
+   0x1155f0  1252 0x37c     3915  FONT          #1120
+   0x11653c  1252 0x37c     3915  FONT          #1121
+   0x117488  1252 0x37c     3915  FONT          #1122
+   0x1183d4  1252     0       16  RCDATA        DVCLAL
+   0x1183e4  1252     0      972  RCDATA        PACKAGEINFO
+   0x1187b0  1252     0     1169  RCDATA        TFORM1
+   0x118c44  1252 0x37c     1074  RCDATA        #1000
+   0x119078  1252     0       20  GROUP_CURSOR  #32761
+   0x11908c  1252     0       20  GROUP_CURSOR  #32762
+   0x1190a0  1252     0       20  GROUP_CURSOR  #32763
+   0x1190b4  1252     0       20  GROUP_CURSOR  #32764
+   0x1190c8  1252     0       20  GROUP_CURSOR  #32765
+   0x1190dc  1252     0       20  GROUP_CURSOR  #32766
+   0x1190f0  1252     0       20  GROUP_CURSOR  #32767
+   0x119104  1252 0x409       20  GROUP_ICON    MAINICON
+   0x119118  1252     0      188  GROUP_ICON    #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+kernel32.dll        0        DeleteCriticalSection
+kernel32.dll        0        LeaveCriticalSection
+kernel32.dll        0        EnterCriticalSection
+kernel32.dll        0        InitializeCriticalSection
+kernel32.dll        0        VirtualFree
+kernel32.dll        0        VirtualAlloc
+kernel32.dll        0        LocalFree
+kernel32.dll        0        LocalAlloc
+kernel32.dll        0        GetCurrentThreadId
+kernel32.dll        0        InterlockedDecrement
+kernel32.dll        0        InterlockedIncrement
+kernel32.dll        0        VirtualQuery
+kernel32.dll        0        WideCharToMultiByte
+kernel32.dll        0        MultiByteToWideChar
+kernel32.dll        0        lstrlenA
+kernel32.dll        0        lstrcpynA
+kernel32.dll        0        LoadLibraryExA
+kernel32.dll        0        GetThreadLocale
+kernel32.dll        0        GetStartupInfoA
+kernel32.dll        0        GetProcAddress
+kernel32.dll        0        GetModuleHandleA
+kernel32.dll        0        GetModuleFileNameA
+kernel32.dll        0        GetLocaleInfoA
+kernel32.dll        0        GetLastError
+kernel32.dll        0        GetCommandLineA
+kernel32.dll        0        FreeLibrary
+kernel32.dll        0        FindFirstFileA
+kernel32.dll        0        FindClose
+kernel32.dll        0        ExitProcess
+kernel32.dll        0        ExitThread
+kernel32.dll        0        CreateThread
+kernel32.dll        0        WriteFile
+kernel32.dll        0        UnhandledExceptionFilter
+kernel32.dll        0        SetFilePointer
+kernel32.dll        0        SetEndOfFile
+kernel32.dll        0        RtlUnwind
+kernel32.dll        0        ReadFile
+kernel32.dll        0        RaiseException
+kernel32.dll        0        GetStdHandle
+kernel32.dll        0        GetFileSize
+kernel32.dll        0        GetSystemTime
+kernel32.dll        0        GetFileType
+kernel32.dll        0        CreateFileA
+kernel32.dll        0        CloseHandle
+user32.dll          0        GetKeyboardType
+user32.dll          0        LoadStringA
+user32.dll          0        MessageBoxA
+user32.dll          0        CharNextA
+advapi32.dll        0        RegQueryValueExA
+advapi32.dll        0        RegOpenKeyExA
+advapi32.dll        0        RegCloseKey
+oleaut32.dll        0        SysFreeString
+oleaut32.dll        0        SysReAllocStringLen
+oleaut32.dll        0        SysAllocStringLen
+kernel32.dll        0        TlsSetValue
+kernel32.dll        0        TlsGetValue
+kernel32.dll        0        LocalAlloc
+kernel32.dll        0        GetModuleHandleA
+advapi32.dll        0        RegQueryValueExA
+advapi32.dll        0        RegQueryInfoKeyA
+advapi32.dll        0        RegOpenKeyExA
+advapi32.dll        0        RegFlushKey
+advapi32.dll        0        RegEnumKeyExA
+advapi32.dll        0        RegCloseKey
+kernel32.dll        0        lstrcpyA
+kernel32.dll        0        WriteFile
+kernel32.dll        0        WaitForSingleObject
+kernel32.dll        0        VirtualQuery
+kernel32.dll        0        VirtualAlloc
+kernel32.dll        0        SuspendThread
+kernel32.dll        0        Sleep
+kernel32.dll        0        SizeofResource
+kernel32.dll        0        SetThreadPriority
+kernel32.dll        0        SetThreadLocale
+kernel32.dll        0        SetFilePointer
+kernel32.dll        0        SetEvent
+kernel32.dll        0        SetErrorMode
+kernel32.dll        0        SetEndOfFile
+kernel32.dll        0        ResumeThread
+kernel32.dll        0        ResetEvent
+kernel32.dll        0        ReadFile
+kernel32.dll        0        MulDiv
+kernel32.dll        0        LockResource
+kernel32.dll        0        LoadResource
+kernel32.dll        0        LoadLibraryA
+kernel32.dll        0        LeaveCriticalSection
+kernel32.dll        0        InitializeCriticalSection
+kernel32.dll        0        GlobalUnlock
+kernel32.dll        0        GlobalReAlloc
+kernel32.dll        0        GlobalHandle
+kernel32.dll        0        GlobalLock
+kernel32.dll        0        GlobalFree
+kernel32.dll        0        GlobalFindAtomA
+kernel32.dll        0        GlobalDeleteAtom
+kernel32.dll        0        GlobalAlloc
+kernel32.dll        0        GlobalAddAtomA
+kernel32.dll        0        GetVersionExA
+kernel32.dll        0        GetVersion
+kernel32.dll        0        GetTickCount
+kernel32.dll        0        GetThreadLocale
+kernel32.dll        0        GetTempPathA
+kernel32.dll        0        GetSystemInfo
+kernel32.dll        0        GetStringTypeExA
+kernel32.dll        0        GetStdHandle
+kernel32.dll        0        GetProcAddress
+kernel32.dll        0        GetPriorityClass
+kernel32.dll        0        GetModuleHandleA
+kernel32.dll        0        GetModuleFileNameA
+kernel32.dll        0        GetLocaleInfoA
+kernel32.dll        0        GetLocalTime
+kernel32.dll        0        GetLastError
+kernel32.dll        0        GetFileSize
+kernel32.dll        0        GetExitCodeThread
+kernel32.dll        0        GetDiskFreeSpaceA
+kernel32.dll        0        GetCurrentThreadId
+kernel32.dll        0        GetCurrentProcessId
+kernel32.dll        0        GetCPInfo
+kernel32.dll        0        GetACP
+kernel32.dll        0        FreeResource
+kernel32.dll        0        FreeLibrary
+kernel32.dll        0        FormatMessageA
+kernel32.dll        0        FindResourceA
+kernel32.dll        0        EnumCalendarInfoA
+kernel32.dll        0        EnterCriticalSection
+kernel32.dll        0        DeleteCriticalSection
+kernel32.dll        0        CreateThread
+kernel32.dll        0        CreateFileA
+kernel32.dll        0        CreateEventA
+kernel32.dll        0        CompareStringA
+kernel32.dll        0        CloseHandle
+version.dll         0        VerQueryValueA
+version.dll         0        GetFileVersionInfoSizeA
+version.dll         0        GetFileVersionInfoA
+gdi32.dll           0        UnrealizeObject
+gdi32.dll           0        StretchBlt
+gdi32.dll           0        SetWindowOrgEx
+gdi32.dll           0        SetWindowExtEx
+gdi32.dll           0        SetWinMetaFileBits
+gdi32.dll           0        SetViewportOrgEx
+gdi32.dll           0        SetViewportExtEx
+gdi32.dll           0        SetTextColor
+gdi32.dll           0        SetStretchBltMode
+gdi32.dll           0        SetROP2
+gdi32.dll           0        SetPixel
+gdi32.dll           0        SetMapMode
+gdi32.dll           0        SetEnhMetaFileBits
+gdi32.dll           0        SetDIBColorTable
+gdi32.dll           0        SetBrushOrgEx
+gdi32.dll           0        SetBkMode
+gdi32.dll           0        SetBkColor
+gdi32.dll           0        SelectPalette
+gdi32.dll           0        SelectObject
+gdi32.dll           0        SaveDC
+gdi32.dll           0        RestoreDC
+gdi32.dll           0        Rectangle
+gdi32.dll           0        RectVisible
+gdi32.dll           0        RealizePalette
+gdi32.dll           0        PolyPolyline
+gdi32.dll           0        PlayEnhMetaFile
+gdi32.dll           0        PatBlt
+gdi32.dll           0        MoveToEx
+gdi32.dll           0        MaskBlt
+gdi32.dll           0        LineTo
+gdi32.dll           0        IntersectClipRect
+gdi32.dll           0        GetWindowOrgEx
+gdi32.dll           0        GetWinMetaFileBits
+gdi32.dll           0        GetTextMetricsA
+gdi32.dll           0        GetTextExtentPoint32A
+gdi32.dll           0        GetSystemPaletteEntries
+gdi32.dll           0        GetStockObject
+gdi32.dll           0        GetPixel
+gdi32.dll           0        GetPaletteEntries
+gdi32.dll           0        GetObjectA
+gdi32.dll           0        GetEnhMetaFilePaletteEntries
+gdi32.dll           0        GetEnhMetaFileHeader
+gdi32.dll           0        GetEnhMetaFileBits
+gdi32.dll           0        GetDeviceCaps
+gdi32.dll           0        GetDIBits
+gdi32.dll           0        GetDIBColorTable
+gdi32.dll           0        GetDCOrgEx
+gdi32.dll           0        GetCurrentPositionEx
+gdi32.dll           0        GetClipBox
+gdi32.dll           0        GetBrushOrgEx
+gdi32.dll           0        GetBitmapBits
+gdi32.dll           0        ExtTextOutA
+gdi32.dll           0        ExtCreatePen
+gdi32.dll           0        ExcludeClipRect
+gdi32.dll           0        DeleteObject
+gdi32.dll           0        DeleteEnhMetaFile
+gdi32.dll           0        DeleteDC
+gdi32.dll           0        CreateSolidBrush
+gdi32.dll           0        CreatePenIndirect
+gdi32.dll           0        CreatePen
+gdi32.dll           0        CreatePalette
+gdi32.dll           0        CreateHalftonePalette
+gdi32.dll           0        CreateFontIndirectA
+gdi32.dll           0        CreateDIBitmap
+gdi32.dll           0        CreateDIBSection
+gdi32.dll           0        CreateCompatibleDC
+gdi32.dll           0        CreateCompatibleBitmap
+gdi32.dll           0        CreateBrushIndirect
+gdi32.dll           0        CreateBitmap
+gdi32.dll           0        CopyEnhMetaFileA
+gdi32.dll           0        BitBlt
+user32.dll          0        WindowFromPoint
+user32.dll          0        WinHelpA
+user32.dll          0        WaitMessage
+user32.dll          0        ValidateRect
+user32.dll          0        UpdateWindow
+user32.dll          0        UnregisterClassA
+user32.dll          0        UnionRect
+user32.dll          0        UnhookWindowsHookEx
+user32.dll          0        TranslateMessage
+user32.dll          0        TranslateMDISysAccel
+user32.dll          0        TrackPopupMenu
+user32.dll          0        SystemParametersInfoA
+user32.dll          0        ShowWindow
+user32.dll          0        ShowScrollBar
+user32.dll          0        ShowOwnedPopups
+user32.dll          0        ShowCursor
+user32.dll          0        SetWindowsHookExA
+user32.dll          0        SetWindowTextA
+user32.dll          0        SetWindowPos
+user32.dll          0        SetWindowPlacement
+user32.dll          0        SetWindowLongA
+user32.dll          0        SetTimer
+user32.dll          0        SetScrollRange
+user32.dll          0        SetScrollPos
+user32.dll          0        SetScrollInfo
+user32.dll          0        SetRect
+user32.dll          0        SetPropA
+user32.dll          0        SetMenuItemInfoA
+user32.dll          0        SetMenu
+user32.dll          0        SetKeyboardState
+user32.dll          0        SetForegroundWindow
+user32.dll          0        SetFocus
+user32.dll          0        SetCursor
+user32.dll          0        SetClipboardData
+user32.dll          0        SetClassLongA
+user32.dll          0        SetCapture
+user32.dll          0        SetActiveWindow
+user32.dll          0        SendMessageA
+user32.dll          0        ScrollWindowEx
+user32.dll          0        ScrollWindow
+user32.dll          0        ScreenToClient
+user32.dll          0        RemovePropA
+user32.dll          0        RemoveMenu
+user32.dll          0        ReleaseDC
+user32.dll          0        ReleaseCapture
+user32.dll          0        RegisterWindowMessageA
+user32.dll          0        RegisterClipboardFormatA
+user32.dll          0        RegisterClassA
+user32.dll          0        RedrawWindow
+user32.dll          0        PtInRect
+user32.dll          0        PostQuitMessage
+user32.dll          0        PostMessageA
+user32.dll          0        PeekMessageA
+user32.dll          0        OpenClipboard
+user32.dll          0        OffsetRect
+user32.dll          0        OemToCharA
+user32.dll          0        MsgWaitForMultipleObjects
+user32.dll          0        MessageBoxA
+user32.dll          0        MessageBeep
+user32.dll          0        MapWindowPoints
+user32.dll          0        MapVirtualKeyA
+user32.dll          0        LoadStringA
+user32.dll          0        LoadKeyboardLayoutA
+user32.dll          0        LoadIconA
+user32.dll          0        LoadCursorA
+user32.dll          0        LoadBitmapA
+user32.dll          0        KillTimer
+user32.dll          0        IsZoomed
+user32.dll          0        IsWindowVisible
+user32.dll          0        IsWindowEnabled
+user32.dll          0        IsWindow
+user32.dll          0        IsRectEmpty
+user32.dll          0        IsIconic
+user32.dll          0        IsDialogMessageA
+user32.dll          0        IsChild
+user32.dll          0        IsCharAlphaNumericA
+user32.dll          0        IsCharAlphaA
+user32.dll          0        InvalidateRect
+user32.dll          0        IntersectRect
+user32.dll          0        InsertMenuItemA
+user32.dll          0        InsertMenuA
+user32.dll          0        InflateRect
+user32.dll          0        GetWindowThreadProcessId
+user32.dll          0        GetWindowTextA
+user32.dll          0        GetWindowRect
+user32.dll          0        GetWindowPlacement
+user32.dll          0        GetWindowLongA
+user32.dll          0        GetWindowDC
+user32.dll          0        GetTopWindow
+user32.dll          0        GetSystemMetrics
+user32.dll          0        GetSystemMenu
+user32.dll          0        GetSysColor
+user32.dll          0        GetSubMenu
+user32.dll          0        GetScrollRange
+user32.dll          0        GetScrollPos
+user32.dll          0        GetScrollInfo
+user32.dll          0        GetPropA
+user32.dll          0        GetParent
+user32.dll          0        GetWindow
+user32.dll          0        GetMessageTime
+user32.dll          0        GetMessagePos
+user32.dll          0        GetMenuStringA
+user32.dll          0        GetMenuState
+user32.dll          0        GetMenuItemInfoA
+user32.dll          0        GetMenuItemID
+user32.dll          0        GetMenuItemCount
+user32.dll          0        GetMenu
+user32.dll          0        GetLastActivePopup
+user32.dll          0        GetKeyboardState
+user32.dll          0        GetKeyboardLayoutList
+user32.dll          0        GetKeyboardLayout
+user32.dll          0        GetKeyState
+user32.dll          0        GetKeyNameTextA
+user32.dll          0        GetIconInfo
+user32.dll          0        GetForegroundWindow
+user32.dll          0        GetFocus
+user32.dll          0        GetDoubleClickTime
+user32.dll          0        GetDesktopWindow
+user32.dll          0        GetDCEx
+user32.dll          0        GetDC
+user32.dll          0        GetCursorPos
+user32.dll          0        GetCursor
+user32.dll          0        GetClipboardData
+user32.dll          0        GetClientRect
+user32.dll          0        GetClassNameA
+user32.dll          0        GetClassInfoA
+user32.dll          0        GetCaretPos
+user32.dll          0        GetCapture
+user32.dll          0        GetActiveWindow
+user32.dll          0        FrameRect
+user32.dll          0        FindWindowA
+user32.dll          0        FillRect
+user32.dll          0        EqualRect
+user32.dll          0        EnumWindows
+user32.dll          0        EnumThreadWindows
+user32.dll          0        EnumClipboardFormats
+user32.dll          0        EndPaint
+user32.dll          0        EnableWindow
+user32.dll          0        EnableScrollBar
+user32.dll          0        EnableMenuItem
+user32.dll          0        EmptyClipboard
+user32.dll          0        DrawTextA
+user32.dll          0        DrawMenuBar
+user32.dll          0        DrawIconEx
+user32.dll          0        DrawIcon
+user32.dll          0        DrawFrameControl
+user32.dll          0        DrawFocusRect
+user32.dll          0        DrawEdge
+user32.dll          0        DispatchMessageA
+user32.dll          0        DestroyWindow
+user32.dll          0        DestroyMenu
+user32.dll          0        DestroyIcon
+user32.dll          0        DestroyCursor
+user32.dll          0        DeleteMenu
+user32.dll          0        DefWindowProcA
+user32.dll          0        DefMDIChildProcA
+user32.dll          0        DefFrameProcA
+user32.dll          0        CreateWindowExA
+user32.dll          0        CreatePopupMenu
+user32.dll          0        CreateMenu
+user32.dll          0        CreateIcon
+user32.dll          0        CloseClipboard
+user32.dll          0        ClientToScreen
+user32.dll          0        CheckMenuItem
+user32.dll          0        CallWindowProcA
+user32.dll          0        CallNextHookEx
+user32.dll          0        BeginPaint
+user32.dll          0        CharNextA
+user32.dll          0        CharLowerBuffA
+user32.dll          0        CharLowerA
+user32.dll          0        CharUpperBuffA
+user32.dll          0        AdjustWindowRectEx
+user32.dll          0        ActivateKeyboardLayout
+kernel32.dll        0        Sleep
+oleaut32.dll        0        SafeArrayPtrOfIndex
+oleaut32.dll        0        SafeArrayPutElement
+oleaut32.dll        0        SafeArrayGetElement
+oleaut32.dll        0        SafeArrayGetUBound
+oleaut32.dll        0        SafeArrayGetLBound
+oleaut32.dll        0        SafeArrayRedim
+oleaut32.dll        0        SafeArrayCreate
+oleaut32.dll        0        VariantChangeTypeEx
+oleaut32.dll        0        VariantCopyInd
+oleaut32.dll        0        VariantCopy
+oleaut32.dll        0        VariantClear
+oleaut32.dll        0        VariantInit
+comctl32.dll        0        ImageList_SetIconSize
+comctl32.dll        0        ImageList_GetIconSize
+comctl32.dll        0        ImageList_Write
+comctl32.dll        0        ImageList_Read
+comctl32.dll        0        ImageList_GetDragImage
+comctl32.dll        0        ImageList_DragShowNolock
+comctl32.dll        0        ImageList_SetDragCursorImage
+comctl32.dll        0        ImageList_DragMove
+comctl32.dll        0        ImageList_DragLeave
+comctl32.dll        0        ImageList_DragEnter
+comctl32.dll        0        ImageList_EndDrag
+comctl32.dll        0        ImageList_BeginDrag
+comctl32.dll        0        ImageList_Remove
+comctl32.dll        0        ImageList_DrawEx
+comctl32.dll        0        ImageList_Draw
+comctl32.dll        0        ImageList_GetBkColor
+comctl32.dll        0        ImageList_SetBkColor
+comctl32.dll        0        ImageList_ReplaceIcon
+comctl32.dll        0        ImageList_Add
+comctl32.dll        0        ImageList_GetImageCount
+comctl32.dll        0        ImageList_Destroy
+comctl32.dll        0        ImageList_Create
+comctl32.dll        0        InitCommonControls
+kernel32.dll        0        MulDiv
+
+=== Packer / Compiler ===
+
+  Borland Delphi 2006

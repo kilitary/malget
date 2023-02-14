@@ -1,0 +1,252 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        128          0x80
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          5             5
+                 TimeDateStamp:    "2007-06-27 02:46:28"
+          PointerToSymbolTable:     307712       0x4b200
+               NumberOfSymbols:       6031        0x178f
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        775         0x307  RELOCS_STRIPPED, EXECUTABLE_IMAGE
+                                                          LINE_NUMS_STRIPPED, 32BIT_MACHINE
+                                                          DEBUG_STRIPPED
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     2.56
+                    SizeOfCode:     287232       0x46200
+         SizeOfInitializedData:     306688       0x4ae00
+       SizeOfUninitializedData:      19456        0x4c00
+           AddressOfEntryPoint:       4672        0x1240
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     294912       0x48000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      1.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:     344064       0x54000
+                 SizeOfHeaders:       1024         0x400
+                      CheckSum:     585931       0x8f0cb
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    2097152      0x200000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   52000   size:0x     108c
+  RESOURCE      rva:0x       0   size:0x        0
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x       0   size:0x        0
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000    4603c    46200      400     0        0     0        0  60000060  R-X CODE IDATA
+  .data       48000      2b0      400    46600     0        0     0        0  c0000040  RW- IDATA
+  .rdata      49000     3530     3600    46a00     0        0     0        0  40000040  R-- IDATA
+  .bss        4d000     4bf0        0        0     0        0     0        0  c0000080  RW- UDATA
+  .idata      52000     108c     1200    4a000     0        0     0        0  c0000040  RW- IDATA
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+GDI32.dll         133        SetPixel
+ADVAPI32.DLL       f5        GetUserNameA
+ADVAPI32.DLL      182        RegCloseKey
+ADVAPI32.DLL      185        RegCreateKeyA
+ADVAPI32.DLL      18b        RegDeleteValueA
+ADVAPI32.DLL      19b        RegOpenKeyExA
+ADVAPI32.DLL      1b0        RegSetValueExA
+KERNEL32.dll        1        AddAtomA
+KERNEL32.dll       12        Beep
+KERNEL32.dll       26        CloseHandle
+KERNEL32.dll       35        CopyFileA
+KERNEL32.dll       4f        CreateMutexA
+KERNEL32.dll       57        CreateSemaphoreA
+KERNEL32.dll       5a        CreateThread
+KERNEL32.dll       9b        ExitProcess
+KERNEL32.dll       af        FindAtomA
+KERNEL32.dll       b5        FindFirstFileA
+KERNEL32.dll       dc        GetAtomNameA
+KERNEL32.dll       ec        GetCommandLineA
+KERNEL32.dll      119        GetCurrentProcess
+KERNEL32.dll      143        GetLastError
+KERNEL32.dll      14d        GetModuleFileNameA
+KERNEL32.dll      14f        GetModuleHandleA
+KERNEL32.dll      180        GetStartupInfoA
+KERNEL32.dll      18a        GetSystemDirectoryA
+KERNEL32.dll      1a5        GetTickCount
+KERNEL32.dll      1b9        GetWindowsDirectoryA
+KERNEL32.dll      1ee        InterlockedDecrement
+KERNEL32.dll      1f2        InterlockedIncrement
+KERNEL32.dll      272        ReleaseSemaphore
+KERNEL32.dll      2b9        SetFileAttributesA
+KERNEL32.dll      2c5        SetLastError
+KERNEL32.dll      2cb        SetPriorityClass
+KERNEL32.dll      2df        SetUnhandledExceptionFilter
+KERNEL32.dll      2eb        Sleep
+KERNEL32.dll      2f4        TerminateThread
+KERNEL32.dll      2f7        TlsAlloc
+KERNEL32.dll      2f8        TlsFree
+KERNEL32.dll      2f9        TlsGetValue
+KERNEL32.dll      2fa        TlsSetValue
+KERNEL32.dll      325        WaitForSingleObject
+msvcrt.dll         18        _fdopen
+msvcrt.dll         2c        _itoa
+msvcrt.dll         41        _read
+msvcrt.dll         54        _strdup
+msvcrt.dll         71        _write
+msvcrt.dll         27        __getmainargs
+msvcrt.dll         30        __mb_cur_max
+msvcrt.dll         3c        __p__environ
+msvcrt.dll         3e        __p__fmode
+msvcrt.dll         50        __set_app_type
+msvcrt.dll         6f        _assert
+msvcrt.dll         79        _cexit
+msvcrt.dll         8d        _ctype
+msvcrt.dll         98        _errno
+msvcrt.dll         ad        _filelengthi64
+msvcrt.dll         c2        _fstati64
+msvcrt.dll         e9        _iob
+msvcrt.dll         eb        _isctype
+msvcrt.dll        11c        _lseeki64
+msvcrt.dll        15e        _onexit
+msvcrt.dll        167        _pctype
+msvcrt.dll        184        _setmode
+msvcrt.dll        19f        _strnicmp
+msvcrt.dll        1bd        _vsnprintf
+msvcrt.dll        215        abort
+msvcrt.dll        21c        atexit
+msvcrt.dll        21e        atoi
+msvcrt.dll        22a        exit
+msvcrt.dll        22d        fclose
+msvcrt.dll        230        fflush
+msvcrt.dll        232        fgetpos
+msvcrt.dll        238        fopen
+msvcrt.dll        239        fprintf
+msvcrt.dll        23e        fread
+msvcrt.dll        23f        free
+msvcrt.dll        243        fseek
+msvcrt.dll        244        fsetpos
+msvcrt.dll        245        ftell
+msvcrt.dll        247        fwrite
+msvcrt.dll        249        getc
+msvcrt.dll        26d        localeconv
+msvcrt.dll        272        malloc
+msvcrt.dll        276        memchr
+msvcrt.dll        278        memcpy
+msvcrt.dll        279        memmove
+msvcrt.dll        27a        memset
+msvcrt.dll        280        putc
+msvcrt.dll        287        rand
+msvcrt.dll        28e        setlocale
+msvcrt.dll        28f        setvbuf
+msvcrt.dll        290        signal
+msvcrt.dll        293        sprintf
+msvcrt.dll        295        srand
+msvcrt.dll        297        strcat
+msvcrt.dll        299        strcmp
+msvcrt.dll        29a        strcoll
+msvcrt.dll        29b        strcpy
+msvcrt.dll        29e        strftime
+msvcrt.dll        29f        strlen
+msvcrt.dll        2a6        strstr
+msvcrt.dll        2a7        strtod
+msvcrt.dll        2ab        strxfrm
+msvcrt.dll        2b8        ungetc
+SHELL32.DLL        8d        ShellExecuteA
+USER32.dll          c        BlockInput
+USER32.dll         3f        CloseWindow
+USER32.dll         b9        EnumChildWindows
+USER32.dll         cf        ExitWindowsEx
+USER32.dll         d1        FindWindowA
+USER32.dll         de        GetAsyncKeyState
+USER32.dll         e8        GetClassNameA
+USER32.dll         f7        GetDC
+USER32.dll        102        GetForegroundWindow
+USER32.dll        10b        GetKeyState
+USER32.dll        145        GetSystemMetrics
+USER32.dll        15c        GetWindowTextA
+USER32.dll        15d        GetWindowTextLengthA
+USER32.dll        1ae        MessageBoxA
+USER32.dll        1ce        PostMessageA
+USER32.dll        1f4        SendMessageA
+USER32.dll        206        SetCursorPos
+USER32.dll        234        SetWindowPos
+USER32.dll        236        SetWindowTextA
+USER32.dll        244        SwapMouseButton
+USER32.dll        268        VkKeyScanA
+USER32.dll        275        keybd_event
+WININET.DLL        8b        InternetGetConnectedState
+WINMM.DLL          31        mciSendStringA
+WSOCK32.DLL        19        WSACleanup
+WSOCK32.DLL        1f        WSAStartup
+WSOCK32.DLL        23        accept
+WSOCK32.DLL        24        bind
+WSOCK32.DLL        25        closesocket
+WSOCK32.DLL        2a        gethostname
+WSOCK32.DLL        34        htons
+WSOCK32.DLL        39        listen
+WSOCK32.DLL        3d        recv
+WSOCK32.DLL        43        send
+WSOCK32.DLL        48        socket
+
+=== Packer / Compiler ===
+
+  MingWin32

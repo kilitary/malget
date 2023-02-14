@@ -1,0 +1,108 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:          0             0
+                blocks_in_file:          0             0
+                    num_relocs:          0             0
+             header_paragraphs:          0             0
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      17744        0x4550
+                            ss:          0             0
+                            sp:        332         0x14c
+                      checksum:          2             2
+                            ip:      21318        0x5346
+                            cs:       8519        0x2147
+            reloc_table_offset:          0             0
+                overlay_number:          0             0
+                     reserved0: 76280680761262080  0x10f00e000000000
+                        oem_id:        267         0x10b
+                      oem_info:          0             0
+                     reserved2:     188416       0x2e000
+                     reserved3:     131072       0x20000
+                     reserved4:          0             0
+                     reserved5:     447837       0x6d55d
+                     reserved6:       4096        0x1000
+                        lfanew:         12           0xc
+
+=== DOS STUB ===
+
+00000000: 4d 5a 00 00 00 00 00 00  00 00 00 00              |MZ..........    |
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          2             2
+                 TimeDateStamp:    "1987-09-11 01:35:02"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        271         0x10f  RELOCS_STRIPPED, EXECUTABLE_IMAGE
+                                                          LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      0.0
+                    SizeOfCode:     188416       0x2e000
+         SizeOfInitializedData:     131072       0x20000
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:     447837       0x6d55d
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:         12           0xc
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:     450560       0x6e000
+                 SizeOfHeaders:        512         0x200
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   6d707   size:0x       74
+  RESOURCE      rva:0x       0   size:0x        0
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x   6d77b   size:0x        a
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x       0   size:0x        0
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+               1000    4f000        0        0     0        0     0        0  c00000e0  RW- CODE IDATA UDATA
+              50000    1e000    1dc00      200     0        0     0        0  e00000e0  RWX CODE IDATA UDATA
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+KERNEL32.DLL        0        GetProcAddress
+KERNEL32.DLL        0        GetModuleHandleA
+
+=== Packer / Compiler ===
+
+  FSG v2.0

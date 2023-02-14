@@ -1,0 +1,179 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        224          0xe0
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+    93  5d       4035   fc3         3   3
+     1   1          0     0        75  4b
+   125  7d      50727  c627        16  10
+   110  6e      50727  c627        26  1a
+   109  6d      50727  c627        72  48
+   120  78      50727  c627         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          3             3
+                 TimeDateStamp:    "2010-02-16 14:52:54"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        259         0x103  RELOCS_STRIPPED, EXECUTABLE_IMAGE
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      8.0
+                    SizeOfCode:     180224       0x2c000
+         SizeOfInitializedData:      16384        0x4000
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:     159399       0x26ea7
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     184320       0x2d000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:       4096        0x1000
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:     200704       0x31000
+                 SizeOfHeaders:       4096        0x1000
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   2e504   size:0x       28
+  RESOURCE      rva:0x       0   size:0x        0
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x   2e218   size:0x       40
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x   2d000   size:0x       f4
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000    2bee4    2c000     1000     0        0     0        0  e0000020  RWX CODE
+  .rdata      2d000     1a72     2000    2d000     0        0     0        0  40000040  R-- IDATA
+  .data       2f000     187c     1000    2f000     0        0     0        0  c0000040  RW- IDATA
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+KERNEL32.dll      110        GetCommandLineA
+KERNEL32.dll      216        HeapFree
+KERNEL32.dll      1e9        GetVersionExA
+KERNEL32.dll      210        HeapAlloc
+KERNEL32.dll      1a3        GetProcessHeap
+KERNEL32.dll      34a        SetUnhandledExceptionFilter
+KERNEL32.dll      1a0        GetProcAddress
+KERNEL32.dll      17f        GetModuleHandleA
+KERNEL32.dll       b9        ExitProcess
+KERNEL32.dll      3a4        WriteFile
+KERNEL32.dll      1b9        GetStdHandle
+KERNEL32.dll      17d        GetModuleFileNameA
+KERNEL32.dll       f6        FreeEnvironmentStringsA
+KERNEL32.dll      155        GetEnvironmentStrings
+KERNEL32.dll       f7        FreeEnvironmentStringsW
+KERNEL32.dll      394        WideCharToMultiByte
+KERNEL32.dll      171        GetLastError
+KERNEL32.dll      157        GetEnvironmentStringsW
+KERNEL32.dll      324        SetHandleCount
+KERNEL32.dll      166        GetFileType
+KERNEL32.dll      1b7        GetStartupInfoA
+KERNEL32.dll       81        DeleteCriticalSection
+KERNEL32.dll      365        TlsGetValue
+KERNEL32.dll      363        TlsAlloc
+KERNEL32.dll      366        TlsSetValue
+KERNEL32.dll      364        TlsFree
+KERNEL32.dll      22c        InterlockedIncrement
+KERNEL32.dll      328        SetLastError
+KERNEL32.dll      146        GetCurrentThreadId
+KERNEL32.dll      228        InterlockedDecrement
+KERNEL32.dll      214        HeapDestroy
+KERNEL32.dll      212        HeapCreate
+KERNEL32.dll      383        VirtualFree
+KERNEL32.dll      2a3        QueryPerformanceCounter
+KERNEL32.dll      1df        GetTickCount
+KERNEL32.dll      143        GetCurrentProcessId
+KERNEL32.dll      1ca        GetSystemTimeAsFileTime
+KERNEL32.dll      251        LeaveCriticalSection
+KERNEL32.dll       98        EnterCriticalSection
+KERNEL32.dll      35e        TerminateProcess
+KERNEL32.dll      142        GetCurrentProcess
+KERNEL32.dll      36e        UnhandledExceptionFilter
+KERNEL32.dll      239        IsDebuggerPresent
+KERNEL32.dll      252        LoadLibraryA
+KERNEL32.dll      223        InitializeCriticalSection
+KERNEL32.dll      356        Sleep
+KERNEL32.dll      104        GetCPInfo
+KERNEL32.dll       fd        GetACP
+KERNEL32.dll      193        GetOEMCP
+KERNEL32.dll      23f        IsValidCodePage
+KERNEL32.dll      381        VirtualAlloc
+KERNEL32.dll      21a        HeapReAlloc
+KERNEL32.dll      2d7        RtlUnwind
+KERNEL32.dll      21c        HeapSize
+KERNEL32.dll      275        MultiByteToWideChar
+KERNEL32.dll      174        GetLocaleInfoA
+KERNEL32.dll      244        LCMapStringA
+KERNEL32.dll      245        LCMapStringW
+KERNEL32.dll      1ba        GetStringTypeA
+KERNEL32.dll      1bd        GetStringTypeW
+
+=== Packer / Compiler ===
+
+  MS Visual C++ v8.0

@@ -1,0 +1,187 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0: 1672082308236662  0x5f0c000048576
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        192          0xc0
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+    93  5d       4035   fc3         3   3
+     1   1          0     0         1   1
+    95  5f       3077   c05         1   1
+    90  5a       3077   c05         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          3             3
+                 TimeDateStamp:    "2011-03-08 12:46:37"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        782         0x30e  EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED
+                                                          LOCAL_SYMS_STRIPPED, 32BIT_MACHINE
+                                                          DEBUG_STRIPPED
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     4.21
+                    SizeOfCode:     294912       0x48000
+         SizeOfInitializedData:      90112       0x16000
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:       4100        0x1004
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     299008       0x49000
+                     ImageBase:   16777216     0x1000000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:       4096        0x1000
+        OperatingSystemVersion:                      6.1
+                  ImageVersion:                      6.1
+              SubsystemVersion:                      5.0
+                     Reserved1:          0             0
+                   SizeOfImage:     389120       0x5f000
+                 SizeOfHeaders:       4096        0x1000
+                      CheckSum:     410584       0x643d8
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:      32768        0x8000  TERMINAL_SERVER_AWARE
+            SizeOfStackReserve:     262144       0x40000
+             SizeOfStackCommit:       8192        0x2000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   4afb0   size:0x       3c
+  RESOURCE      rva:0x   4b000   size:0x    13bdc
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x       0   size:0x        0
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000    48000    476f6     1000     0        0     0        0  60000020  R-X CODE
+  .data       49000     16f8     2000    49000     0        0     0        0  c0000040  RW- IDATA
+  .rsrc       4b000    13bdc    14000    4b000     0        0     0        0  40000040  R-- IDATA
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0x4b372  1252     0     1640  ICON          #1
+    0x4b9da  1252     0      744  ICON          #2
+    0x4bcc2  1252     0      488  ICON          #3
+    0x4beaa  1252     0      296  ICON          #4
+    0x4bfd2  1252     0     3752  ICON          #5
+    0x4ce7a  1252     0     2216  ICON          #6
+    0x4d722  1252     0     1736  ICON          #7
+    0x4ddea  1252     0     1384  ICON          #8
+    0x4e352  1252     0    55762  ICON          #9
+    0x5bd24  1252     0     9640  ICON          #10
+    0x4b2e0  1252     0      146  GROUP_ICON    #121
+    0x5e2cc  1252     0     1060  VERSION       #1
+    0x5e6f0  1252     0     1260  #25           #10001
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+kernel32.dll      177        GetModuleHandleA
+kernel32.dll      374        VirtualProtect
+kernel32.dll      189        GetProcAddress
+kernel32.dll      1f1        HeapCreate
+kernel32.dll      1f3        HeapDestroy
+kernel32.dll      1f5        HeapFree
+kernel32.dll      1ef        HeapAlloc
+kernel32.dll      2b1        RtlUnwind
+kernel32.dll      13a        GetCurrentProcess
+kernel32.dll      220        LCMapStringA
+kernel32.dll      241        LoadLibraryA
+kernel32.dll       b6        ExitProcess
+kernel32.dll       4d        CreateFileA
+kernel32.dll       2e        CloseHandle
+user32.dll         27        CharLowerBuffA
+user32.dll        280        SetWindowLongA
+user32.dll         44        CloseWindow
+user32.dll         60        CreateWindowExA
+user32.dll        2d8        wsprintfA
+advapi32.dll      1ca        RegCloseKey
+advapi32.dll      1da        RegEnumValueA
+advapi32.dll      1cd        RegCreateKeyA
+advapi32.dll      1d6        RegEnumKeyA
+advapi32.dll      1d3        RegDeleteValueA
+advapi32.dll      1e3        RegOpenKeyA
+advapi32.dll      1ec        RegQueryValueA
+advapi32.dll      1f9        RegSetValueA
+advapi32.dll      1d1        RegDeleteKeyA
+
+=== VERSION INFO ===
+
+# VS_FIXEDFILEINFO:
+  FileVersion         :  9.0.8112.16421
+  ProductVersion      :  9.0.8112.16421
+  StrucVersion        :  0x10000
+  FileFlagsMask       :  0x3f
+  FileFlags           :  0
+  FileOS              :  0x40004
+  FileType            :  1
+  FileSubtype         :  0
+
+# StringTable 040904B0:
+  CompanyName         :  "Microsoft Corporation"
+  FileDescription     :  "Win32 Cabinet Self-Extractor                                           "
+  FileVersion         :  "9.00.8112.16421 (WIN7_IE9_RTM.110308-0330)"
+  InternalName        :  "Wextract                "
+  LegalCopyright      :  "© Microsoft Corporation. All rights reserved."
+  OriginalFilename    :  "WEXTRACT.EXE            "
+  ProductName         :  "Windows® Internet Explorer"
+  ProductVersion      :  "9.00.8112.16421"
+
+  VarFileInfo         :  [ 0x409, 0x4b0 ]
+
+=== Packer / Compiler ===
+
+  MS Visual C++ v7.1 EXE / v7.0

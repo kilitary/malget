@@ -1,0 +1,304 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:         80          0x50
+                blocks_in_file:          2             2
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:         15           0xf
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:         26          0x1a
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        128          0x80
+
+=== DOS STUB ===
+
+00000000: ba 10 00 0e 1f b4 09 cd  21 b8 01 4c cd 21 90 90  |........!..L.!..|
+00000010: 54 68 69 73 20 70 72 6f  67 72 61 6d 20 6d 75 73  |This program mus|
+00000020: 74 20 62 65 20 72 75 6e  20 75 6e 64 65 72 20 57  |t be run under W|
+00000030: 69 6e 33 32 0d 0a 24 37  00 00 00 00 00 00 00 00  |in32..$7........|
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          7             7
+                 TimeDateStamp:    "1992-06-19 22:22:17"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:      33166        0x818e  EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED
+                                                          LOCAL_SYMS_STRIPPED, BYTES_REVERSED_LO
+                                                          32BIT_MACHINE, BYTES_REVERSED_HI
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     2.25
+                    SizeOfCode:      59392        0xe800
+         SizeOfInitializedData:      13312        0x3400
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:      60932        0xee04
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:      65536       0x10000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:     103936       0x19600
+                 SizeOfHeaders:       1024         0x400
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:      16384        0x4000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   13000   size:0x     1066
+  RESOURCE      rva:0x   19000   size:0x      600
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x   16000   size:0x       18
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x       0   size:0x        0
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  CODE         1000     f000     e77e      400     0        0     0        0  60000020  R-X CODE
+  DATA        10000     1000      46f     ec00     0        0     0        0  c0000040  RW- IDATA
+  BSS         11000     2000        0     f200     0        0     0        0  c0000000  RW-
+  .idata      13000     2000     1068     f200     0        0     0        0  c0000040  RW- IDATA
+  .tls        15000     1000        0    10400     0        0     0        0  c0000000  RW-
+  .rdata      16000     3000       13    10400     0        0     0        0  50000040  R-- IDATA SHARED
+  .rsrc       19000      600      4e3    10600     0        0     0        0  50000040  R-- IDATA SHARED
+
+=== TLS ===
+
+ RAW_START    RAW_END    INDEX   CALLBKS  ZEROFILL     FLAGS
+    415000     415008   410098    416010         0         0
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0x10750     0 0x418      744  ICON          #1
+    0x10a38     0     0       16  RCDATA        DVCLAL
+    0x10a48     0     0      132  RCDATA        PACKAGEINFO
+    0x10acc     0 0x418       20  GROUP_ICON    MAINICON
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+kernel32.dll        0        GetCurrentThreadId
+kernel32.dll        0        GetLastError
+kernel32.dll        0        ExitProcess
+kernel32.dll        0        CreateThread
+kernel32.dll        0        WriteFile
+kernel32.dll        0        UnhandledExceptionFilter
+kernel32.dll        0        SetFilePointer
+kernel32.dll        0        SetEndOfFile
+kernel32.dll        0        RtlUnwind
+kernel32.dll        0        ReadFile
+kernel32.dll        0        RaiseException
+kernel32.dll        0        GetStdHandle
+kernel32.dll        0        GetFileSize
+kernel32.dll        0        GetFileType
+kernel32.dll        0        CreateFileA
+kernel32.dll        0        CloseHandle
+kernel32.dll        0        GetCommandLineA
+kernel32.dll        0        TlsSetValue
+kernel32.dll        0        TlsGetValue
+kernel32.dll        0        LocalAlloc
+kernel32.dll        0        GetModuleHandleA
+kernel32.dll        0        GetModuleFileNameA
+kernel32.dll        0        FreeLibrary
+kernel32.dll        0        HeapFree
+kernel32.dll        0        HeapReAlloc
+kernel32.dll        0        HeapAlloc
+kernel32.dll        0        GetProcessHeap
+user32.dll          0        CharNextA
+oleaut32.dll        0        SysFreeString
+oleaut32.dll        0        SysReAllocStringLen
+advapi32.dll        0        RegSetValueExA
+advapi32.dll        0        RegQueryValueExA
+advapi32.dll        0        RegOpenKeyExA
+advapi32.dll        0        RegEnumValueA
+advapi32.dll        0        RegEnumKeyA
+advapi32.dll        0        RegDeleteValueA
+advapi32.dll        0        RegDeleteKeyA
+advapi32.dll        0        RegCreateKeyExA
+advapi32.dll        0        RegCloseKey
+advapi32.dll        0        OpenProcessToken
+advapi32.dll        0        LookupPrivilegeNameA
+advapi32.dll        0        GetUserNameA
+advapi32.dll        0        GetTokenInformation
+advapi32.dll        0        AdjustTokenPrivileges
+kernel32.dll        0        WriteFile
+kernel32.dll        0        WaitForSingleObject
+kernel32.dll        0        TerminateThread
+kernel32.dll        0        TerminateProcess
+kernel32.dll        0        SuspendThread
+kernel32.dll        0        Sleep
+kernel32.dll        0        SetSystemTime
+kernel32.dll        0        SetProcessWorkingSetSize
+kernel32.dll        0        SetPriorityClass
+kernel32.dll        0        SetFileTime
+kernel32.dll        0        SetFileAttributesA
+kernel32.dll        0        SetErrorMode
+kernel32.dll        0        ResumeThread
+kernel32.dll        0        RemoveDirectoryA
+kernel32.dll        0        ReadFile
+kernel32.dll        0        OpenProcess
+kernel32.dll        0        MoveFileA
+kernel32.dll        0        LoadLibraryA
+kernel32.dll        0        GlobalUnlock
+kernel32.dll        0        GlobalLock
+kernel32.dll        0        GlobalAlloc
+kernel32.dll        0        GetWindowsDirectoryA
+kernel32.dll        0        GetVersionExA
+kernel32.dll        0        GetTimeZoneInformation
+kernel32.dll        0        GetTempPathA
+kernel32.dll        0        GetSystemTime
+kernel32.dll        0        GetSystemDirectoryA
+kernel32.dll        0        GetProcAddress
+kernel32.dll        0        GetModuleHandleA
+kernel32.dll        0        GetLogicalDrives
+kernel32.dll        0        GetLocalTime
+kernel32.dll        0        GetFileTime
+kernel32.dll        0        GetFileSize
+kernel32.dll        0        GetFileAttributesA
+kernel32.dll        0        GetEnvironmentVariableA
+kernel32.dll        0        GetDriveTypeA
+kernel32.dll        0        GetCurrentProcessId
+kernel32.dll        0        GetCurrentProcess
+kernel32.dll        0        GetComputerNameA
+kernel32.dll        0        FreeLibrary
+kernel32.dll        0        FindNextFileA
+kernel32.dll        0        FindFirstFileA
+kernel32.dll        0        FindClose
+kernel32.dll        0        ExitProcess
+kernel32.dll        0        DeviceIoControl
+kernel32.dll        0        DeleteFileA
+kernel32.dll        0        CreateProcessA
+kernel32.dll        0        CreateFileA
+kernel32.dll        0        CreateDirectoryA
+kernel32.dll        0        CopyFileA
+kernel32.dll        0        CloseHandle
+gdi32.dll           0        TextOutA
+gdi32.dll           0        SetTextColor
+gdi32.dll           0        SetBkMode
+gdi32.dll           0        SetBkColor
+gdi32.dll           0        SelectObject
+gdi32.dll           0        CreateFontIndirectA
+gdi32.dll           0        CreateFontA
+user32.dll          0        CreateWindowExA
+user32.dll          0        mouse_event
+user32.dll          0        TranslateMessage
+user32.dll          0        SystemParametersInfoA
+user32.dll          0        SwapMouseButton
+user32.dll          0        ShowWindow
+user32.dll          0        SetWindowTextA
+user32.dll          0        SetWindowPos
+user32.dll          0        SetWindowLongA
+user32.dll          0        SetFocus
+user32.dll          0        SetCursorPos
+user32.dll          0        SetClipboardData
+user32.dll          0        SendMessageA
+user32.dll          0        RegisterClassA
+user32.dll          0        OpenClipboard
+user32.dll          0        MessageBoxA
+user32.dll          0        LoadIconA
+user32.dll          0        LoadCursorA
+user32.dll          0        IsWindowVisible
+user32.dll          0        IsIconic
+user32.dll          0        GetWindowThreadProcessId
+user32.dll          0        GetWindowTextLengthA
+user32.dll          0        GetWindowTextA
+user32.dll          0        GetWindowLongA
+user32.dll          0        GetSystemMetrics
+user32.dll          0        GetMessageA
+user32.dll          0        GetKeyState
+user32.dll          0        GetForegroundWindow
+user32.dll          0        GetDesktopWindow
+user32.dll          0        GetCursorPos
+user32.dll          0        GetClipboardData
+user32.dll          0        GetClassNameA
+user32.dll          0        GetAsyncKeyState
+user32.dll          0        FindWindowExA
+user32.dll          0        FindWindowA
+user32.dll          0        ExitWindowsEx
+user32.dll          0        EnumWindows
+user32.dll          0        EndPaint
+user32.dll          0        EnableWindow
+user32.dll          0        EmptyClipboard
+user32.dll          0        DispatchMessageA
+user32.dll          0        DestroyWindow
+user32.dll          0        DefWindowProcA
+user32.dll          0        CloseClipboard
+user32.dll          0        ClipCursor
+user32.dll          0        CallWindowProcA
+user32.dll          0        BeginPaint
+wininet.dll         0        InternetOpenUrlA
+wininet.dll         0        InternetOpenA
+wininet.dll         0        InternetCloseHandle
+wsock32.dll         0        WSACleanup
+wsock32.dll         0        WSAStartup
+wsock32.dll         0        WSAAsyncSelect
+wsock32.dll         0        gethostname
+wsock32.dll         0        gethostbyname
+wsock32.dll         0        socket
+wsock32.dll         0        send
+wsock32.dll         0        recv
+wsock32.dll         0        listen
+wsock32.dll         0        inet_ntoa
+wsock32.dll         0        inet_addr
+wsock32.dll         0        htons
+wsock32.dll         0        htonl
+wsock32.dll         0        connect
+wsock32.dll         0        closesocket
+wsock32.dll         0        bind
+wsock32.dll         0        accept
+advapi32.dll        0        UnlockServiceDatabase
+advapi32.dll        0        StartServiceA
+advapi32.dll        0        OpenServiceA
+advapi32.dll        0        OpenSCManagerA
+advapi32.dll        0        LockServiceDatabase
+advapi32.dll        0        EnumServicesStatusA
+advapi32.dll        0        DeleteService
+advapi32.dll        0        ControlService
+advapi32.dll        0        CloseServiceHandle
+advapi32.dll        0        ChangeServiceConfigA
+shell32.dll         0        ShellExecuteA
+wininet.dll         0        InternetCheckConnectionA

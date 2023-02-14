@@ -1,0 +1,354 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        264         0x108
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+   241  f1      40116  9cb4        13   d
+   243  f3      40116  9cb4       139  8b
+   242  f2      40116  9cb4        24  18
+   259  103      23907  5d63        22  16
+   260  104      23907  5d63        19  13
+   261  105      23907  5d63        45  2d
+   131  83      30729  7809        10   a
+   147  93      30729  7809         3   3
+     1   1          0     0       248  f8
+   261  105      23918  5d6e        48  30
+   256  100      23918  5d6e         1   1
+   255  ff      23918  5d6e         1   1
+   258  102      23918  5d6e         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          6             6
+                 TimeDateStamp:    "2016-08-14 19:15:49"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        258         0x102  EXECUTABLE_IMAGE, 32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     14.0
+                    SizeOfCode:     188416       0x2e000
+         SizeOfInitializedData:     334848       0x51c00
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:     117429       0x1cab5
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     192512       0x2f000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      5.1
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      5.1
+                     Reserved1:          0             0
+                   SizeOfImage:     663552       0xa2000
+                 SizeOfHeaders:       1024         0x400
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:      33088        0x8140  DYNAMIC_BASE, NX_COMPAT
+                                                          TERMINAL_SERVER_AWARE
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x   37d70   size:0x       34
+  IMPORT        rva:0x   37da4   size:0x       28
+  RESOURCE      rva:0x   5a000   size:0x    453a8
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x   a0000   size:0x     1f8c
+  DEBUG         rva:0x   35ec0   size:0x       54
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x   30890   size:0x       40
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x   2f000   size:0x      21c
+  Delay_IAT     rva:0x   37334   size:0x      120
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000    2dfe8    2e000      400     0        0     0        0  60000020  R-X CODE
+  .rdata      2f000     99d0     9a00    2e400     0        0     0        0  40000040  R-- IDATA
+  .data       39000    1f8b8      c00    37e00     0        0     0        0  c0000040  RW- IDATA
+  .gfids      59000       f0      200    38a00     0        0     0        0  40000040  R-- IDATA
+  .rsrc       5a000    453a8    45400    38c00     0        0     0        0  40000040  R-- IDATA
+  .reloc      a0000     1f8c     2000    7e000     0        0     0        0  42000040  R-- IDATA DISCARDABLE
+
+=== STRINGS ===
+
+   ID    ID  LANG  STRING
+  100    64   409  "Select destination folder"
+  101    65   409  "Extracting %s"
+  102    66   409  "Skipping %s"
+  103    67   409  "Unexpected end of archive"
+  104    68   409  "The file \"%s\" header is corrupt"
+  105    69   409  "Corrupt header is found"
+  106    6a   409  "Main archive header is corrupt"
+  110    6e   409  "The archive comment header is corrupt"
+  111    6f   409  "The archive comment is corrupt"
+  112    70   409  "Not enough memory"
+  113    71   409  "Unknown method in %s"
+  114    72   409  "Cannot open %s"
+  120    78   409  "Cannot create %s"
+  121    79   409  "Cannot create folder %s"
+  122    7a   409  "Checksum error in the encrypted file %s. Corrupt file or wrong password."
+  123    7b   409  "Checksum error in %s"
+  124    7c   409  "Packed data checksum error in %s"
+  131    83   409  "Write error in the file %s. Probably the disk is full"
+  132    84   409  "Read error in the file %s"
+  133    85   409  "File close error"
+  134    86   409  "The required volume is absent"
+  140    8c   409  "The archive is either in unknown format or damaged"
+  141    8d   409  "Extracting from %s"
+  142    8e   409  "Next volume"
+  143    8f   409  "The archive header is corrupt"
+  144    90   409  "Close"
+  150    96   409  "Error"
+  151    97   409  "Errors encountered while performing the operation\nLook at the information window for more details"
+  152    98   409  "bytes"
+  153    99   409  "modified on"
+  154    9a   409  "folder is not accessible"
+  160    a0   409  "Some files could not be created.\nPlease close all applications, reboot Windows and restart this installation"
+  161    a1   409  "Some installation files are corrupt.\nPlease download a fresh copy and retry the installation"
+  162    a2   409  "All files"
+  170    aa   409  "<ul><li>Press <b>Install</b> button to start extraction.</li><br><br>"
+  171    ab   409  "<ul><li>Press <b>Extract</b> button to start extraction.</li><br><br>"
+  172    ac   409  "<li>Use <b>Browse</b> button to select the destination"
+  173    ad   409  "folder from the folders tree. It can be also entered"
+  174    ae   409  "manually.</li><br><br>"
+  175    af   409  "<li>If the destination folder does not exist, it will be"
+  176    b0   409  "created automatically before extraction.</li></ul>"
+  180    b4   409  "The archive is corrupt"
+  185    b9   409  "Extracting files to %s folder"
+  186    ba   409  "Extracting files to temporary folder"
+  190    be   409  "Extract"
+  191    bf   409  "Extraction progress"
+  195    c3   409  "Total path and file name length must not exceed %d characters"
+  200    c8   409  "Unknown encryption method in %s"
+  201    c9   409  "The specified password is incorrect."
+  210    d2   409  "Cannot copy %s to %s."
+  220    dc   409  "Cannot create symbolic link %s"
+  221    dd   409  "Cannot create hard link %s"
+  225    e1   409  "You may need to run this self-extracting archive as administrator"
+  230    e6   409  "Pause"
+  231    e7   409  "Continue"
+  240    f0   409  "Security warning"
+  241    f1   409  "Please remove %s from folder %s. It is unsecure to run %s until it is done."
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0x390ec  1252 0x409     2998  BITMAP        #101
+    0x39ca4  1252 0x400   270376  ICON          #1
+    0x7bccc  1252 0x409      646  DIALOG        ASKNEXTVOL
+    0x7bf54  1252 0x409      314  DIALOG        GETPASSWORD1
+    0x7c090  1252 0x409      236  DIALOG        LICENSEDLG
+    0x7c17c  1252 0x409      302  DIALOG        RENAMEDLG
+    0x7c2ac  1252 0x409      824  DIALOG        REPLACEFILEDLG
+    0x7c5e4  1252 0x409      594  DIALOG        STARTDLG
+    0x7c838  1252 0x409      482  STRING        #7
+    0x7ca1c  1252 0x409      460  STRING        #8
+    0x7cbe8  1252 0x409      494  STRING        #9
+    0x7cdd8  1252 0x409      326  STRING        #10
+    0x7cf20  1252 0x409     1094  STRING        #11
+    0x7d368  1252 0x409      358  STRING        #12
+    0x7d4d0  1252 0x409      288  STRING        #13
+    0x7d5f0  1252 0x409      186  STRING        #14
+    0x7d6ac  1252 0x409      188  STRING        #15
+    0x7d768  1252 0x409      214  STRING        #16
+    0x7d840  1252 0x400       20  GROUP_ICON    #100
+    0x7d854  1252 0x409     1875  MANIFEST      #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+KERNEL32.dll      202        GetLastError
+KERNEL32.dll      473        SetLastError
+KERNEL32.dll      1c0        GetCurrentProcess
+KERNEL32.dll       dd        DeviceIoControl
+KERNEL32.dll      46a        SetFileTime
+KERNEL32.dll       52        CloseHandle
+KERNEL32.dll       81        CreateDirectoryW
+KERNEL32.dll      403        RemoveDirectoryW
+KERNEL32.dll       8f        CreateFileW
+KERNEL32.dll       d6        DeleteFileW
+KERNEL32.dll       93        CreateHardLinkW
+KERNEL32.dll      261        GetShortPathNameW
+KERNEL32.dll      20f        GetLongPathNameW
+KERNEL32.dll      363        MoveFileW
+KERNEL32.dll      1f3        GetFileType
+KERNEL32.dll      264        GetStdHandle
+KERNEL32.dll      525        WriteFile
+KERNEL32.dll      3c0        ReadFile
+KERNEL32.dll      157        FlushFileBuffers
+KERNEL32.dll      453        SetEndOfFile
+KERNEL32.dll      466        SetFilePointer
+KERNEL32.dll      461        SetFileAttributesW
+KERNEL32.dll      1ea        GetFileAttributesW
+KERNEL32.dll      12e        FindClose
+KERNEL32.dll      139        FindFirstFileW
+KERNEL32.dll      145        FindNextFileW
+KERNEL32.dll      2a4        GetVersionExW
+KERNEL32.dll      1bf        GetCurrentDirectoryW
+KERNEL32.dll      1fb        GetFullPathNameW
+KERNEL32.dll      15c        FoldStringW
+KERNEL32.dll      214        GetModuleFileNameW
+KERNEL32.dll      218        GetModuleHandleW
+KERNEL32.dll      14e        FindResourceW
+KERNEL32.dll      162        FreeLibrary
+KERNEL32.dll      245        GetProcAddress
+KERNEL32.dll      1c1        GetCurrentProcessId
+KERNEL32.dll      119        ExitProcess
+KERNEL32.dll      493        SetThreadExecutionState
+KERNEL32.dll      4b2        Sleep
+KERNEL32.dll      33f        LoadLibraryW
+KERNEL32.dll      270        GetSystemDirectoryW
+KERNEL32.dll       64        CompareStringW
+KERNEL32.dll       10        AllocConsole
+KERNEL32.dll      15f        FreeConsole
+KERNEL32.dll       17        AttachConsole
+KERNEL32.dll      524        WriteConsoleW
+KERNEL32.dll      246        GetProcessAffinityMask
+KERNEL32.dll       b5        CreateThread
+KERNEL32.dll      499        SetThreadPriority
+KERNEL32.dll      2e2        InitializeCriticalSection
+KERNEL32.dll       ee        EnterCriticalSection
+KERNEL32.dll      339        LeaveCriticalSection
+KERNEL32.dll       d1        DeleteCriticalSection
+KERNEL32.dll      459        SetEvent
+KERNEL32.dll      40f        ResetEvent
+KERNEL32.dll      3fe        ReleaseSemaphore
+KERNEL32.dll      4f9        WaitForSingleObject
+KERNEL32.dll       85        CreateEventW
+KERNEL32.dll       ae        CreateSemaphoreW
+KERNEL32.dll      277        GetSystemTime
+KERNEL32.dll      4be        SystemTimeToTzSpecificLocalTime
+KERNEL32.dll      4d0        TzSpecificLocalTimeToSystemTime
+KERNEL32.dll      4bd        SystemTimeToFileTime
+KERNEL32.dll      124        FileTimeToLocalFileTime
+KERNEL32.dll      346        LocalFileTimeToFileTime
+KERNEL32.dll      125        FileTimeToSystemTime
+KERNEL32.dll      172        GetCPInfo
+KERNEL32.dll      2fe        IsDBCSLeadByte
+KERNEL32.dll      367        MultiByteToWideChar
+KERNEL32.dll      511        WideCharToMultiByte
+KERNEL32.dll      2b3        GlobalAlloc
+KERNEL32.dll      293        GetTickCount
+KERNEL32.dll      44d        SetCurrentDirectoryW
+KERNEL32.dll      1df        GetExitCodeProcess
+KERNEL32.dll      203        GetLocalTime
+KERNEL32.dll      357        MapViewOfFile
+KERNEL32.dll      4d6        UnmapViewOfFile
+KERNEL32.dll       8c        CreateFileMappingW
+KERNEL32.dll      379        OpenFileMappingW
+KERNEL32.dll      187        GetCommandLineW
+KERNEL32.dll      457        SetEnvironmentVariableW
+KERNEL32.dll      11d        ExpandEnvironmentStringsW
+KERNEL32.dll      285        GetTempPathW
+KERNEL32.dll      360        MoveFileExW
+KERNEL32.dll      206        GetLocaleInfoW
+KERNEL32.dll      297        GetTimeFormatW
+KERNEL32.dll      1c8        GetDateFormatW
+KERNEL32.dll      233        GetNumberFormatW
+KERNEL32.dll      3b1        RaiseException
+KERNEL32.dll      273        GetSystemInfo
+KERNEL32.dll      4ef        VirtualProtect
+KERNEL32.dll      4f1        VirtualQuery
+KERNEL32.dll      33d        LoadLibraryExA
+KERNEL32.dll      304        IsProcessorFeaturePresent
+KERNEL32.dll      300        IsDebuggerPresent
+KERNEL32.dll      4d3        UnhandledExceptionFilter
+KERNEL32.dll      4a5        SetUnhandledExceptionFilter
+KERNEL32.dll      263        GetStartupInfoW
+KERNEL32.dll      3a7        QueryPerformanceCounter
+KERNEL32.dll      1c5        GetCurrentThreadId
+KERNEL32.dll      279        GetSystemTimeAsFileTime
+KERNEL32.dll      2e7        InitializeSListHead
+KERNEL32.dll      4c0        TerminateProcess
+KERNEL32.dll      418        RtlUnwind
+KERNEL32.dll       ea        EncodePointer
+KERNEL32.dll      2e3        InitializeCriticalSectionAndSpinCount
+KERNEL32.dll      4c5        TlsAlloc
+KERNEL32.dll      4c7        TlsGetValue
+KERNEL32.dll      4c8        TlsSetValue
+KERNEL32.dll      4c6        TlsFree
+KERNEL32.dll      33e        LoadLibraryExW
+KERNEL32.dll      3a8        QueryPerformanceFrequency
+KERNEL32.dll      217        GetModuleHandleExW
+KERNEL32.dll      213        GetModuleFileNameA
+KERNEL32.dll      168        GetACP
+KERNEL32.dll      2cf        HeapFree
+KERNEL32.dll      2cb        HeapAlloc
+KERNEL32.dll      2d2        HeapReAlloc
+KERNEL32.dll      269        GetStringTypeW
+KERNEL32.dll      32d        LCMapStringW
+KERNEL32.dll      133        FindFirstFileExA
+KERNEL32.dll      143        FindNextFileA
+KERNEL32.dll      30a        IsValidCodePage
+KERNEL32.dll      237        GetOEMCP
+KERNEL32.dll      186        GetCommandLineA
+KERNEL32.dll      1da        GetEnvironmentStringsW
+KERNEL32.dll      161        FreeEnvironmentStringsW
+KERNEL32.dll      24a        GetProcessHeap
+KERNEL32.dll      487        SetStdHandle
+KERNEL32.dll      2d4        HeapSize
+KERNEL32.dll      19a        GetConsoleCP
+KERNEL32.dll      1ac        GetConsoleMode
+KERNEL32.dll      467        SetFilePointerEx
+KERNEL32.dll       ca        DecodePointer
+
+=== EXPORTS ===
+
+# module "sfxrar.exe"
+# flags=0x0  ts="2016-08-14 19:15:49"  version=0.0  ord_base=1
+# nFuncs=0  nNames=0
+
+=== Packer / Compiler ===
+
+  MS Visual C++ v8.0

@@ -1,0 +1,184 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        216          0xd8
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+   149  95      21022  521e        23  17
+   132  84      21022  521e        73  49
+   131  83      21022  521e       166  a6
+   123  7b      50727  c627        11   b
+     1   1          0     0       121  79
+   138  8a      21022  521e         2   2
+   145  91      21022  521e         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          3             3
+                 TimeDateStamp:    "2011-05-09 20:27:24"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        258         0x102  EXECUTABLE_IMAGE, 32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      9.0
+                    SizeOfCode:     122880       0x1e000
+         SizeOfInitializedData:     229376       0x38000
+       SizeOfUninitializedData:     503808       0x7b000
+           AddressOfEntryPoint:     628944       0x998d0
+                    BaseOfCode:     507904       0x7c000
+                    BaseOfData:     630784       0x9a000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      5.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      5.0
+                     Reserved1:          0             0
+                   SizeOfImage:     860160       0xd2000
+                 SizeOfHeaders:       4096        0x1000
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:      33088        0x8140  DYNAMIC_BASE, NX_COMPAT
+                                                          TERMINAL_SERVER_AWARE
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   d1304   size:0x      18c
+  RESOURCE      rva:0x   9a000   size:0x    37304
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x   d1490   size:0x       10
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x   99ab4   size:0x       48
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x       0   size:0x        0
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  UPX0         1000    7b000        0      400     0        0     0        0  e0000080  RWX UDATA
+  UPX1        7c000    1e000    1dc00      400     0        0     0        0  e0000040  RWX IDATA
+  .rsrc       9a000    38000    37600    1e000     0        0     0        0  c0000040  RW- IDATA
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+             1252     0        7  INTERVAL      INTERVAL
+             1252     0      133  URL           URL
+    0x1e528  1252     0     1640  ICON          #1
+    0x1eb94  1252     0      744  ICON          #2
+    0x1ee80  1252     0      488  ICON          #3
+    0x1f06c  1252     0      296  ICON          #4
+    0x1f198  1252     0    22337  ICON          #5
+    0x248e0  1252     0     3752  ICON          #6
+    0x2578c  1252     0     2216  ICON          #7
+    0x26038  1252     0     1736  ICON          #8
+    0x26704  1252     0     1384  ICON          #9
+    0x26c70  1252     0    67624  ICON          #10
+    0x3749c  1252     0    38056  ICON          #11
+    0x40948  1252     0    26600  ICON          #12
+    0x47134  1252     0    21640  ICON          #13
+    0x4c5c0  1252     0    16936  ICON          #14
+    0x507ec  1252     0     9640  ICON          #15
+    0x52d98  1252     0     4264  ICON          #16
+    0x53e44  1252     0     2440  ICON          #17
+    0x547d0  1252     0     1128  ICON          #18
+    0x54c3c  1252     0      258  GROUP_ICON    #1
+    0x54d44  1252     0     1120  VERSION       #1
+    0x551a8  1252 0x409      346  MANIFEST      #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+KERNEL32.DLL        0        LoadLibraryA
+KERNEL32.DLL        0        GetProcAddress
+KERNEL32.DLL        0        VirtualProtect
+KERNEL32.DLL        0        VirtualAlloc
+KERNEL32.DLL        0        VirtualFree
+KERNEL32.DLL        0        ExitProcess
+ADVAPI32.dll        0        RegCloseKey
+SHELL32.dll         0        ShellExecuteA
+urlmon.dll          0        URLDownloadToFileA
+WININET.dll         0        InternetOpenA
+
+=== VERSION INFO ===
+
+# VS_FIXEDFILEINFO:
+  FileVersion         :  2.0.0.0
+  ProductVersion      :  2.0.0.0
+  StrucVersion        :  0x10000
+  FileFlagsMask       :  0x3f
+  FileFlags           :  0
+  FileOS              :  4
+  FileType            :  1
+  FileSubtype         :  0
+
+  VarFileInfo         :  [ 0x0, 0x4b0 ]
+
+# StringTable 000004b0:
+  Comments            :  "O4o71BEVZxmuzjMgmQFl0DaArU4Ykg"
+  CompanyName         :  "fMRBAuRnc3cCTUYmD2ZzCvpYHHMfSp"
+  FileDescription     :  "ZS4nwIwmJNidNZNAlE9VxEHPcO4vhA"
+  FileVersion         :  "2.0.0.0"
+  InternalName        :  "assemblychange.exe"
+  LegalCopyright      :  "pIcYDHxjTnnuAThBZJVseMFQvNj5wY ©"
+  LegalTrademarks     :  "oeWZuA0REZvj5FWMv8xsnV4h5M4UuH"
+  OriginalFilename    :  "assemblychange.exe"
+  ProductName         :  "wzwNlAj9rdXSpW29qC56F3JAYT4jVP"
+  ProductVersion      :  "2.0.0.0"
+  Assembly Version    :  "1.5.0.0"
+
+=== Packer / Compiler ===
+
+  UPX v0.89.6 - v1.02 / v1.05 - v1.22

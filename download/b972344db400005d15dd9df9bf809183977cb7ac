@@ -1,0 +1,804 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        272         0x110
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+   225  e1      20806  5146         2   2
+   199  c7      41118  a09e         1   1
+   223  df      21005  520d        51  33
+   224  e0      21005  520d       177  b1
+   225  e1      21005  520d        53  35
+   131  83      30729  7809         9   9
+   147  93      30729  7809        37  25
+     1   1          0     0       544 220
+   234  ea      40629  9eb5        80  50
+   223  df      40629  9eb5         1   1
+   219  db      21005  520d         1   1
+   151  97          0     0         1   1
+   222  de      40629  9eb5         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          5             5
+                 TimeDateStamp:    "2019-07-23 00:35:11"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        290         0x122  EXECUTABLE_IMAGE, LARGE_ADDRESS_AWARE
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     12.0
+                    SizeOfCode:     581632       0x8e000
+         SizeOfInitializedData:     673280       0xa4600
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:     163850       0x2800a
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     585728       0x8f000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      5.1
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      5.1
+                     Reserved1:          0             0
+                   SizeOfImage:    1282048      0x139000
+                 SizeOfHeaders:       1024         0x400
+                      CheckSum:    1077544      0x107128
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:      32832        0x8040  DYNAMIC_BASE, TERMINAL_SERVER_AWARE
+            SizeOfStackReserve:    4194304      0x400000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    4194304      0x400000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   bc0cc   size:0x      17c
+  RESOURCE      rva:0x   c8000   size:0x    6834c
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x  131000   size:0x     7134
+  DEBUG         rva:0x   92bc0   size:0x       1c
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x   a4b50   size:0x       40
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x   8f000   size:0x      884
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000    8dfdd    8e000      400     0        0     0        0  60000020  R-X CODE
+  .rdata      8f000    2fd8e    2fe00    8e400     0        0     0        0  40000040  R-- IDATA
+  .data       bf000     8f74     5200    be200     0        0     0        0  c0000040  RW- IDATA
+  .rsrc       c8000    6834c    68400    c3400     0        0     0        0  40000040  R-- IDATA
+  .reloc     131000     7134     7200   12b800     0        0     0        0  42000040  R-- IDATA DISCARDABLE
+
+=== STRINGS ===
+
+   ID    ID  LANG  STRING
+  101    65   809  "(Paused) "
+  102    66   809  "AutoIt Error"
+  103    67   809  "AutoIt has detected the stack has become corrupt.\n\nStack corruption typically occurs when either the wrong calling convention is used or when the function is called with the wrong number of arguments.\n\nAutoIt supports the __stdcall (WINAPI) and __cdecl calling conventions.  The __stdcall (WINAPI) convention is used by default but __cdecl can be used instead.  See the DllCall() documentation for details on changing the calling convention."
+  104    68   809  "\"EndWith\" missing \"With\"."
+  105    69   809  "Badly formatted \"Func\" statement."
+  106    6a   809  "\"With\" missing \"EndWith\"."
+  107    6b   809  "Missing right bracket ')' in expression."
+  108    6c   809  "Missing operator in expression."
+  109    6d   809  "Unbalanced brackets in expression."
+  110    6e   809  "Error in expression."
+  111    6f   809  "Error parsing function call."
+  112    70   809  "Incorrect number of parameters in function call."
+  113    71   809  "\"ReDim\" used without an array variable."
+  114    72   809  "Illegal text at the end of statement (one statement per line)."
+  115    73   809  "\"If\" statement has no matching \"EndIf\" statement."
+  116    74   809  "\"Else\" statement with no matching \"If\" statement."
+  117    75   809  "\"EndIf\" statement with no matching \"If\" statement."
+  118    76   809  "Too many \"Else\" statements for matching \"If\" statement."
+  119    77   809  "\"While\" statement has no matching \"Wend\" statement."
+  120    78   809  "\"Wend\" statement with no matching \"While\" statement."
+  121    79   809  "Variable used without being declared."
+  122    7a   809  "Array variable has incorrect number of subscripts or subscript dimension range exceeded."
+  123    7b   809  "Variable subscript badly formatted."
+  124    7c   809  "Subscript used on non-accessible variable."
+  125    7d   809  "Too many subscripts used for an array."
+  126    7e   809  "Missing subscript dimensions in \"Dim\" statement."
+  127    7f   809  "No variable given for \"Dim\", \"Local\", \"Global\", \"Struct\" or \"Const\" statement."
+  128    80   809  "Expected a \"=\" operator in assignment statement."
+  129    81   809  "Invalid keyword at the start of this line."
+  130    82   809  "Array maximum size exceeded."
+  131    83   809  "\"Func\" statement has no matching \"EndFunc\"."
+  132    84   809  "Duplicate function name."
+  133    85   809  "Unknown function name."
+  134    86   809  "Unknown macro."
+  136    88   809  "Unable to get a list of running processes."
+  138    8a   809  "Invalid element in a DllStruct."
+  139    8b   809  "Unknown option or bad parameter specified."
+  140    8c   809  "Unable to load the internet libraries."
+  141    8d   809  "\"Struct\" statement has no matching \"EndStruct\"."
+  142    8e   809  "Unable to open file, the maximum number of open files has been exceeded."
+  143    8f   809  "\"ContinueLoop\" statement with no matching \"While\", \"Do\" or \"For\" statement."
+  144    90   809  "Invalid file filter given."
+  145    91   809  "Expected a variable in user function call."
+  146    92   809  "\"Do\" statement has no matching \"Until\" statement."
+  147    93   809  "\"Until\" statement with no matching \"Do\" statement."
+  148    94   809  "\"For\" statement is badly formatted."
+  149    95   809  "\"Next\" statement with no matching \"For\" statement."
+  150    96   809  "\"ExitLoop/ContinueLoop\" statements only valid from inside a For/Do/While loop."
+  151    97   809  "\"For\" statement has no matching \"Next\" statement."
+  152    98   809  "\"Case\" statement with no matching \"Select\"or \"Switch\" statement."
+  153    99   809  "\"EndSelect\" statement with no matching \"Select\" statement."
+  154    9a   809  "Recursion level has been exceeded - AutoIt will quit to prevent stack overflow."
+  155    9b   809  "Cannot make existing variables static."
+  156    9c   809  "Cannot make static variables into regular variables."
+  157    9d   809  "Badly formated Enum statement"
+  159    9f   809  "This keyword cannot be used after a \"Then\" keyword."
+  160    a0   809  "\"Select\" statement is missing \"EndSelect\" or \"Case\" statement."
+  161    a1   809  "\"If\" statements must have a \"Then\" keyword."
+  162    a2   809  "Badly formated Struct statement."
+  163    a3   809  "Cannot assign values to constants."
+  164    a4   809  "Cannot make existing variables into constants."
+  165    a5   809  "Only Object-type variables allowed in a \"With\" statement."
+  166    a6   809  "\"long_ptr\", \"int_ptr\" and \"short_ptr\" DllCall() types have been deprecated.  Use \"long*\", \"int*\" and \"short*\" instead."
+  167    a7   809  "Object referenced outside a \"With\" statement."
+  168    a8   809  "Nested \"With\" statements are not allowed."
+  169    a9   809  "Variable must be of type \"Object\"."
+  170    aa   809  "The requested action with this object has failed."
+  171    ab   809  "Variable appears more than once in function declaration."
+  172    ac   809  "ReDim array can not be initialized in this manner."
+  173    ad   809  "An array variable can not be used in this manner."
+  174    ae   809  "Can not redeclare a constant."
+  175    af   809  "Can not redeclare a parameter inside a user function."
+  176    b0   809  "Can pass constants by reference only to parameters with \"Const\" keyword."
+  177    b1   809  "Can not initialize a variable with itself."
+  178    b2   809  "Incorrect way to use this parameter."
+  179    b3   809  "\"EndSwitch\" statement with no matching \"Switch\" statement."
+  180    b4   809  "\"Switch\" statement is missing \"EndSwitch\" or \"Case\" statement."
+  181    b5   809  "\"ContinueCase\" statement with no matching \"Select\"or \"Switch\" statement."
+  182    b6   809  "Assert Failed!"
+  184    b8   809  "Obsolete function/parameter."
+  185    b9   809  "Invalid Exitcode (reserved for AutoIt internal use)."
+  186    ba   809  "Variable cannot be accessed in this manner."
+  187    bb   809  "Func reassign not allowed."
+  188    bc   809  "Func reassign on global level not allowed."
+ 5000  1388   809  "Unable to parse line."
+ 5001  1389   809  "Unable to open the script file."
+ 5002  138a   809  "String missing closing quote."
+ 5003  138b   809  "Badly formated variable or macro."
+ 5004  138c   809  "Missing separator character after keyword."
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0xc3b5c  1252 0x809      296  ICON          #1
+    0xc3c84  1252 0x809      296  ICON          #2
+    0xc3dac  1252 0x809      296  ICON          #3
+    0xc3ed4  1252 0x809     9640  ICON          #4
+    0xc647c  1252 0x809       80  MENU          #166
+    0xc64cc  1252 0x809     1428  STRING        #7
+    0xc6a60  1252 0x809     1674  STRING        #8
+    0xc70ec  1252 0x809     1168  STRING        #9
+    0xc757c  1252 0x809     1532  STRING        #10
+    0xc7b78  1252 0x809     1628  STRING        #11
+    0xc81d4  1252 0x809     1126  STRING        #12
+    0xc863c  1252 0x809      344  STRING        #313
+    0xc8794  1252     0    20738  FONT          CTIYYHLZRECQYJP
+    0xcd898  1252     0    20738  FONT          DIMJKPDMEWNPVJWJV
+    0xd299c  1252     0    20738  FONT          GIWHYLMUR
+    0xd7aa0  1252     0    20738  FONT          KHLHHGXUZ
+    0xdcba4  1252     0    20738  FONT          OGVVNYFMTDGLIMPRYNG
+    0xe1ca8  1252     0    20738  FONT          RJEJFYLYYJNYDZYZP
+    0xe6dac  1252     0    20738  FONT          RVAGEQIGRUPDAWUK
+    0xebeb0  1252     0    20738  FONT          VEZOOPY
+    0xf0fb4  1252     0    20738  FONT          VRWKSTEJ
+    0xf60b8  1252     0    20734  FONT          XLDVQDW
+    0xfb1b8  1252     0   196224  RCDATA        SCRIPT
+   0x12b038  1252 0x809       20  GROUP_ICON    #99
+   0x12b04c  1252 0x809       20  GROUP_ICON    #162
+   0x12b060  1252 0x809       20  GROUP_ICON    #164
+   0x12b074  1252 0x809       20  GROUP_ICON    #169
+   0x12b088  1252 0x40c      724  VERSION       #1
+   0x12b35c  1252 0x809     1007  MANIFEST      #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+WSOCK32.dll              74  
+WSOCK32.dll              17  
+WSOCK32.dll               c  
+WSOCK32.dll              15  
+WSOCK32.dll               f  
+WSOCK32.dll              11  
+WSOCK32.dll               a  
+WSOCK32.dll               9  
+WSOCK32.dll              73  
+WSOCK32.dll              97  
+WSOCK32.dll              12  
+WSOCK32.dll               1  
+WSOCK32.dll               d  
+WSOCK32.dll               2  
+WSOCK32.dll               3  
+WSOCK32.dll              6f  
+WSOCK32.dll              10  
+WSOCK32.dll              14  
+WSOCK32.dll              13  
+WSOCK32.dll               b  
+WSOCK32.dll              34  
+WSOCK32.dll              39  
+WSOCK32.dll               4  
+VERSION.dll         6        GetFileVersionInfoW
+VERSION.dll         5        GetFileVersionInfoSizeW
+VERSION.dll         e        VerQueryValueW
+WINMM.dll          94        timeGetTime
+WINMM.dll          bb        waveOutSetVolume
+WINMM.dll          32        mciSendStringW
+COMCTL32.dll       6f        ImageList_ReplaceIcon
+COMCTL32.dll       54        ImageList_Destroy
+COMCTL32.dll       6d        ImageList_Remove
+COMCTL32.dll       72        ImageList_SetDragCursorImage
+COMCTL32.dll       50        ImageList_BeginDrag
+COMCTL32.dll       56        ImageList_DragEnter
+COMCTL32.dll       57        ImageList_DragLeave
+COMCTL32.dll       5e        ImageList_EndDrag
+COMCTL32.dll       58        ImageList_DragMove
+COMCTL32.dll       7b        InitCommonControlsEx
+COMCTL32.dll       53        ImageList_Create
+MPR.dll            49        WNetUseConnectionW
+MPR.dll             c        WNetCancelConnection2W
+MPR.dll            24        WNetGetConnectionW
+MPR.dll             6        WNetAddConnection2W
+WININET.dll        9b        InternetQueryDataAvailable
+WININET.dll        6b        InternetCloseHandle
+WININET.dll        9a        InternetOpenW
+WININET.dll        af        InternetSetOptionW
+WININET.dll        74        InternetCrackUrlW
+WININET.dll        5a        HttpQueryInfoW
+WININET.dll        9e        InternetQueryOptionW
+WININET.dll        58        HttpOpenRequestW
+WININET.dll        5e        HttpSendRequestW
+WININET.dll        35        FtpOpenFileW
+WININET.dll        32        FtpGetFileSize
+WININET.dll        99        InternetOpenUrlW
+WININET.dll        9f        InternetReadFile
+WININET.dll        72        InternetConnectW
+PSAPI.DLL          15        GetProcessMemoryInfo
+IPHLPAPI.DLL       85        IcmpCreateFile
+IPHLPAPI.DLL       84        IcmpCloseHandle
+IPHLPAPI.DLL       87        IcmpSendEcho
+USERENV.dll         4        DestroyEnvironmentBlock
+USERENV.dll        2c        UnloadUserProfile
+USERENV.dll         0        CreateEnvironmentBlock
+USERENV.dll        21        LoadUserProfileW
+UxTheme.dll        3f        IsThemeActive
+KERNEL32.dll       e8        DuplicateHandle
+KERNEL32.dll       b5        CreateThread
+KERNEL32.dll      4f9        WaitForSingleObject
+KERNEL32.dll      2cb        HeapAlloc
+KERNEL32.dll      24a        GetProcessHeap
+KERNEL32.dll      2cf        HeapFree
+KERNEL32.dll      4b2        Sleep
+KERNEL32.dll      1c5        GetCurrentThreadId
+KERNEL32.dll      367        MultiByteToWideChar
+KERNEL32.dll      366        MulDiv
+KERNEL32.dll      2a4        GetVersionExW
+KERNEL32.dll      30e        IsWow64Process
+KERNEL32.dll      273        GetSystemInfo
+KERNEL32.dll      162        FreeLibrary
+KERNEL32.dll      33c        LoadLibraryA
+KERNEL32.dll      245        GetProcAddress
+KERNEL32.dll      458        SetErrorMode
+KERNEL32.dll      214        GetModuleFileNameW
+KERNEL32.dll      511        WideCharToMultiByte
+KERNEL32.dll      548        lstrcpyW
+KERNEL32.dll      54e        lstrlenW
+KERNEL32.dll      218        GetModuleHandleW
+KERNEL32.dll      3a7        QueryPerformanceCounter
+KERNEL32.dll      4ed        VirtualFreeEx
+KERNEL32.dll      380        OpenProcess
+KERNEL32.dll      4ea        VirtualAllocEx
+KERNEL32.dll      52e        WriteProcessMemory
+KERNEL32.dll      3c3        ReadProcessMemory
+KERNEL32.dll       8f        CreateFileW
+KERNEL32.dll      467        SetFilePointerEx
+KERNEL32.dll      453        SetEndOfFile
+KERNEL32.dll      3c0        ReadFile
+KERNEL32.dll      525        WriteFile
+KERNEL32.dll      157        FlushFileBuffers
+KERNEL32.dll      4c0        TerminateProcess
+KERNEL32.dll       be        CreateToolhelp32Snapshot
+KERNEL32.dll      396        Process32FirstW
+KERNEL32.dll      398        Process32NextW
+KERNEL32.dll      46a        SetFileTime
+KERNEL32.dll      1ea        GetFileAttributesW
+KERNEL32.dll      139        FindFirstFileW
+KERNEL32.dll      44d        SetCurrentDirectoryW
+KERNEL32.dll      20f        GetLongPathNameW
+KERNEL32.dll      261        GetShortPathNameW
+KERNEL32.dll       d6        DeleteFileW
+KERNEL32.dll      145        FindNextFileW
+KERNEL32.dll       72        CopyFileExW
+KERNEL32.dll      363        MoveFileW
+KERNEL32.dll       81        CreateDirectoryW
+KERNEL32.dll      403        RemoveDirectoryW
+KERNEL32.dll      48a        SetSystemPowerState
+KERNEL32.dll      3a8        QueryPerformanceFrequency
+KERNEL32.dll      14e        FindResourceW
+KERNEL32.dll      341        LoadResource
+KERNEL32.dll      354        LockResource
+KERNEL32.dll      4b1        SizeofResource
+KERNEL32.dll      102        EnumResourceNamesW
+KERNEL32.dll      38a        OutputDebugStringW
+KERNEL32.dll      285        GetTempPathW
+KERNEL32.dll      283        GetTempFileNameW
+KERNEL32.dll       dd        DeviceIoControl
+KERNEL32.dll      203        GetLocalTime
+KERNEL32.dll       64        CompareStringW
+KERNEL32.dll      1c0        GetCurrentProcess
+KERNEL32.dll       ee        EnterCriticalSection
+KERNEL32.dll      339        LeaveCriticalSection
+KERNEL32.dll      264        GetStdHandle
+KERNEL32.dll       a1        CreatePipe
+KERNEL32.dll      2ec        InterlockedExchange
+KERNEL32.dll      4c1        TerminateThread
+KERNEL32.dll      33e        LoadLibraryExW
+KERNEL32.dll      14d        FindResourceExW
+KERNEL32.dll       75        CopyFileW
+KERNEL32.dll      4ec        VirtualFree
+KERNEL32.dll      15e        FormatMessageW
+KERNEL32.dll      1df        GetExitCodeProcess
+KERNEL32.dll      242        GetPrivateProfileStringW
+KERNEL32.dll      52b        WritePrivateProfileStringW
+KERNEL32.dll      240        GetPrivateProfileSectionW
+KERNEL32.dll      529        WritePrivateProfileSectionW
+KERNEL32.dll      23f        GetPrivateProfileSectionNamesW
+KERNEL32.dll      124        FileTimeToLocalFileTime
+KERNEL32.dll      125        FileTimeToSystemTime
+KERNEL32.dll      4bd        SystemTimeToFileTime
+KERNEL32.dll      346        LocalFileTimeToFileTime
+KERNEL32.dll      1d3        GetDriveTypeW
+KERNEL32.dll      1ce        GetDiskFreeSpaceExW
+KERNEL32.dll      1cf        GetDiskFreeSpaceW
+KERNEL32.dll      2a7        GetVolumeInformationW
+KERNEL32.dll      4a9        SetVolumeLabelW
+KERNEL32.dll       93        CreateHardLinkW
+KERNEL32.dll      461        SetFileAttributesW
+KERNEL32.dll       85        CreateEventW
+KERNEL32.dll      459        SetEvent
+KERNEL32.dll      1dc        GetEnvironmentVariableW
+KERNEL32.dll      457        SetEnvironmentVariableW
+KERNEL32.dll      2be        GlobalLock
+KERNEL32.dll      2c5        GlobalUnlock
+KERNEL32.dll      2b3        GlobalAlloc
+KERNEL32.dll      1f0        GetFileSize
+KERNEL32.dll      2ba        GlobalFree
+KERNEL32.dll      2c0        GlobalMemoryStatusEx
+KERNEL32.dll       36        Beep
+KERNEL32.dll      270        GetSystemDirectoryW
+KERNEL32.dll      2d2        HeapReAlloc
+KERNEL32.dll      2d4        HeapSize
+KERNEL32.dll      18f        GetComputerNameW
+KERNEL32.dll      2af        GetWindowsDirectoryW
+KERNEL32.dll      1c1        GetCurrentProcessId
+KERNEL32.dll      24e        GetProcessIoCounters
+KERNEL32.dll       a8        CreateProcessW
+KERNEL32.dll      24c        GetProcessId
+KERNEL32.dll      47d        SetPriorityClass
+KERNEL32.dll      33f        LoadLibraryW
+KERNEL32.dll      4e9        VirtualAlloc
+KERNEL32.dll      300        IsDebuggerPresent
+KERNEL32.dll      1bf        GetCurrentDirectoryW
+KERNEL32.dll      545        lstrcmpiW
+KERNEL32.dll       ca        DecodePointer
+KERNEL32.dll      202        GetLastError
+KERNEL32.dll      3b1        RaiseException
+KERNEL32.dll      2e3        InitializeCriticalSectionAndSpinCount
+KERNEL32.dll       d1        DeleteCriticalSection
+KERNEL32.dll      2eb        InterlockedDecrement
+KERNEL32.dll      2ef        InterlockedIncrement
+KERNEL32.dll      1c4        GetCurrentThread
+KERNEL32.dll       52        CloseHandle
+KERNEL32.dll      1fb        GetFullPathNameW
+KERNEL32.dll       ea        EncodePointer
+KERNEL32.dll      119        ExitProcess
+KERNEL32.dll      217        GetModuleHandleExW
+KERNEL32.dll      11a        ExitThread
+KERNEL32.dll      279        GetSystemTimeAsFileTime
+KERNEL32.dll      413        ResumeThread
+KERNEL32.dll      187        GetCommandLineW
+KERNEL32.dll      304        IsProcessorFeaturePresent
+KERNEL32.dll      30a        IsValidCodePage
+KERNEL32.dll      168        GetACP
+KERNEL32.dll      237        GetOEMCP
+KERNEL32.dll      172        GetCPInfo
+KERNEL32.dll      473        SetLastError
+KERNEL32.dll      4d3        UnhandledExceptionFilter
+KERNEL32.dll      4a5        SetUnhandledExceptionFilter
+KERNEL32.dll      4c5        TlsAlloc
+KERNEL32.dll      4c7        TlsGetValue
+KERNEL32.dll      4c8        TlsSetValue
+KERNEL32.dll      4c6        TlsFree
+KERNEL32.dll      263        GetStartupInfoW
+KERNEL32.dll      269        GetStringTypeW
+KERNEL32.dll      487        SetStdHandle
+KERNEL32.dll      1f3        GetFileType
+KERNEL32.dll      19a        GetConsoleCP
+KERNEL32.dll      1ac        GetConsoleMode
+KERNEL32.dll      418        RtlUnwind
+KERNEL32.dll      3be        ReadConsoleW
+KERNEL32.dll      298        GetTimeZoneInformation
+KERNEL32.dll      1c8        GetDateFormatW
+KERNEL32.dll      297        GetTimeFormatW
+KERNEL32.dll      32d        LCMapStringW
+KERNEL32.dll      1da        GetEnvironmentStringsW
+KERNEL32.dll      161        FreeEnvironmentStringsW
+KERNEL32.dll      524        WriteConsoleW
+KERNEL32.dll      12e        FindClose
+KERNEL32.dll      456        SetEnvironmentVariableA
+USER32.dll          3        AdjustWindowRectEx
+USER32.dll         54        CopyImage
+USER32.dll        2c6        SetWindowPos
+USER32.dll        11f        GetCursorInfo
+USER32.dll        256        RegisterHotKey
+USER32.dll         47        ClientToScreen
+USER32.dll        141        GetKeyboardLayoutNameW
+USER32.dll        1c4        IsCharAlphaW
+USER32.dll        1c3        IsCharAlphaNumericW
+USER32.dll        1c6        IsCharLowerW
+USER32.dll        1c8        IsCharUpperW
+USER32.dll        158        GetMenuStringW
+USER32.dll        17a        GetSubMenu
+USER32.dll        10a        GetCaretPos
+USER32.dll        1e2        IsZoomed
+USER32.dll        218        MonitorFromPoint
+USER32.dll        15f        GetMonitorInfoW
+USER32.dll        2c4        SetWindowLongW
+USER32.dll        298        SetLayeredWindowAttributes
+USER32.dll         fb        FlashWindow
+USER32.dll        110        GetClassLongW
+USER32.dll        2fa        TranslateAcceleratorW
+USER32.dll        1cd        IsDialogMessageW
+USER32.dll        17b        GetSysColor
+USER32.dll        1b5        InflateRect
+USER32.dll         c4        DrawFocusRect
+USER32.dll         d0        DrawTextW
+USER32.dll         fd        FrameRect
+USER32.dll         c6        DrawFrameControl
+USER32.dll         f6        FillRect
+USER32.dll        240        PtInRect
+USER32.dll         a0        DestroyAcceleratorTable
+USER32.dll         58        CreateAcceleratorTableW
+USER32.dll        288        SetCursor
+USER32.dll        192        GetWindowDC
+USER32.dll        17e        GetSystemMetrics
+USER32.dll        100        GetActiveWindow
+USER32.dll         31        CharNextW
+USER32.dll        333        wsprintfW
+USER32.dll        24a        RedrawWindow
+USER32.dll         c9        DrawMenuBar
+USER32.dll         a4        DestroyMenu
+USER32.dll        29c        SetMenu
+USER32.dll        1a2        GetWindowTextLengthW
+USER32.dll         6a        CreateMenu
+USER32.dll        1ce        IsDlgButtonChecked
+USER32.dll         95        DefDlgProcW
+USER32.dll         1e        CallWindowProcW
+USER32.dll        264        ReleaseCapture
+USER32.dll        280        SetCapture
+USER32.dll         66        CreateIconFromResourceEx
+USER32.dll        331        mouse_event
+USER32.dll         f5        ExitWindowsEx
+USER32.dll        27f        SetActiveWindow
+USER32.dll         f9        FindWindowExW
+USER32.dll         ef        EnumThreadWindows
+USER32.dll        29e        SetMenuDefaultItem
+USER32.dll        1b9        InsertMenuItemW
+USER32.dll        1d2        IsMenu
+USER32.dll        2f7        TrackPopupMenuEx
+USER32.dll        120        GetCursorPos
+USER32.dll         9e        DeleteMenu
+USER32.dll        2ae        SetRect
+USER32.dll        152        GetMenuItemID
+USER32.dll        151        GetMenuItemCount
+USER32.dll        2a2        SetMenuItemInfoW
+USER32.dll        154        GetMenuItemInfoW
+USER32.dll        293        SetForegroundWindow
+USER32.dll        1d1        IsIconic
+USER32.dll         fa        FindWindowW
+USER32.dll        219        MonitorFromRect
+USER32.dll        330        keybd_event
+USER32.dll        276        SendInput
+USER32.dll        107        GetAsyncKeyState
+USER32.dll        296        SetKeyboardState
+USER32.dll        142        GetKeyboardState
+USER32.dll        13d        GetKeyState
+USER32.dll        321        VkKeyScanW
+USER32.dll        1fa        LoadStringW
+USER32.dll         ac        DialogBoxParamW
+USER32.dll        20d        MessageBeep
+USER32.dll         da        EndDialog
+USER32.dll        273        SendDlgItemMessageW
+USER32.dll        127        GetDlgItem
+USER32.dll        2cb        SetWindowTextW
+USER32.dll         55        CopyRect
+USER32.dll        265        ReleaseDC
+USER32.dll        121        GetDC
+USER32.dll         dc        EndPaint
+USER32.dll          e        BeginPaint
+USER32.dll        114        GetClientRect
+USER32.dll        14b        GetMenu
+USER32.dll         a6        DestroyWindow
+USER32.dll         f2        EnumWindows
+USER32.dll        123        GetDesktopWindow
+USER32.dll        1db        IsWindow
+USER32.dll        1dc        IsWindowEnabled
+USER32.dll        1e0        IsWindowVisible
+USER32.dll         d8        EnableWindow
+USER32.dll        1be        InvalidateRect
+USER32.dll        196        GetWindowLongW
+USER32.dll        1a4        GetWindowThreadProcessId
+USER32.dll          c        AttachThreadInput
+USER32.dll        12c        GetFocus
+USER32.dll        1a3        GetWindowTextW
+USER32.dll        26d        ScreenToClient
+USER32.dll        27b        SendMessageTimeoutW
+USER32.dll         df        EnumChildWindows
+USER32.dll         3b        CharUpperBuffW
+USER32.dll        164        GetParent
+USER32.dll        126        GetDlgCtrlID
+USER32.dll        27c        SendMessageW
+USER32.dll        208        MapVirtualKeyW
+USER32.dll        236        PostMessageW
+USER32.dll        19c        GetWindowRect
+USER32.dll        2be        SetUserObjectSecurity
+USER32.dll         4a        CloseDesktop
+USER32.dll         4e        CloseWindowStation
+USER32.dll        228        OpenDesktopW
+USER32.dll        2aa        SetProcessWindowStation
+USER32.dll        168        GetProcessWindowStation
+USER32.dll        22d        OpenWindowStationW
+USER32.dll        18c        GetUserObjectSecurity
+USER32.dll        215        MessageBoxW
+USER32.dll         9c        DefWindowProcW
+USER32.dll        286        SetClipboardData
+USER32.dll         d5        EmptyClipboard
+USER32.dll         56        CountClipboardFormats
+USER32.dll         49        CloseClipboard
+USER32.dll        116        GetClipboardData
+USER32.dll        1ca        IsClipboardFormatAvailable
+USER32.dll        226        OpenClipboard
+USER32.dll          f        BlockInput
+USER32.dll        15d        GetMessageW
+USER32.dll        1fd        LockWindowUpdate
+USER32.dll         af        DispatchMessageW
+USER32.dll        2fc        TranslateMessage
+USER32.dll        233        PeekMessageW
+USER32.dll        308        UnregisterHotKey
+USER32.dll         40        CheckMenuRadioItem
+USER32.dll         2d        CharLowerBuffW
+USER32.dll        21b        MoveWindow
+USER32.dll        292        SetFocus
+USER32.dll        237        PostQuitMessage
+USER32.dll        1e3        KillTimer
+USER32.dll         6b        CreatePopupMenu
+USER32.dll        263        RegisterWindowMessageW
+USER32.dll        2bb        SetTimer
+USER32.dll        2df        ShowWindow
+USER32.dll         6e        CreateWindowExW
+USER32.dll        24d        RegisterClassExW
+USER32.dll        1ed        LoadIconW
+USER32.dll        1eb        LoadCursorW
+USER32.dll        17c        GetSysColorBrush
+USER32.dll        12d        GetForegroundWindow
+USER32.dll        20e        MessageBoxA
+USER32.dll         a3        DestroyIcon
+USER32.dll        2ec        SystemParametersInfoW
+USER32.dll        1ef        LoadImageW
+USER32.dll        112        GetClassNameW
+GDI32.dll         2b6        StrokePath
+GDI32.dll          e6        DeleteObject
+GDI32.dll         21e        GetTextExtentPoint32W
+GDI32.dll         132        ExtCreatePen
+GDI32.dll         1cb        GetDeviceCaps
+GDI32.dll          f3        EndPath
+GDI32.dll         29b        SetPixel
+GDI32.dll          1e        CloseFigure
+GDI32.dll          2f        CreateCompatibleBitmap
+GDI32.dll          30        CreateCompatibleDC
+GDI32.dll         277        SelectObject
+GDI32.dll         2b3        StretchBlt
+GDI32.dll         1ca        GetDIBits
+GDI32.dll         236        LineTo
+GDI32.dll           8        AngleArc
+GDI32.dll         23a        MoveToEx
+GDI32.dll          ed        Ellipse
+GDI32.dll          e3        DeleteDC
+GDI32.dll         204        GetPixel
+GDI32.dll          32        CreateDCW
+GDI32.dll         20d        GetStockObject
+GDI32.dll         224        GetTextFaceW
+GDI32.dll          41        CreateFontW
+GDI32.dll         2a6        SetTextColor
+GDI32.dll         250        PolyDraw
+GDI32.dll          12        BeginPath
+GDI32.dll         25f        Rectangle
+GDI32.dll         2a9        SetViewportOrgEx
+GDI32.dll         1fd        GetObjectW
+GDI32.dll         27f        SetBkMode
+GDI32.dll         26a        RoundRect
+GDI32.dll         27e        SetBkColor
+GDI32.dll          4b        CreatePen
+GDI32.dll          54        CreateSolidBrush
+GDI32.dll         2b5        StrokeAndFillPath
+COMDLG32.dll        c        GetOpenFileNameW
+COMDLG32.dll        e        GetSaveFileNameW
+ADVAPI32.dll      123        GetAce
+ADVAPI32.dll      252        RegEnumValueW
+ADVAPI32.dll      248        RegDeleteValueW
+ADVAPI32.dll      244        RegDeleteKeyW
+ADVAPI32.dll      24f        RegEnumKeyExW
+ADVAPI32.dll      27e        RegSetValueExW
+ADVAPI32.dll      261        RegOpenKeyExW
+ADVAPI32.dll      230        RegCloseKey
+ADVAPI32.dll      26e        RegQueryValueExW
+ADVAPI32.dll      234        RegConnectRegistryW
+ADVAPI32.dll      177        InitializeSecurityDescriptor
+ADVAPI32.dll      176        InitializeAcl
+ADVAPI32.dll       1f        AdjustTokenPrivileges
+ADVAPI32.dll      1fc        OpenThreadToken
+ADVAPI32.dll      1f7        OpenProcessToken
+ADVAPI32.dll      197        LookupPrivilegeValueW
+ADVAPI32.dll       df        DuplicateTokenEx
+ADVAPI32.dll       7c        CreateProcessAsUserW
+ADVAPI32.dll       7d        CreateProcessWithLogonW
+ADVAPI32.dll      136        GetLengthSid
+ADVAPI32.dll       76        CopySid
+ADVAPI32.dll      18d        LogonUserW
+ADVAPI32.dll       20        AllocateAndInitializeSid
+ADVAPI32.dll       51        CheckTokenMembership
+ADVAPI32.dll      239        RegCreateKeyExW
+ADVAPI32.dll      120        FreeSid
+ADVAPI32.dll      15a        GetTokenInformation
+ADVAPI32.dll      148        GetSecurityDescriptorDacl
+ADVAPI32.dll      124        GetAclInformation
+ADVAPI32.dll       16        AddAce
+ADVAPI32.dll      2b6        SetSecurityDescriptorDacl
+ADVAPI32.dll      165        GetUserNameW
+ADVAPI32.dll      17d        InitiateSystemShutdownExW
+SHELL32.dll        20        DragQueryPoint
+SHELL32.dll       121        ShellExecuteExW
+SHELL32.dll        1f        DragQueryFileW
+SHELL32.dll        a5        SHEmptyRecycleBinW
+SHELL32.dll        d7        SHGetPathFromIDListW
+SHELL32.dll        7b        SHBrowseForFolderW
+SHELL32.dll        9a        SHCreateShellItem
+SHELL32.dll        b6        SHGetDesktopFolder
+SHELL32.dll        df        SHGetSpecialFolderLocation
+SHELL32.dll        c3        SHGetFolderPathW
+SHELL32.dll        ac        SHFileOperationW
+SHELL32.dll        2a        ExtractIconExW
+SHELL32.dll       12e        Shell_NotifyIconW
+SHELL32.dll       122        ShellExecuteW
+SHELL32.dll        1b        DragFinish
+ole32.dll          67        CoTaskMemAlloc
+ole32.dll          68        CoTaskMemFree
+ole32.dll           8        CLSIDFromString
+ole32.dll         14b        ProgIDFromCLSID
+ole32.dll           6        CLSIDFromProgID
+ole32.dll         147        OleSetMenuDescriptor
+ole32.dll          d4        MkParseDisplayName
+ole32.dll         146        OleSetContainedObject
+ole32.dll          10        CoCreateInstance
+ole32.dll          cd        IIDFromString
+ole32.dll         179        StringFromGUID2
+ole32.dll          86        CreateStreamOnHGlobal
+ole32.dll         132        OleInitialize
+ole32.dll         149        OleUninitialize
+ole32.dll          3e        CoInitialize
+ole32.dll          6c        CoUninitialize
+ole32.dll          97        GetRunningObjectTable
+ole32.dll          2d        CoGetInstanceFromFile
+ole32.dll          35        CoGetObject
+ole32.dll          63        CoSetProxyBlanket
+ole32.dll          11        CoCreateInstanceEx
+ole32.dll          40        CoInitializeSecurity
+OLEAUT32.dll             b7  
+OLEAUT32.dll              b  
+OLEAUT32.dll              3  
+OLEAUT32.dll              6  
+OLEAUT32.dll             26  
+OLEAUT32.dll             27  
+OLEAUT32.dll             18  
+OLEAUT32.dll             17  
+OLEAUT32.dll             25  
+OLEAUT32.dll             29  
+OLEAUT32.dll            19b  
+OLEAUT32.dll             a3  
+OLEAUT32.dll             20  
+OLEAUT32.dll             92  
+OLEAUT32.dll              c  
+OLEAUT32.dll              7  
+OLEAUT32.dll             b9  
+OLEAUT32.dll             dc  
+OLEAUT32.dll             4d  
+OLEAUT32.dll              a  
+OLEAUT32.dll              9  
+OLEAUT32.dll            1a2  
+OLEAUT32.dll             a4  
+OLEAUT32.dll            1ba  
+OLEAUT32.dll            1bb  
+OLEAUT32.dll             ba  
+OLEAUT32.dll             1f  
+OLEAUT32.dll              2  
+OLEAUT32.dll              8  
+
+=== VERSION INFO ===
+
+# VS_FIXEDFILEINFO:
+  FileVersion         :  1.0.0.0
+  ProductVersion      :  1.0.0.0
+  StrucVersion        :  0x10000
+  FileFlagsMask       :  0
+  FileFlags           :  0
+  FileOS              :  4
+  FileType            :  2
+  FileSubtype         :  0
+
+# StringTable 040904b0:
+  FileDescription     :  "AutoProxySetup x64"
+  OriginalFilename    :  "AutoProxySetup.x64"
+  CompanyName         :  ""
+  FileVersion         :  "424.27.272.899"
+  LegalCopyright      :  "(C) 2009 by SOO1 - Christoph Weyd"
+  ProductName         :  "AutoProxySetup.x64"
+  ProductVersion      :  "742.398.196.288"
+
+  VarFileInfo         :  [ 0x409, 0x4b0 ]
+
+=== Packer / Compiler ===
+
+  MS Visual C++ v8.0

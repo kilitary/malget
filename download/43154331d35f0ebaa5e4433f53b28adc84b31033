@@ -1,0 +1,292 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        184          0xb8
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+    14   e       7299  1c83         1   1
+     9   9       8041  1f69         8   8
+    13   d       8169  1fe9         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          3             3
+                 TimeDateStamp:    "2012-04-04 05:24:14"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        271         0x10f  RELOCS_STRIPPED, EXECUTABLE_IMAGE
+                                                          LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      6.0
+                    SizeOfCode:      36864        0x9000
+         SizeOfInitializedData:      36864        0x9000
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:       5996        0x176c
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:      40960        0xa000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:       4096        0x1000
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      5.9
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:      77824       0x13000
+                 SizeOfHeaders:       4096        0x1000
+                      CheckSum:     132028       0x203bc
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x    8fa4   size:0x       50
+  RESOURCE      rva:0x    b000   size:0x     7574
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x     228   size:0x       48
+  IAT           rva:0x    1000   size:0x      214
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000     88fc     9000     1000     0        0     0        0  60000020  R-X CODE
+  .data        a000      820     1000     a000     0        0     0        0  c0000040  RW- IDATA
+  .rsrc        b000     7574     8000     b000     0        0     0        0  40000040  R-- IDATA
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+     0xb3bc     0 0x409     1640  ICON          #1
+     0xba24     0 0x409      744  ICON          #2
+     0xbd0c     0 0x409      296  ICON          #3
+     0xbe34     0 0x409      224  ICON          #4
+     0xbf14     0 0x409     3752  ICON          #5
+     0xcdbc     0 0x409     2216  ICON          #6
+     0xd664     0 0x409     1384  ICON          #7
+     0xdbcc     0 0x409     1224  ICON          #8
+     0xe094     0 0x409     9640  ICON          #9
+    0x1063c     0 0x409     4264  ICON          #10
+    0x116e4     0 0x409     1128  ICON          #11
+    0x11b4c     0 0x409      480  ICON          #12
+    0x11d2c  1200     0      304  ICON          #30001
+    0x11e5c  1200     0      744  ICON          #30002
+    0x12144  1200     0      296  ICON          #30003
+    0x1226c  1200 0x409      174  GROUP_ICON    0
+    0x1231c  1200     0       48  GROUP_ICON    #1
+    0x1234c  1200 0x409      552  VERSION       #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+advapi32.dll        0        SetServiceStatus
+advapi32.dll        0        RegisterServiceCtrlHandlerA
+advapi32.dll        0        StartServiceCtrlDispatcherA
+kernel32.dll        0        CreateEventA
+kernel32.dll        0        WaitForMultipleObjects
+kernel32.dll        0        WaitForSingleObject
+kernel32.dll        0        SetEvent
+kernel32.dll        0        CloseHandle
+MSVBVM60.DLL        0        __vbaVarSub
+MSVBVM60.DLL        0        _CIcos
+MSVBVM60.DLL        0        _adj_fptan
+MSVBVM60.DLL        0        __vbaStrI4
+MSVBVM60.DLL        0        __vbaVarMove
+MSVBVM60.DLL        0        __vbaFreeVar
+MSVBVM60.DLL        0        __vbaAryMove
+MSVBVM60.DLL        0        __vbaLenBstr
+MSVBVM60.DLL        0        __vbaStrVarMove
+MSVBVM60.DLL        0        __vbaPut3
+MSVBVM60.DLL        0        __vbaEnd
+MSVBVM60.DLL        0        __vbaFreeVarList
+MSVBVM60.DLL        0        _adj_fdiv_m64
+MSVBVM60.DLL        0        __vbaFreeObjList
+MSVBVM60.DLL            204  
+MSVBVM60.DLL        0        _adj_fprem1
+MSVBVM60.DLL            207  
+MSVBVM60.DLL        0        __vbaStrCat
+MSVBVM60.DLL        0        __vbaLsetFixstr
+MSVBVM60.DLL        0        __vbaSetSystemError
+MSVBVM60.DLL        0        __vbaHresultCheckObj
+MSVBVM60.DLL        0        _adj_fdiv_m32
+MSVBVM60.DLL        0        __vbaAryVar
+MSVBVM60.DLL        0        __vbaAryDestruct
+MSVBVM60.DLL        0        __vbaStrBool
+MSVBVM60.DLL        0        __vbaExitProc
+MSVBVM60.DLL        0        __vbaVarForInit
+MSVBVM60.DLL        0        __vbaForEachCollObj
+MSVBVM60.DLL        0        __vbaStrLike
+MSVBVM60.DLL            253  
+MSVBVM60.DLL        0        __vbaOnError
+MSVBVM60.DLL        0        __vbaObjSet
+MSVBVM60.DLL        0        _adj_fdiv_m16i
+MSVBVM60.DLL        0        _adj_fdivr_m16i
+MSVBVM60.DLL            256  
+MSVBVM60.DLL            208  
+MSVBVM60.DLL        0        __vbaBoolVarNull
+MSVBVM60.DLL        0        _CIsin
+MSVBVM60.DLL            2c5  
+MSVBVM60.DLL        0        __vbaErase
+MSVBVM60.DLL            278  
+MSVBVM60.DLL        0        __vbaNextEachCollObj
+MSVBVM60.DLL            20d  
+MSVBVM60.DLL        0        __vbaChkstk
+MSVBVM60.DLL        0        __vbaFileClose
+MSVBVM60.DLL        0        EVENT_SINK_AddRef
+MSVBVM60.DLL            20f  
+MSVBVM60.DLL            210  
+MSVBVM60.DLL        0        __vbaGet3
+MSVBVM60.DLL        0        __vbaStrCmp
+MSVBVM60.DLL        0        __vbaVarTstEq
+MSVBVM60.DLL        0        __vbaAryConstruct2
+MSVBVM60.DLL        0        DllFunctionCall
+MSVBVM60.DLL        0        __vbaRedimPreserve
+MSVBVM60.DLL        0        __vbaLbound
+MSVBVM60.DLL        0        _adj_fpatan
+MSVBVM60.DLL        0        __vbaFixstrConstruct
+MSVBVM60.DLL        0        __vbaRedim
+MSVBVM60.DLL        0        EVENT_SINK_Release
+MSVBVM60.DLL        0        __vbaNew
+MSVBVM60.DLL            258  
+MSVBVM60.DLL        0        _CIsqrt
+MSVBVM60.DLL        0        __vbaVarAnd
+MSVBVM60.DLL        0        EVENT_SINK_QueryInterface
+MSVBVM60.DLL        0        __vbaStr2Vec
+MSVBVM60.DLL        0        __vbaExceptHandler
+MSVBVM60.DLL            2c7  
+MSVBVM60.DLL        0        __vbaPrintFile
+MSVBVM60.DLL        0        __vbaStrToUnicode
+MSVBVM60.DLL            2c9  
+MSVBVM60.DLL        0        _adj_fprem
+MSVBVM60.DLL        0        _adj_fdivr_m64
+MSVBVM60.DLL            25f  
+MSVBVM60.DLL            260  
+MSVBVM60.DLL        0        __vbaFPException
+MSVBVM60.DLL        0        __vbaInStrVar
+MSVBVM60.DLL            2cd  
+MSVBVM60.DLL        0        __vbaStrVarVal
+MSVBVM60.DLL        0        __vbaUbound
+MSVBVM60.DLL        0        __vbaVarCat
+MSVBVM60.DLL        0        __vbaLsetFixstrFree
+MSVBVM60.DLL            284  
+MSVBVM60.DLL            285  
+MSVBVM60.DLL        0        _CIlog
+MSVBVM60.DLL        0        __vbaFileOpen
+MSVBVM60.DLL            288  
+MSVBVM60.DLL        0        __vbaR8Str
+MSVBVM60.DLL        0        __vbaNew2
+MSVBVM60.DLL        0        __vbaVar2Vec
+MSVBVM60.DLL        0        _adj_fdiv_m32i
+MSVBVM60.DLL        0        _adj_fdivr_m32i
+MSVBVM60.DLL            23d  
+MSVBVM60.DLL        0        __vbaStrCopy
+MSVBVM60.DLL        0        __vbaFreeStrList
+MSVBVM60.DLL        0        _adj_fdivr_m32
+MSVBVM60.DLL        0        _adj_fdiv_r
+MSVBVM60.DLL            242  
+MSVBVM60.DLL            2ad  
+MSVBVM60.DLL             64  
+MSVBVM60.DLL        0        __vbaI4Var
+MSVBVM60.DLL        0        __vbaVarCmpEq
+MSVBVM60.DLL        0        __vbaVarAdd
+MSVBVM60.DLL        0        __vbaAryLock
+MSVBVM60.DLL        0        __vbaStrComp
+MSVBVM60.DLL        0        __vbaVarDup
+MSVBVM60.DLL        0        __vbaStrToAnsi
+MSVBVM60.DLL        0        __vbaVarCopy
+MSVBVM60.DLL            268  
+MSVBVM60.DLL            269  
+MSVBVM60.DLL        0        _CIatan
+MSVBVM60.DLL        0        __vbaAryCopy
+MSVBVM60.DLL        0        __vbaCastObj
+MSVBVM60.DLL        0        __vbaStrMove
+MSVBVM60.DLL        0        __vbaStrVarCopy
+MSVBVM60.DLL            26b  
+MSVBVM60.DLL        0        _allmul
+MSVBVM60.DLL        0        _CItan
+MSVBVM60.DLL        0        __vbaAryUnlock
+MSVBVM60.DLL        0        __vbaVarForNext
+MSVBVM60.DLL        0        _CIexp
+MSVBVM60.DLL        0        __vbaFreeObj
+MSVBVM60.DLL        0        __vbaFreeStr
+
+=== VERSION INFO ===
+
+# VS_FIXEDFILEINFO:
+  FileVersion         :  5.9.0.160
+  ProductVersion      :  5.9.0.160
+  StrucVersion        :  0x10000
+  FileFlagsMask       :  0
+  FileFlags           :  0
+  FileOS              :  4
+  FileType            :  1
+  FileSubtype         :  0
+
+  VarFileInfo         :  [ 0x409, 0x4b0 ]
+
+# StringTable 040904B0:
+  Comments            :  "gild"
+  CompanyName         :  "mano"
+  ProductName         :  "kpm"
+  FileVersion         :  "5.09.0160"
+  ProductVersion      :  "5.09.0160"
+  InternalName        :  "avqs"
+  OriginalFilename    :  "avqs.exe"
+
+=== Packer / Compiler ===
+
+  MS Visual Basic v5.0/v6.0

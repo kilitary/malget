@@ -1,0 +1,984 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:         64          0x40
+                blocks_in_file:          1             1
+                    num_relocs:          0             0
+             header_paragraphs:          2             2
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         10           0xa
+                overlay_number:          0             0
+                     reserved0: 1061194807189176320  0xeba1f0e00000000
+                        oem_id:      46080        0xb400
+                      oem_info:      52489        0xcd09
+                     reserved2: 1275181089    0x4c01b821
+                     reserved3: 1767317965    0x695721cd
+                     reserved4:  540160878    0x2032336e
+                     reserved5: 1163412782    0x4558452e
+                     reserved6:  604638510    0x240a0d2e
+                        lfanew:         64          0x40
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 57 69  |........!..L.!Wi|
+00000010: 6e 33 32 20 2e 45 58 45  2e 0d 0a 24 40 00 00 00  |n32 .EXE...$@...|
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          3             3
+                 TimeDateStamp:    "2011-04-25 20:25:55"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:      33678        0x838e  EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED
+                                                          LOCAL_SYMS_STRIPPED, BYTES_REVERSED_LO
+                                                          32BIT_MACHINE, DEBUG_STRIPPED
+                                                          BYTES_REVERSED_HI
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     2.25
+                    SizeOfCode:     590848       0x90400
+         SizeOfInitializedData:     285696       0x45c00
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:     592052       0x908b4
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     598016       0x92000
+                     ImageBase:  320077824    0x13140000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:     974848       0xee000
+                 SizeOfHeaders:        512         0x200
+                      CheckSum:          0             0
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:      28672        0x7000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   eb000   size:0x     3000
+  RESOURCE      rva:0x   ea000   size:0x      cf8
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x   e92d0   size:0x       18
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x   e835c   size:0x       c0
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .MPRESS1     1000    e7000    e7000     1000     0        0     0        0  e00000e0  RWX CODE IDATA UDATA
+  .MPRESS2    e8000     2000     2000    e8000     0        0     0        0  e00000e0  RWX CODE IDATA UDATA
+  .rsrc       ea000     4000     4000    ea000     0        0     0        0  c0000040  RW- IDATA
+
+=== TLS ===
+
+ RAW_START    RAW_END    INDEX   CALLBKS  ZEROFILL     FLAGS
+  132292e8   1322931c 132292dc         0         0         0
+
+=== STRINGS ===
+
+   ID    ID  LANG  STRING
+65312  ff20     0  "No context-sensitive help installed"
+65313  ff21     0  "No help found for context"
+65314  ff22     0  "No topic-based help system installed"
+65315  ff23     0  "Unable to retrieve a pointer to a running object registered with OLE for %s/%s"
+65328  ff30     0  "Invalid clipboard format"
+65329  ff31     0  "Clipboard does not support Icons"
+65330  ff32     0  "Cannot open clipboard"
+65331  ff33     0  "Menu '%s' is already being used by another form"
+65332  ff34     0  "Docked control must have a name"
+65333  ff35     0  "Error removing control from dock tree"
+65334  ff36     0  " - Dock zone not found"
+65335  ff37     0  " - Dock zone has no control"
+65336  ff38     0  "Error loading dock zone from the stream. Expecting version %d, but found %d."
+65337  ff39     0  "OLE error %.8x"
+65338  ff3a     0  "Method '%s' not supported by automation object"
+65339  ff3b     0  "Variant does not reference an automation object"
+65340  ff3c     0  "Dispatch methods do not support more than 64 parameters"
+65341  ff3d     0  "DCOM not installed"
+65342  ff3e     0  "Unable to find a Table of Contents"
+65343  ff3f     0  "No help found for %s"
+65344  ff40     0  "Esc"
+65345  ff41     0  "Enter"
+65346  ff42     0  "Space"
+65347  ff43     0  "PgUp"
+65348  ff44     0  "PgDn"
+65349  ff45     0  "End"
+65350  ff46     0  "Home"
+65351  ff47     0  "Left"
+65352  ff48     0  "Up"
+65353  ff49     0  "Right"
+65354  ff4a     0  "Down"
+65355  ff4b     0  "Ins"
+65356  ff4c     0  "Del"
+65357  ff4d     0  "Shift+"
+65358  ff4e     0  "Ctrl+"
+65359  ff4f     0  "Alt+"
+65360  ff50     0  "Error"
+65361  ff51     0  "Information"
+65362  ff52     0  "Confirm"
+65363  ff53     0  "&Yes"
+65364  ff54     0  "&No"
+65365  ff55     0  "OK"
+65366  ff56     0  "Cancel"
+65367  ff57     0  "&Help"
+65368  ff58     0  "&Abort"
+65369  ff59     0  "&Retry"
+65370  ff5a     0  "&Ignore"
+65371  ff5b     0  "&All"
+65372  ff5c     0  "N&o to All"
+65373  ff5d     0  "Yes to &All"
+65374  ff5e     0  "BkSp"
+65375  ff5f     0  "Tab"
+65376  ff60     0  "Error creating window device context"
+65377  ff61     0  "Error creating window class"
+65378  ff62     0  "Cannot focus a disabled or invisible window"
+65379  ff63     0  "Control '%s' has no parent window"
+65380  ff64     0  "Cannot hide an MDI Child Form"
+65381  ff65     0  "Cannot change Visible in OnShow or OnHide"
+65382  ff66     0  "Cannot make a visible window modal"
+65383  ff67     0  "Menu index out of range"
+65384  ff68     0  "Menu inserted twice"
+65385  ff69     0  "Sub-menu is not in menu"
+65386  ff6a     0  "Not enough timers available"
+65387  ff6b     0  "GroupIndex cannot be less than a previous menu item's GroupIndex"
+65388  ff6c     0  "Cannot create form. No MDI forms are currently active"
+65389  ff6d     0  "A control cannot have itself as its parent"
+65390  ff6e     0  "Cannot drag a form"
+65391  ff6f     0  "Warning"
+65392  ff70     0  "Property %s does not exist"
+65393  ff71     0  "Stream write error"
+65394  ff72     0  "Bitmap image is not valid"
+65395  ff73     0  "Icon image is not valid"
+65396  ff74     0  "Metafile is not valid"
+65397  ff75     0  "Invalid pixel format"
+65398  ff76     0  "Scan line index out of range"
+65399  ff77     0  "Cannot change the size of an icon"
+65400  ff78     0  "Unsupported clipboard format"
+65401  ff79     0  "Out of system resources"
+65402  ff7a     0  "Canvas does not allow drawing"
+65403  ff7b     0  "Invalid image size"
+65404  ff7c     0  "Invalid ImageList"
+65405  ff7d     0  "Invalid ImageList Index"
+65406  ff7e     0  "Failed to read ImageList data from stream"
+65407  ff7f     0  "Failed to write ImageList data to stream"
+65408  ff80     0  "Invalid property value"
+65409  ff81     0  "Invalid data type for '%s'"
+65410  ff82     0  "List capacity out of bounds (%d)"
+65411  ff83     0  "List count out of bounds (%d)"
+65412  ff84     0  "List index out of bounds (%d)"
+65413  ff85     0  "Out of memory while expanding memory stream"
+65414  ff86     0  "Error reading %s%s%s: %s"
+65415  ff87     0  "Stream read error"
+65416  ff88     0  "Property is read-only"
+65417  ff89     0  "Failed to create key %s"
+65418  ff8a     0  "Failed to get data for '%s'"
+65419  ff8b     0  "Failed to set data for '%s'"
+65420  ff8c     0  "Resource %s not found"
+65421  ff8d     0  "%s.Seek not implemented"
+65422  ff8e     0  "Operation not allowed on sorted list"
+65423  ff8f     0  "%s not in a class registration group"
+65424  ff90     0  "Unable to create directory"
+65425  ff91     0  "Ancestor for '%s' not found"
+65426  ff92     0  "Cannot assign a %s to a %s"
+65427  ff93     0  "Bits index out of range"
+65428  ff94     0  "Can't write to a read-only resource stream"
+65429  ff95     0  "CheckSynchronize called from thread $%x, which is NOT the main thread"
+65430  ff96     0  "Class %s not found"
+65431  ff97     0  "A class named %s already exists"
+65432  ff98     0  "List does not allow duplicates ($0%x)"
+65433  ff99     0  "A component named %s already exists"
+65434  ff9a     0  "String list does not allow duplicates"
+65435  ff9b     0  "Cannot create file \"%s\". %s"
+65436  ff9c     0  "Cannot open file \"%s\". %s"
+65437  ff9d     0  "Invalid stream format"
+65438  ff9e     0  "''%s'' is not a valid component name"
+65439  ff9f     0  "Invalid property path"
+65440  ffa0     0  "November"
+65441  ffa1     0  "December"
+65442  ffa2     0  "Sun"
+65443  ffa3     0  "Mon"
+65444  ffa4     0  "Tue"
+65445  ffa5     0  "Wed"
+65446  ffa6     0  "Thu"
+65447  ffa7     0  "Fri"
+65448  ffa8     0  "Sat"
+65449  ffa9     0  "Sunday"
+65450  ffaa     0  "Monday"
+65451  ffab     0  "Tuesday"
+65452  ffac     0  "Wednesday"
+65453  ffad     0  "Thursday"
+65454  ffae     0  "Friday"
+65455  ffaf     0  "Saturday"
+65456  ffb0     0  "Jul"
+65457  ffb1     0  "Aug"
+65458  ffb2     0  "Sep"
+65459  ffb3     0  "Oct"
+65460  ffb4     0  "Nov"
+65461  ffb5     0  "Dec"
+65462  ffb6     0  "January"
+65463  ffb7     0  "February"
+65464  ffb8     0  "March"
+65465  ffb9     0  "April"
+65466  ffba     0  "May"
+65467  ffbb     0  "June"
+65468  ffbc     0  "July"
+65469  ffbd     0  "August"
+65470  ffbe     0  "September"
+65471  ffbf     0  "October"
+65472  ffc0     0  "External exception %x"
+65473  ffc1     0  "Assertion failed"
+65474  ffc2     0  "Interface not supported"
+65475  ffc3     0  "Exception in safecall method"
+65476  ffc4     0  "%s (%s, line %d)"
+65477  ffc5     0  "Abstract Error"
+65478  ffc6     0  "Access violation at address %p in module '%s'. %s of address %p"
+65479  ffc7     0  "System Error.  Code: %d.\r\n%s"
+65480  ffc8     0  "A call to an OS function failed"
+65481  ffc9     0  "Application is not licensed to use this feature"
+65482  ffca     0  "Jan"
+65483  ffcb     0  "Feb"
+65484  ffcc     0  "Mar"
+65485  ffcd     0  "Apr"
+65486  ffce     0  "May"
+65487  ffcf     0  "Jun"
+65488  ffd0     0  "Variant method calls not supported"
+65489  ffd1     0  "Read"
+65490  ffd2     0  "Write"
+65491  ffd3     0  "Error creating variant or safe array"
+65492  ffd4     0  "Variant or safe array index out of bounds"
+65493  ffd5     0  "Variant or safe array is locked"
+65494  ffd6     0  "Invalid variant type conversion"
+65495  ffd7     0  "Invalid variant operation"
+65496  ffd8     0  "Invalid variant operation (%s%.8x)\n%s"
+65497  ffd9     0  "Could not convert variant of type (%s) into type (%s)"
+65498  ffda     0  "Overflow while converting variant of type (%s) into type (%s)"
+65499  ffdb     0  "Variant overflow"
+65500  ffdc     0  "Invalid argument"
+65501  ffdd     0  "Invalid variant type"
+65502  ffde     0  "Operation not supported"
+65503  ffdf     0  "Unexpected variant error"
+65504  ffe0     0  "Integer overflow"
+65505  ffe1     0  "Invalid floating point operation"
+65506  ffe2     0  "Floating point division by zero"
+65507  ffe3     0  "Floating point overflow"
+65508  ffe4     0  "Floating point underflow"
+65509  ffe5     0  "Invalid pointer operation"
+65510  ffe6     0  "Invalid class typecast"
+65511  ffe7     0  "Access violation at address %p. %s of address %p"
+65512  ffe8     0  "Access violation"
+65513  ffe9     0  "Stack overflow"
+65514  ffea     0  "Control-C hit"
+65515  ffeb     0  "Privileged instruction"
+65516  ffec     0  "Exception %s in module %s at %p.\r\n%s%s\r\n"
+65517  ffed     0  "Application Error"
+65518  ffee     0  "Format '%s' invalid or incompatible with argument"
+65519  ffef     0  "No argument for format '%s'"
+65520  fff0     0  "'%s' is not a valid integer value"
+65521  fff1     0  "'%s' is not a valid floating point value"
+65522  fff2     0  "'%s' is not a valid date and time"
+65523  fff3     0  "Invalid argument to time encode"
+65524  fff4     0  "Invalid argument to date encode"
+65525  fff5     0  "Out of memory"
+65526  fff6     0  "I/O error %d"
+65527  fff7     0  "File not found"
+65528  fff8     0  "Invalid filename"
+65529  fff9     0  "Too many open files"
+65530  fffa     0  "File access denied"
+65531  fffb     0  "Read beyond end of file"
+65532  fffc     0  "Disk full"
+65533  fffd     0  "Invalid numeric input"
+65534  fffe     0  "Division by zero"
+65535  ffff     0  "Range check error"
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0xb2ce4  1252     0   202240  DBIND         BLACK CIPHER.EXE
+    0xe42e4  1252 0x409      308  CURSOR        #1
+    0xe4418  1252 0x409      308  CURSOR        #2
+    0xe454c  1252 0x409      308  CURSOR        #3
+    0xe4680  1252 0x409      308  CURSOR        #4
+    0xe47b4  1252 0x409      308  CURSOR        #5
+    0xe48e8  1252 0x409      308  CURSOR        #6
+    0xe4a1c  1252 0x409      308  CURSOR        #7
+    0xe4b50  1252     0      380  STRING        #4083
+    0xe4ccc  1252     0     1136  STRING        #4084
+    0xe513c  1252     0      160  STRING        #4085
+    0xe51dc  1252     0      220  STRING        #4086
+    0xe52b8  1252     0     1072  STRING        #4087
+    0xe56e8  1252     0      860  STRING        #4088
+    0xe5a44  1252     0      904  STRING        #4089
+    0xe5dcc  1252     0     1036  STRING        #4090
+    0xe61d8  1252     0      208  STRING        #4091
+    0xe62a8  1252     0      184  STRING        #4092
+    0xe6360  1252     0      644  STRING        #4093
+    0xe65e4  1252     0      948  STRING        #4094
+    0xe6998  1252     0      872  STRING        #4095
+    0xe6d00  1252     0      724  STRING        #4096
+    0xe6fd4  1252 0x800        2  RCDATA        BIND
+    0xe6fd8  1252 0x800        2  RCDATA        CHANGEDATE
+    0xe6fdc  1252 0x800        2  RCDATA        COMBOPATH
+    0xe6fe0  1252 0x800        6  RCDATA        DIRATTRIB
+    0xe6fe8  1252     0       16  RCDATA        DVCLAL
+    0xe6ff8  1252 0x800       20  RCDATA        EDTDATE
+    0xe700c  1252 0x800       44  RCDATA        EDTPATH
+    0xe7038  1252 0x800        6  RCDATA        FILEATTRIB
+    0xe7040  1252 0x800       24  RCDATA        FTPHOST
+    0xe7058  1252 0x800       12  RCDATA        FTPPASS
+    0xe7064  1252 0x800        4  RCDATA        FTPPORT
+    0xe7068  1252 0x800       64  RCDATA        FTPROOT
+    0xe70a8  1252 0x800        4  RCDATA        FTPSIZE
+    0xe70ac  1252 0x800       26  RCDATA        FTPUSER
+    0xe70c8  1252 0x800       24  RCDATA        GENCODE
+    0xe70e0  1252 0x800        2  RCDATA        INSTALL
+    0xe70e4  1252 0x800       20  RCDATA        KEYNAME
+    0xe70f8  1252 0x800        2  RCDATA        MELT
+    0xe70fc  1252 0x800        2  RCDATA        MULTIBIND
+    0xe7100  1252 0x800       32  RCDATA        MUTEX
+    0xe7120  1252 0x800       36  RCDATA        NETDATA
+    0xe7144  1252 0x800        2  RCDATA        OFFLINEK
+    0xe7148  1252     0     1544  RCDATA        PACKAGEINFO
+    0xe7750  1252 0x800        2  RCDATA        PERSINST
+    0xe7754  1252 0x800        2  RCDATA        SH11
+    0xe7758  1252 0x800        2  RCDATA        SH12
+    0xe775c  1252 0x800       14  RCDATA        SID
+    0xe776c  1252 0x409       20  GROUP_CURSOR  #32761
+    0xe7780  1252 0x409       20  GROUP_CURSOR  #32762
+    0xe7794  1252 0x409       20  GROUP_CURSOR  #32763
+    0xe77a8  1252 0x409       20  GROUP_CURSOR  #32764
+    0xe77bc  1252 0x409       20  GROUP_CURSOR  #32765
+    0xe77d0  1252 0x409       20  GROUP_CURSOR  #32766
+    0xe77e4  1252 0x409       20  GROUP_CURSOR  #32767
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+oleaut32.dll        0        SysFreeString
+oleaut32.dll        0        SysReAllocStringLen
+oleaut32.dll        0        SysAllocStringLen
+advapi32.dll        0        RegQueryValueExA
+advapi32.dll        0        RegOpenKeyExA
+advapi32.dll        0        RegCloseKey
+user32.dll          0        GetKeyboardType
+user32.dll          0        DestroyWindow
+user32.dll          0        LoadStringA
+user32.dll          0        MessageBoxA
+user32.dll          0        CharNextA
+kernel32.dll        0        GetACP
+kernel32.dll        0        Sleep
+kernel32.dll        0        VirtualFree
+kernel32.dll        0        VirtualAlloc
+kernel32.dll        0        GetTickCount
+kernel32.dll        0        QueryPerformanceCounter
+kernel32.dll        0        GetCurrentThreadId
+kernel32.dll        0        InterlockedDecrement
+kernel32.dll        0        InterlockedIncrement
+kernel32.dll        0        VirtualQuery
+kernel32.dll        0        WideCharToMultiByte
+kernel32.dll        0        MultiByteToWideChar
+kernel32.dll        0        lstrlenA
+kernel32.dll        0        lstrcpynA
+kernel32.dll        0        LoadLibraryExA
+kernel32.dll        0        GetThreadLocale
+kernel32.dll        0        GetStartupInfoA
+kernel32.dll        0        GetProcAddress
+kernel32.dll        0        GetModuleHandleA
+kernel32.dll        0        GetModuleFileNameA
+kernel32.dll        0        GetLocaleInfoA
+kernel32.dll        0        GetLastError
+kernel32.dll        0        GetCommandLineA
+kernel32.dll        0        FreeLibrary
+kernel32.dll        0        FindFirstFileA
+kernel32.dll        0        FindClose
+kernel32.dll        0        ExitProcess
+kernel32.dll        0        CompareStringA
+kernel32.dll        0        WriteFile
+kernel32.dll        0        UnhandledExceptionFilter
+kernel32.dll        0        SetFilePointer
+kernel32.dll        0        SetEndOfFile
+kernel32.dll        0        RtlUnwind
+kernel32.dll        0        ReadFile
+kernel32.dll        0        RaiseException
+kernel32.dll        0        GetStdHandle
+kernel32.dll        0        GetFileSize
+kernel32.dll        0        GetFileType
+kernel32.dll        0        CreateFileA
+kernel32.dll        0        CloseHandle
+kernel32.dll        0        TlsSetValue
+kernel32.dll        0        TlsGetValue
+kernel32.dll        0        LocalAlloc
+kernel32.dll        0        GetModuleHandleA
+user32.dll          0        CreateWindowExA
+user32.dll          0        mouse_event
+user32.dll          0        keybd_event
+user32.dll          0        WindowFromPoint
+user32.dll          0        WaitMessage
+user32.dll          0        VkKeyScanA
+user32.dll          0        UpdateWindow
+user32.dll          0        UnregisterClassA
+user32.dll          0        UnhookWindowsHookEx
+user32.dll          0        TranslateMessage
+user32.dll          0        TranslateMDISysAccel
+user32.dll          0        TrackPopupMenu
+user32.dll          0        ToAscii
+user32.dll          0        SystemParametersInfoA
+user32.dll          0        ShowWindow
+user32.dll          0        ShowScrollBar
+user32.dll          0        ShowOwnedPopups
+user32.dll          0        SetWindowsHookExA
+user32.dll          0        SetWindowTextA
+user32.dll          0        SetWindowPos
+user32.dll          0        SetWindowPlacement
+user32.dll          0        SetWindowLongW
+user32.dll          0        SetWindowLongA
+user32.dll          0        SetTimer
+user32.dll          0        SetScrollRange
+user32.dll          0        SetScrollPos
+user32.dll          0        SetScrollInfo
+user32.dll          0        SetRect
+user32.dll          0        SetPropA
+user32.dll          0        SetParent
+user32.dll          0        SetMenuItemInfoA
+user32.dll          0        SetMenu
+user32.dll          0        SetForegroundWindow
+user32.dll          0        SetFocus
+user32.dll          0        SetCursorPos
+user32.dll          0        SetCursor
+user32.dll          0        SetClipboardData
+user32.dll          0        SetClassLongA
+user32.dll          0        SetCapture
+user32.dll          0        SetActiveWindow
+user32.dll          0        SendMessageW
+user32.dll          0        SendMessageA
+user32.dll          0        ScrollWindow
+user32.dll          0        ScreenToClient
+user32.dll          0        RemovePropA
+user32.dll          0        RemoveMenu
+user32.dll          0        ReleaseDC
+user32.dll          0        ReleaseCapture
+user32.dll          0        RegisterWindowMessageA
+user32.dll          0        RegisterClipboardFormatA
+user32.dll          0        RegisterClassA
+user32.dll          0        RedrawWindow
+user32.dll          0        PtInRect
+user32.dll          0        PostThreadMessageW
+user32.dll          0        PostThreadMessageA
+user32.dll          0        PostQuitMessage
+user32.dll          0        PostMessageA
+user32.dll          0        PeekMessageW
+user32.dll          0        PeekMessageA
+user32.dll          0        OpenClipboard
+user32.dll          0        OffsetRect
+user32.dll          0        OemToCharA
+user32.dll          0        MessageBoxA
+user32.dll          0        MapWindowPoints
+user32.dll          0        MapVirtualKeyA
+user32.dll          0        LockWorkStation
+user32.dll          0        LoadStringA
+user32.dll          0        LoadKeyboardLayoutA
+user32.dll          0        LoadIconA
+user32.dll          0        LoadCursorA
+user32.dll          0        LoadBitmapA
+user32.dll          0        KillTimer
+user32.dll          0        IsZoomed
+user32.dll          0        IsWindowVisible
+user32.dll          0        IsWindowUnicode
+user32.dll          0        IsWindowEnabled
+user32.dll          0        IsWindow
+user32.dll          0        IsRectEmpty
+user32.dll          0        IsIconic
+user32.dll          0        IsDialogMessageW
+user32.dll          0        IsDialogMessageA
+user32.dll          0        IsClipboardFormatAvailable
+user32.dll          0        IsChild
+user32.dll          0        InvalidateRect
+user32.dll          0        IntersectRect
+user32.dll          0        InsertMenuItemA
+user32.dll          0        InsertMenuA
+user32.dll          0        InflateRect
+user32.dll          0        GetWindowThreadProcessId
+user32.dll          0        GetWindowTextLengthA
+user32.dll          0        GetWindowTextA
+user32.dll          0        GetWindowRect
+user32.dll          0        GetWindowPlacement
+user32.dll          0        GetWindowLongW
+user32.dll          0        GetWindowLongA
+user32.dll          0        GetWindowDC
+user32.dll          0        GetTopWindow
+user32.dll          0        GetSystemMetrics
+user32.dll          0        GetSystemMenu
+user32.dll          0        GetSysColorBrush
+user32.dll          0        GetSysColor
+user32.dll          0        GetSubMenu
+user32.dll          0        GetScrollRange
+user32.dll          0        GetScrollPos
+user32.dll          0        GetScrollInfo
+user32.dll          0        GetPropA
+user32.dll          0        GetParent
+user32.dll          0        GetWindow
+user32.dll          0        GetMessagePos
+user32.dll          0        GetMessageA
+user32.dll          0        GetMenuStringA
+user32.dll          0        GetMenuState
+user32.dll          0        GetMenuItemInfoA
+user32.dll          0        GetMenuItemID
+user32.dll          0        GetMenuItemCount
+user32.dll          0        GetMenu
+user32.dll          0        GetLastInputInfo
+user32.dll          0        GetLastActivePopup
+user32.dll          0        GetKeyboardState
+user32.dll          0        GetKeyboardLayoutNameA
+user32.dll          0        GetKeyboardLayoutList
+user32.dll          0        GetKeyboardLayout
+user32.dll          0        GetKeyState
+user32.dll          0        GetKeyNameTextA
+user32.dll          0        GetIconInfo
+user32.dll          0        GetForegroundWindow
+user32.dll          0        GetFocus
+user32.dll          0        GetDesktopWindow
+user32.dll          0        GetDCEx
+user32.dll          0        GetDC
+user32.dll          0        GetCursorPos
+user32.dll          0        GetCursor
+user32.dll          0        GetClipboardData
+user32.dll          0        GetClientRect
+user32.dll          0        GetClassNameA
+user32.dll          0        GetClassLongA
+user32.dll          0        GetClassInfoA
+user32.dll          0        GetCapture
+user32.dll          0        GetActiveWindow
+user32.dll          0        FrameRect
+user32.dll          0        FindWindowExA
+user32.dll          0        FindWindowA
+user32.dll          0        FillRect
+user32.dll          0        ExitWindowsEx
+user32.dll          0        EqualRect
+user32.dll          0        EnumWindows
+user32.dll          0        EnumThreadWindows
+user32.dll          0        EnumDisplayDevicesA
+user32.dll          0        EnumClipboardFormats
+user32.dll          0        EnumChildWindows
+user32.dll          0        EndPaint
+user32.dll          0        EnableWindow
+user32.dll          0        EnableScrollBar
+user32.dll          0        EnableMenuItem
+user32.dll          0        EmptyClipboard
+user32.dll          0        DrawTextA
+user32.dll          0        DrawMenuBar
+user32.dll          0        DrawIconEx
+user32.dll          0        DrawIcon
+user32.dll          0        DrawFrameControl
+user32.dll          0        DrawEdge
+user32.dll          0        DispatchMessageW
+user32.dll          0        DispatchMessageA
+user32.dll          0        DestroyWindow
+user32.dll          0        DestroyMenu
+user32.dll          0        DestroyIcon
+user32.dll          0        DestroyCursor
+user32.dll          0        DeleteMenu
+user32.dll          0        DefWindowProcA
+user32.dll          0        DefMDIChildProcA
+user32.dll          0        DefFrameProcA
+user32.dll          0        CreatePopupMenu
+user32.dll          0        CreateMenu
+user32.dll          0        CreateIcon
+user32.dll          0        CloseClipboard
+user32.dll          0        ClientToScreen
+user32.dll          0        CheckMenuItem
+user32.dll          0        CallWindowProcA
+user32.dll          0        CallNextHookEx
+user32.dll          0        BeginPaint
+user32.dll          0        CharNextA
+user32.dll          0        CharLowerBuffA
+user32.dll          0        CharLowerA
+user32.dll          0        CharUpperBuffA
+user32.dll          0        CharToOemA
+user32.dll          0        AdjustWindowRectEx
+user32.dll          0        ActivateKeyboardLayout
+gdi32.dll           0        UnrealizeObject
+gdi32.dll           0        StretchBlt
+gdi32.dll           0        SetWindowOrgEx
+gdi32.dll           0        SetWinMetaFileBits
+gdi32.dll           0        SetViewportOrgEx
+gdi32.dll           0        SetTextColor
+gdi32.dll           0        SetStretchBltMode
+gdi32.dll           0        SetROP2
+gdi32.dll           0        SetPixel
+gdi32.dll           0        SetEnhMetaFileBits
+gdi32.dll           0        SetDIBColorTable
+gdi32.dll           0        SetBrushOrgEx
+gdi32.dll           0        SetBkMode
+gdi32.dll           0        SetBkColor
+gdi32.dll           0        SelectPalette
+gdi32.dll           0        SelectObject
+gdi32.dll           0        SaveDC
+gdi32.dll           0        RestoreDC
+gdi32.dll           0        RectVisible
+gdi32.dll           0        RealizePalette
+gdi32.dll           0        PlayEnhMetaFile
+gdi32.dll           0        PatBlt
+gdi32.dll           0        MoveToEx
+gdi32.dll           0        MaskBlt
+gdi32.dll           0        LineTo
+gdi32.dll           0        IntersectClipRect
+gdi32.dll           0        GetWindowOrgEx
+gdi32.dll           0        GetWinMetaFileBits
+gdi32.dll           0        GetTextMetricsA
+gdi32.dll           0        GetTextExtentPoint32A
+gdi32.dll           0        GetSystemPaletteEntries
+gdi32.dll           0        GetStockObject
+gdi32.dll           0        GetRgnBox
+gdi32.dll           0        GetPixel
+gdi32.dll           0        GetPaletteEntries
+gdi32.dll           0        GetObjectA
+gdi32.dll           0        GetEnhMetaFilePaletteEntries
+gdi32.dll           0        GetEnhMetaFileHeader
+gdi32.dll           0        GetEnhMetaFileBits
+gdi32.dll           0        GetDeviceCaps
+gdi32.dll           0        GetDIBits
+gdi32.dll           0        GetDIBColorTable
+gdi32.dll           0        GetDCOrgEx
+gdi32.dll           0        GetCurrentPositionEx
+gdi32.dll           0        GetClipBox
+gdi32.dll           0        GetBrushOrgEx
+gdi32.dll           0        GetBitmapBits
+gdi32.dll           0        GdiFlush
+gdi32.dll           0        ExcludeClipRect
+gdi32.dll           0        DeleteObject
+gdi32.dll           0        DeleteEnhMetaFile
+gdi32.dll           0        DeleteDC
+gdi32.dll           0        CreateSolidBrush
+gdi32.dll           0        CreatePenIndirect
+gdi32.dll           0        CreatePalette
+gdi32.dll           0        CreateHalftonePalette
+gdi32.dll           0        CreateFontIndirectA
+gdi32.dll           0        CreateDIBitmap
+gdi32.dll           0        CreateDIBSection
+gdi32.dll           0        CreateDCA
+gdi32.dll           0        CreateCompatibleDC
+gdi32.dll           0        CreateCompatibleBitmap
+gdi32.dll           0        CreateBrushIndirect
+gdi32.dll           0        CreateBitmap
+gdi32.dll           0        CopyEnhMetaFileA
+gdi32.dll           0        BitBlt
+version.dll         0        VerQueryValueA
+version.dll         0        GetFileVersionInfoSizeA
+version.dll         0        GetFileVersionInfoA
+kernel32.dll        0        lstrlenA
+kernel32.dll        0        lstrcpyA
+kernel32.dll        0        WriteProcessMemory
+kernel32.dll        0        WriteFile
+kernel32.dll        0        WinExec
+kernel32.dll        0        WaitForSingleObject
+kernel32.dll        0        VirtualQuery
+kernel32.dll        0        VirtualFreeEx
+kernel32.dll        0        VirtualFree
+kernel32.dll        0        VirtualAllocEx
+kernel32.dll        0        VirtualAlloc
+kernel32.dll        0        VerLanguageNameA
+kernel32.dll        0        UnmapViewOfFile
+kernel32.dll        0        TerminateProcess
+kernel32.dll        0        SizeofResource
+kernel32.dll        0        SetThreadLocale
+kernel32.dll        0        SetThreadContext
+kernel32.dll        0        SetLastError
+kernel32.dll        0        SetFileTime
+kernel32.dll        0        SetFilePointer
+kernel32.dll        0        SetFileAttributesA
+kernel32.dll        0        SetEvent
+kernel32.dll        0        SetErrorMode
+kernel32.dll        0        SetEndOfFile
+kernel32.dll        0        ResumeThread
+kernel32.dll        0        ResetEvent
+kernel32.dll        0        ReadProcessMemory
+kernel32.dll        0        ReadFile
+kernel32.dll        0        PeekNamedPipe
+kernel32.dll        0        OpenProcess
+kernel32.dll        0        MultiByteToWideChar
+kernel32.dll        0        MulDiv
+kernel32.dll        0        MoveFileA
+kernel32.dll        0        MapViewOfFile
+kernel32.dll        0        LockResource
+kernel32.dll        0        LocalFileTimeToFileTime
+kernel32.dll        0        LocalAlloc
+kernel32.dll        0        LoadResource
+kernel32.dll        0        LoadLibraryA
+kernel32.dll        0        LeaveCriticalSection
+kernel32.dll        0        InitializeCriticalSection
+kernel32.dll        0        HeapFree
+kernel32.dll        0        HeapAlloc
+kernel32.dll        0        GlobalUnlock
+kernel32.dll        0        GlobalMemoryStatus
+kernel32.dll        0        GlobalLock
+kernel32.dll        0        GlobalFree
+kernel32.dll        0        GlobalFindAtomA
+kernel32.dll        0        GlobalDeleteAtom
+kernel32.dll        0        GlobalAlloc
+kernel32.dll        0        GlobalAddAtomA
+kernel32.dll        0        GetWindowsDirectoryA
+kernel32.dll        0        GetVersionExA
+kernel32.dll        0        GetVersion
+kernel32.dll        0        GetUserDefaultLangID
+kernel32.dll        0        GetTickCount
+kernel32.dll        0        GetThreadLocale
+kernel32.dll        0        GetThreadContext
+kernel32.dll        0        GetTempPathA
+kernel32.dll        0        GetSystemDirectoryA
+kernel32.dll        0        GetStdHandle
+kernel32.dll        0        GetProcessHeap
+kernel32.dll        0        GetProcAddress
+kernel32.dll        0        GetPrivateProfileStringA
+kernel32.dll        0        GetPrivateProfileIntA
+kernel32.dll        0        GetModuleHandleA
+kernel32.dll        0        GetModuleFileNameA
+kernel32.dll        0        GetLocaleInfoA
+kernel32.dll        0        GetLocalTime
+kernel32.dll        0        GetLastError
+kernel32.dll        0        GetFullPathNameA
+kernel32.dll        0        GetFileTime
+kernel32.dll        0        GetFileSize
+kernel32.dll        0        GetFileAttributesA
+kernel32.dll        0        GetExitCodeProcess
+kernel32.dll        0        GetEnvironmentVariableA
+kernel32.dll        0        GetDriveTypeA
+kernel32.dll        0        GetDiskFreeSpaceA
+kernel32.dll        0        GetDateFormatA
+kernel32.dll        0        GetCurrentThreadId
+kernel32.dll        0        GetCurrentThread
+kernel32.dll        0        GetCurrentProcessId
+kernel32.dll        0        GetCurrentProcess
+kernel32.dll        0        GetComputerNameA
+kernel32.dll        0        GetCPInfo
+kernel32.dll        0        FreeResource
+kernel32.dll        0        InterlockedExchange
+kernel32.dll        0        FreeLibrary
+kernel32.dll        0        FormatMessageA
+kernel32.dll        0        FindResourceA
+kernel32.dll        0        FindNextFileA
+kernel32.dll        0        FindFirstFileA
+kernel32.dll        0        FindClose
+kernel32.dll        0        FileTimeToSystemTime
+kernel32.dll        0        FileTimeToLocalFileTime
+kernel32.dll        0        FileTimeToDosDateTime
+kernel32.dll        0        ExitThread
+kernel32.dll        0        ExitProcess
+kernel32.dll        0        EnumResourceNamesA
+kernel32.dll        0        EnumCalendarInfoA
+kernel32.dll        0        EnterCriticalSection
+kernel32.dll        0        DosDateTimeToFileTime
+kernel32.dll        0        DeleteFileA
+kernel32.dll        0        DeleteCriticalSection
+kernel32.dll        0        CreateThread
+kernel32.dll        0        CreateRemoteThread
+kernel32.dll        0        CreateProcessA
+kernel32.dll        0        CreatePipe
+kernel32.dll        0        CreateMutexA
+kernel32.dll        0        CreateFileMappingA
+kernel32.dll        0        CreateFileA
+kernel32.dll        0        CreateEventA
+kernel32.dll        0        CreateDirectoryA
+kernel32.dll        0        CopyFileA
+kernel32.dll        0        CompareStringA
+kernel32.dll        0        CloseHandle
+kernel32.dll        0        Beep
+advapi32.dll        0        RegSetValueExA
+advapi32.dll        0        RegQueryValueExA
+advapi32.dll        0        RegQueryInfoKeyA
+advapi32.dll        0        RegOpenKeyExA
+advapi32.dll        0        RegOpenKeyA
+advapi32.dll        0        RegFlushKey
+advapi32.dll        0        RegEnumValueA
+advapi32.dll        0        RegEnumKeyExA
+advapi32.dll        0        RegDeleteValueA
+advapi32.dll        0        RegDeleteKeyA
+advapi32.dll        0        RegCreateKeyExA
+advapi32.dll        0        RegCreateKeyA
+advapi32.dll        0        RegCloseKey
+advapi32.dll        0        OpenThreadToken
+advapi32.dll        0        OpenProcessToken
+advapi32.dll        0        LookupPrivilegeValueA
+advapi32.dll        0        LookupPrivilegeNameA
+advapi32.dll        0        LookupPrivilegeDisplayNameA
+advapi32.dll        0        LookupAccountSidA
+advapi32.dll        0        LookupAccountNameA
+advapi32.dll        0        IsValidSid
+advapi32.dll        0        GetUserNameA
+advapi32.dll        0        GetTokenInformation
+advapi32.dll        0        GetSidSubAuthorityCount
+advapi32.dll        0        GetSidSubAuthority
+advapi32.dll        0        GetSidIdentifierAuthority
+advapi32.dll        0        AdjustTokenPrivileges
+wsock32.dll         0        WSACleanup
+wsock32.dll         0        WSAStartup
+wsock32.dll         0        WSAGetLastError
+wsock32.dll         0        gethostname
+wsock32.dll         0        getservbyname
+wsock32.dll         0        gethostbyname
+wsock32.dll         0        gethostbyaddr
+wsock32.dll         0        socket
+wsock32.dll         0        shutdown
+wsock32.dll         0        sendto
+wsock32.dll         0        send
+wsock32.dll         0        recv
+wsock32.dll         0        ntohs
+wsock32.dll         0        ioctlsocket
+wsock32.dll         0        inet_ntoa
+wsock32.dll         0        inet_addr
+wsock32.dll         0        htons
+wsock32.dll         0        connect
+wsock32.dll         0        closesocket
+kernel32.dll        0        Sleep
+shell32.dll         0        ShellExecuteExA
+shell32.dll         0        ShellExecuteA
+shell32.dll         0        SHGetFileInfoA
+shell32.dll         0        SHFileOperationA
+shell32.dll         0        DragQueryFileA
+oleaut32.dll        0        GetErrorInfo
+oleaut32.dll        0        GetActiveObject
+oleaut32.dll        0        SysFreeString
+ole32.dll           0        CoTaskMemFree
+ole32.dll           0        CLSIDFromProgID
+ole32.dll           0        ProgIDFromCLSID
+ole32.dll           0        StringFromCLSID
+ole32.dll           0        CoCreateInstance
+ole32.dll           0        CoUninitialize
+ole32.dll           0        CoInitialize
+ole32.dll           0        IsEqualGUID
+URLMON.DLL          0        URLDownloadToFileA
+oleaut32.dll        0        SafeArrayPtrOfIndex
+oleaut32.dll        0        SafeArrayGetUBound
+oleaut32.dll        0        SafeArrayGetLBound
+oleaut32.dll        0        SafeArrayCreate
+oleaut32.dll        0        VariantChangeType
+oleaut32.dll        0        VariantCopy
+oleaut32.dll        0        VariantClear
+oleaut32.dll        0        VariantInit
+comctl32.dll        0        _TrackMouseEvent
+comctl32.dll        0        ImageList_SetIconSize
+comctl32.dll        0        ImageList_GetIconSize
+comctl32.dll        0        ImageList_Write
+comctl32.dll        0        ImageList_Read
+comctl32.dll        0        ImageList_DragShowNolock
+comctl32.dll        0        ImageList_DragMove
+comctl32.dll        0        ImageList_DragLeave
+comctl32.dll        0        ImageList_DragEnter
+comctl32.dll        0        ImageList_EndDrag
+comctl32.dll        0        ImageList_BeginDrag
+comctl32.dll        0        ImageList_Remove
+comctl32.dll        0        ImageList_DrawEx
+comctl32.dll        0        ImageList_Draw
+comctl32.dll        0        ImageList_GetBkColor
+comctl32.dll        0        ImageList_SetBkColor
+comctl32.dll        0        ImageList_Add
+comctl32.dll        0        ImageList_GetImageCount
+comctl32.dll        0        ImageList_Destroy
+comctl32.dll        0        ImageList_Create
+wininet.dll         0        InternetOpenUrlA
+wininet.dll         0        InternetOpenA
+wininet.dll         0        InternetConnectA
+wininet.dll         0        InternetCloseHandle
+wininet.dll         0        FtpPutFileA
+shell32.dll         0        SHGetSpecialFolderLocation
+shell32.dll         0        SHGetPathFromIDListA
+winmm.dll           0        waveInUnprepareHeader
+winmm.dll           0        waveInStart
+winmm.dll           0        waveInReset
+winmm.dll           0        waveInPrepareHeader
+winmm.dll           0        waveInOpen
+winmm.dll           0        waveInClose
+winmm.dll           0        waveInAddBuffer
+winmm.dll           0        PlaySoundA
+winmm.dll           0        mciSendStringA
+advapi32.dll        0        CredEnumerateA
+netapi32.dll        0        Netbios
+ntdll               0        NtUnmapViewOfSection
+gdiplus.dll         0        GdipGetImageEncoders
+gdiplus.dll         0        GdipGetImageEncodersSize
+gdiplus.dll         0        GdipDrawImageRectI
+gdiplus.dll         0        GdipSetInterpolationMode
+gdiplus.dll         0        GdipDeleteGraphics
+gdiplus.dll         0        GdipCreateBitmapFromScan0
+gdiplus.dll         0        GdipCreateBitmapFromStreamICM
+gdiplus.dll         0        GdipCreateBitmapFromStream
+gdiplus.dll         0        GdipGetImagePixelFormat
+gdiplus.dll         0        GdipGetImageGraphicsContext
+gdiplus.dll         0        GdipSaveImageToStream
+gdiplus.dll         0        GdipDisposeImage
+gdiplus.dll         0        GdiplusShutdown
+gdiplus.dll         0        GdiplusStartup
+gdiplus.dll         0        GdipFree
+gdiplus.dll         0        GdipAlloc
+advapi32.dll        0        StartServiceA
+advapi32.dll        0        QueryServiceStatus
+advapi32.dll        0        OpenServiceA
+advapi32.dll        0        OpenSCManagerA
+advapi32.dll        0        EnumServicesStatusA
+advapi32.dll        0        DeleteService
+advapi32.dll        0        CreateServiceA
+advapi32.dll        0        ControlService
+advapi32.dll        0        CloseServiceHandle
+ntdll.dll           0        NtQuerySystemInformation
+netapi32.dll        0        NetApiBufferFree
+netapi32.dll        0        NetShareGetInfo
+netapi32.dll        0        NetShareEnum
+SHFolder.dll        0        SHGetFolderPathA
+WS2_32.DLL          0        WSAIoctl
+msacm32.dll         0        acmStreamUnprepareHeader
+msacm32.dll         0        acmStreamPrepareHeader
+msacm32.dll         0        acmStreamConvert
+msacm32.dll         0        acmStreamReset
+msacm32.dll         0        acmStreamSize
+msacm32.dll         0        acmStreamClose
+msacm32.dll         0        acmStreamOpen
+ole32.dll           0        CoTaskMemFree
+pstorec.dll         0        PStoreCreateInstance
+ole32.dll           0        StringFromCLSID
+rasapi32.dll        0        RasGetEntryDialParamsA
+rasapi32.dll        0        RasEnumEntriesA
+shell32.dll         0        SHGetSpecialFolderPathA
+advapi32.dll        0        LsaFreeMemory
+advapi32.dll        0        LsaClose
+advapi32.dll        0        LsaRetrievePrivateData
+advapi32.dll        0        LsaOpenPolicy
+advapi32.dll        0        ConvertSidToStringSidA
+shell32.dll         0        SHGetSpecialFolderPathA
+user32.dll          0        EnumDisplayMonitors
+user32.dll          0        GetMonitorInfoA
+URL.DLL             0        InetIsOffline
+SHELL32.DLL         0        SHEmptyRecycleBinA
+AVICAP32.DLL        0        capGetDriverDescriptionA
+
+=== Packer / Compiler ===
+
+  Borland Delphi v6.0 - v7.0

@@ -1,0 +1,440 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        224          0xe0
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+   158  9e      30319  766f        16  10
+   170  aa      30319  766f       101  65
+   171  ab      30319  766f        36  24
+   147  93      30729  7809         7   7
+     1   1          0     0       148  94
+   175  af      30319  766f         1   1
+   154  9a      30319  766f         1   1
+   157  9d      30319  766f         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          5             5
+                 TimeDateStamp:    "2019-02-26 00:46:28"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        290         0x122  EXECUTABLE_IMAGE, LARGE_ADDRESS_AWARE
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                     10.0
+                    SizeOfCode:     117248       0x1ca00
+         SizeOfInitializedData:   78071808     0x4a74800
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:      12050        0x2f12
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:     122880       0x1e000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:        512         0x200
+        OperatingSystemVersion:                      5.1
+                  ImageVersion:                      0.0
+              SubsystemVersion:                      5.1
+                     Reserved1:          0             0
+                   SizeOfImage:   78204928     0x4a95000
+                 SizeOfHeaders:       1024         0x400
+                      CheckSum:     252614       0x3dac6
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:      33024        0x8100  NX_COMPAT, TERMINAL_SERVER_AWARE
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   2b584   size:0x       50
+  RESOURCE      rva:0x 4a86000   size:0x     6000
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x 4a8c000   size:0x     17b4
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x   2a650   size:0x       40
+  Bound_IAT     rva:0x       0   size:0x        0
+  IAT           rva:0x   1e000   size:0x      25c
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000    1c88f    1ca00      400     0        0     0        0  60000020  R-X CODE
+  .rdata      1e000     e334     e400    1ce00     0        0     0        0  40000040  R-- IDATA
+  .data       2d000  4a586d0     2a00    2b200     0        0     0        0  c0000040  RW- IDATA
+  .rsrc     4a86000     6000     6000    2dc00     0        0     0        0  40000040  R-- IDATA
+  .reloc    4a8c000     8844     8a00    33c00     0        0     0        0  42000040  R-- IDATA DISCARDABLE
+
+=== STRINGS ===
+
+   ID    ID  LANG  STRING
+  256   100     0  "Wahopibotaf xikuxogipapog dajoyonivew vofedelabokohor sitaxerahapesod"
+  257   101     0  "Zerufucileyebav pulesihiv coyameyazimoxo metoxadu yagurugevubi"
+  258   102     0  "Vobixosidiyove"
+  259   103     0  "Yitobodi nahazuwuriguhi sugidov mos moyurizuwehe"
+  260   104     0  "Natituy vivoxaz"
+  261   105     0  "Cibanizab"
+  262   106     0  "Molupi xunupuvehi godorevi ginopebale"
+  263   107     0  "Nubigoyupa mapabidikibanu fetisi lacezin"
+  264   108     0  "Govoponerobazi fuhuhe kusaxodopuris tanutehikuniwov bidu"
+  265   109     0  "Hakal berizes cak dovaz"
+  266   10a     0  "Rojeyopirey wazetam yowayah sasetakitoxap kojunocag"
+  267   10b     0  "Wuhirufu lipekuf yobozep"
+  268   10c     0  "Tuxipemakapawu"
+  269   10d     0  "Zinazesod komixuwitok sepabopoducojuy ciw"
+  270   10e     0  "Sawe cepebuwahunar movapoluculax posugodiziparuk"
+  271   10f     0  "Xilafewic zawumiyalele"
+  272   110     0  "Wimuhi jaxu cifiwojalepus"
+  273   111     0  "Luwificumuki pubu babunot ragaloroxojexo wecabazi"
+  274   112     0  "Tipilujov nopajumefak loxutubepabu"
+  275   113     0  "Guvovedicunepob"
+  276   114     0  "Gawe"
+  277   115     0  "Yemi boxumukefuj rogatojetiwucum"
+  278   116     0  "Yiyitici serejesoxis zinaperacic xuzabazise"
+  279   117     0  "Yucuto tedidarore judezelejewodu cejoxipe"
+  280   118     0  "Vamuyapuvon jusumoy"
+  281   119     0  "Dudufoxesitax fesosefig xokef baxeburerey lamizur"
+  282   11a     0  "Xopigomupowusaz xaxukelocumi setipe"
+  283   11b     0  "Cihigemabedusos fuwidedu mepera met"
+  284   11c     0  "Vozitojok hadajexucedos"
+  285   11d     0  "Loj"
+  286   11e     0  "Wetobiba zurogor zisedusuwef kurocodak"
+  287   11f     0  "Jorisahep walutatud"
+  288   120     0  "Rijoteg dapoc teya xirolov"
+  289   121     0  "Donazid yevinabup"
+  290   122     0  "Zuhaxigoy tifecay pigorabezeh midoyoyimepewa"
+  291   123     0  "Nacodowifo gur roz"
+  292   124     0  "Pozuw wasebohajamid dupepofu"
+  293   125     0  "Rokuwusuhe bamaciyafali gugecaleyoxavi"
+  294   126     0  "Yukepipecixakuk guzadacikam naz duto"
+  295   127     0  "Xuvikuduyewe kezisuh vuviyuxu"
+  296   128     0  "Hixodezez rudum xogososehecama"
+  297   129     0  "Sevo yunacedunopike licineriviv"
+  298   12a     0  "Roruyoyavufe bosusilujuru zabigot cuxamadi rehefugoro"
+  299   12b     0  "Bemimopojeri kopago"
+  300   12c     0  "Magis zorifawuveyowif ticovelucidarop famolomovi xozorepijukoca"
+  301   12d     0  "Fehubenuf"
+  302   12e     0  "Muv"
+  303   12f     0  "Cijoyomi jeyefenibanima"
+  304   130     0  "Pubufogifimug hawec motazu sawacifu"
+  305   131     0  "Havatoko huteriwuvesoya bavobafab gaputonutuza"
+  306   132     0  "Suvowarer poziyugaxi"
+  307   133     0  "Yujewicujusukuz"
+  308   134     0  "Kurukiwija geyuwozahuyuvi nesobomofimeva"
+  309   135     0  "Wesihufo jagiribufi sacifitamexog fakakixub"
+  310   136     0  "Savulecodecuxi robusajazede duvarijux viheliwowo kejuneravoxez"
+  311   137     0  "Yil"
+  312   138     0  "Xolobatoja lohasu kufi"
+  313   139     0  "Xizoru fejakitaz kabiyopuc vefe"
+  314   13a     0  "Gosafego"
+  315   13b     0  "Rek gewagal sepiyemet vivobaku bawijegeyugar"
+  316   13c     0  "Woda"
+  317   13d     0  "Cafeku vilidisigowot tideluji"
+  318   13e     0  "Rafowovariw xufi naselohuciro sis"
+  319   13f     0  "Zupoyuz cojijuwo lowatel jolepeheril"
+  320   140     0  "Buvuzohinozix zux teludifamumuyo pofoj"
+  321   141     0  "Cor dihabicacocuv lipatinu"
+  322   142     0  "Van"
+  323   143     0  "Pipug huwoda cisekipacep denewilocudi sifetocamon"
+  324   144     0  "Lofolevazivip piza zes pukegezizuzudac"
+  325   145     0  "Fuxavosohiki tagafegud"
+  326   146     0  "Sokob pafuyoyagebemih"
+  327   147     0  "Pekiduz"
+  328   148     0  "Jusafejisipez rohapohu mudejitojagadox noxujo fekat"
+  329   149     0  "Genoya noyekerodu xiyecigaxotocix falozomelizul xun"
+  330   14a     0  "Focumomat zipale dizic gume"
+  331   14b     0  "Mumoxakevexih nakebelajemesij hiwomuxitumumu"
+  332   14c     0  "Luciyeyanam jag ridutumiyanude vegalefuhid zafemuzoyepecic"
+  333   14d     0  "Zavewamude xelacihu gafapulaced"
+  334   14e     0  "Fogu"
+  335   14f     0  "Nubufipa kuxocususi"
+  336   150     0  "Gexiribow mecaxozuxe sehiwudezazonar cilehunamupiy pilekuwode"
+  337   151     0  "Yolijorat lakatik bovahulu"
+  338   152     0  "Xevafud bimiwepacof muwuxubehiwaluj pere"
+  339   153     0  "Dezesohuj lipomicev gutagexosim"
+  340   154     0  "Dopuhulinerak bop teviyubihol yihuricapajif"
+  341   155     0  "Hugarinejomiju midufa nuw xecizowanu jopi"
+  342   156     0  "Xuhalimekib vobule niriloguney widayako"
+  343   157     0  "Buno gohaxucaj"
+  344   158     0  "Pupugofijab"
+  345   159     0  "Habu"
+  346   15a     0  "Farijevopox pokocarorocisu domerexezaruz vehemeyepe"
+  347   15b     0  "Fitigifu dumotefe dafe"
+  348   15c     0  "Bigekajovuralar ciw gitulojayucun"
+  349   15d     0  "Zoyogefarejuyaf javemam rufikocahaleh gutozoyizoz"
+  350   15e     0  "Jili pavuwasico tavosoxiyok riyoyetuh gefuyefotado"
+  351   15f     0  "Bimisecozora cehotipuvo mok tubolib"
+  352   160     0  "Lete"
+  353   161     0  "Jil mugonaguva zosuw banojicawure"
+  354   162     0  "Majajeliva"
+  355   163     0  "Sosijutunox pamozixizoveceg yuhu tavidotumazuhay matonagajorose"
+  356   164     0  "Foxuniyofacoyu zisafezevoy cifijusepaceca"
+  357   165     0  "Jivedikafiy yefopugigoxena zugujilosoc"
+  358   166     0  "Reromir keme duxuzihovawo zuweya pet"
+  359   167     0  "Lipi"
+  360   168     0  "Tavoloruriley"
+  361   169     0  "Pebev"
+  362   16a     0  "Tifanix gunorinewo padononuwi"
+  363   16b     0  "Zeyatugo nopep xowitimizuduwuw jekeniv"
+  364   16c     0  "Tivuhi peyowifudilil vap deduyed"
+  365   16d     0  "Mogew civeh"
+  366   16e     0  "Ronatacevaze wic"
+  367   16f     0  "Cesihu"
+  368   170     0  "Weteraxehike dapara"
+  369   171     0  "Zocukifulerova joz bodum pez xicusocikix"
+  370   172     0  "Yexatosen"
+  371   173     0  "Nakocoveli"
+  372   174     0  "Wagakobezamu puyaho vib legise dofuruh"
+  373   175     0  "Huhidof yitatit dohe defomun"
+  374   176     0  "Lekucobejiref naweliki tuma"
+  375   177     0  "Rudicen wekisibefed lunezirobuxaku tefufunamojuf ruxozaxelator"
+  376   178     0  "Losufuwedug yopel"
+  377   179     0  "Kuja lux xejanefo"
+  378   17a     0  "Xanaxi sajenipunar"
+  379   17b     0  "Hihek tepeja femelujovafac tumubahafaxuti rojogem"
+  380   17c     0  "Cix pulelub fowuh wumeduhazolo kon"
+  381   17d     0  "Wonax luzujip poleheyimi tukimi pudim"
+  382   17e     0  "Muhotoxepexu muwurojivapoj"
+  383   17f     0  "Zuzu kusef vaduyucolosizok"
+  384   180     0  "Xikex zasawemayufowa"
+  385   181     0  "Topevuca pihawumiyeju totin rixejiheciyedu"
+  386   182     0  "Nokatepohenuzuy nufuciwagiko pajuga"
+  387   183     0  "Tozi mebalujozawiroh mamatexe"
+  388   184     0  "Sagihagajipunul vek"
+  389   185     0  "Givawevewavoye gumukiyacoja"
+  390   186     0  "Novegiz"
+  391   187     0  "Jerop pajidaxis gida miwiyelonaf cakegexezopika"
+  392   188     0  "Gudumojojuvu cidobimojuki jucu hijepocig davahayexutakil"
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0x31918     0     0        2  AFX_DIALOG_LAYOUT #397
+    0x31920     0     0        2  AFX_DIALOG_LAYOUT #398
+    0x31928     0     0      308  CURSOR        #5
+    0x2e180     0     0     1384  ICON          #1
+    0x2e6e8     0     0     1736  ICON          #2
+    0x2edb0     0     0     1128  ICON          #3
+    0x2f218     0     0     9640  ICON          #4
+    0x31a78     0     0     1178  STRING        #17
+    0x31f18     0     0      960  STRING        #18
+    0x322d8     0     0      966  STRING        #19
+    0x326a0     0     0      974  STRING        #20
+    0x32a70     0     0     1010  STRING        #21
+    0x32e68     0     0     1132  STRING        #22
+    0x332d8     0     0      790  STRING        #23
+    0x335f0     0     0      946  STRING        #24
+    0x339a8     0     0      596  STRING        #25
+    0x31800     0     0      144  ACCELERATORS  #570
+    0x31890     0     0       72  ACCELERATORS  #723
+    0x31a60     0     0       20  GROUP_CURSOR  #2384
+    0x317c0     0     0       62  GROUP_ICON    #120
+    0x318d8     0     0       10  #241          #393
+    0x318e8     0     0       10  #241          #394
+    0x318f8     0     0       10  #241          #395
+    0x31908     0     0       10  #241          #396
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+KERNEL32.dll      4ff        WaitNamedPipeA
+KERNEL32.dll      1bb        GetCurrentActCtx
+KERNEL32.dll      44f        SetDefaultCommConfigW
+KERNEL32.dll      1da        GetEnvironmentStringsW
+KERNEL32.dll      470        SetHandleInformation
+KERNEL32.dll      183        GetCommProperties
+KERNEL32.dll      2ae        GetWindowsDirectoryA
+KERNEL32.dll       78        CreateActCtxW
+KERNEL32.dll      4f8        WaitForMultipleObjectsEx
+KERNEL32.dll      23a        GetPriorityClass
+KERNEL32.dll      1d8        GetEnvironmentStrings
+KERNEL32.dll      17b        GetCalendarInfoW
+KERNEL32.dll      15f        FreeConsole
+KERNEL32.dll      51f        WriteConsoleOutputA
+KERNEL32.dll      42c        SetConsoleCP
+KERNEL32.dll      268        GetStringTypeExW
+KERNEL32.dll      1e5        GetFileAttributesA
+KERNEL32.dll      54b        lstrcpynW
+KERNEL32.dll      304        IsProcessorFeaturePresent
+KERNEL32.dll      4e7        VerifyVersionInfoA
+KERNEL32.dll      524        WriteConsoleW
+KERNEL32.dll      48a        SetSystemPowerState
+KERNEL32.dll      3c0        ReadFile
+KERNEL32.dll      168        GetACP
+KERNEL32.dll      4f3        VirtualUnlock
+KERNEL32.dll      32b        LCMapStringA
+KERNEL32.dll      199        GetConsoleAliasesW
+KERNEL32.dll      2ec        InterlockedExchange
+KERNEL32.dll      245        GetProcAddress
+KERNEL32.dll      24b        GetProcessHeaps
+KERNEL32.dll      184        GetCommState
+KERNEL32.dll      3c1        ReadFileEx
+KERNEL32.dll      33c        LoadLibraryA
+KERNEL32.dll       3c        BuildCommDCBAndTimeoutsW
+KERNEL32.dll      354        LockResource
+KERNEL32.dll      2d0        HeapLock
+KERNEL32.dll      181        GetCommMask
+KERNEL32.dll      12c        FindAtomA
+KERNEL32.dll      15c        FoldStringW
+KERNEL32.dll      4f7        WaitForMultipleObjects
+KERNEL32.dll      48b        SetSystemTime
+KERNEL32.dll      213        GetModuleFileNameA
+KERNEL32.dll      4f4        WTSGetActiveConsoleSessionId
+KERNEL32.dll      215        GetModuleHandleA
+KERNEL32.dll      23d        GetPrivateProfileSectionA
+KERNEL32.dll      40d        RequestDeviceWakeup
+KERNEL32.dll      269        GetStringTypeW
+KERNEL32.dll      1b6        GetConsoleTitleW
+KERNEL32.dll       d1        DeleteCriticalSection
+KERNEL32.dll      468        SetFileShortNameA
+KERNEL32.dll      39e        QueryDepthSList
+KERNEL32.dll       d6        DeleteFileW
+KERNEL32.dll      12b        FindActCtxSectionStringW
+KERNEL32.dll      2c1        GlobalReAlloc
+KERNEL32.dll      52e        WriteProcessMemory
+KERNEL32.dll      2a7        GetVolumeInformationW
+KERNEL32.dll      547        lstrcpyA
+KERNEL32.dll      10d        EnumSystemLocalesA
+KERNEL32.dll      204        GetLocaleInfoA
+KERNEL32.dll      533        WriteTapemark
+KERNEL32.dll      33e        LoadLibraryExW
+KERNEL32.dll      4ac        SetWaitableTimer
+KERNEL32.dll       72        CopyFileExW
+KERNEL32.dll      2b8        GlobalFix
+KERNEL32.dll      54d        lstrlenA
+KERNEL32.dll      165        FreeResource
+KERNEL32.dll       d9        DeleteTimerQueueEx
+KERNEL32.dll       9e        CreateMutexW
+KERNEL32.dll      44e        SetDefaultCommConfigA
+KERNEL32.dll      4e2        VerLanguageNameA
+KERNEL32.dll      202        GetLastError
+KERNEL32.dll      2d2        HeapReAlloc
+KERNEL32.dll      186        GetCommandLineA
+KERNEL32.dll      2d3        HeapSetInformation
+KERNEL32.dll      263        GetStartupInfoW
+KERNEL32.dll      3b1        RaiseException
+KERNEL32.dll       ca        DecodePointer
+KERNEL32.dll      4d3        UnhandledExceptionFilter
+KERNEL32.dll      4a5        SetUnhandledExceptionFilter
+KERNEL32.dll      300        IsDebuggerPresent
+KERNEL32.dll       ea        EncodePointer
+KERNEL32.dll      4c0        TerminateProcess
+KERNEL32.dll      1c0        GetCurrentProcess
+KERNEL32.dll      2cb        HeapAlloc
+KERNEL32.dll      2cf        HeapFree
+KERNEL32.dll       ee        EnterCriticalSection
+KERNEL32.dll      339        LeaveCriticalSection
+KERNEL32.dll      2e3        InitializeCriticalSectionAndSpinCount
+KERNEL32.dll      418        RtlUnwind
+KERNEL32.dll      2cd        HeapCreate
+KERNEL32.dll      2ce        HeapDestroy
+KERNEL32.dll      218        GetModuleHandleW
+KERNEL32.dll      119        ExitProcess
+KERNEL32.dll      525        WriteFile
+KERNEL32.dll      264        GetStdHandle
+KERNEL32.dll      214        GetModuleFileNameW
+KERNEL32.dll      161        FreeEnvironmentStringsW
+KERNEL32.dll      511        WideCharToMultiByte
+KERNEL32.dll      46f        SetHandleCount
+KERNEL32.dll      1f3        GetFileType
+KERNEL32.dll      4c5        TlsAlloc
+KERNEL32.dll      4c7        TlsGetValue
+KERNEL32.dll      4c8        TlsSetValue
+KERNEL32.dll      4c6        TlsFree
+KERNEL32.dll      2ef        InterlockedIncrement
+KERNEL32.dll      473        SetLastError
+KERNEL32.dll      1c5        GetCurrentThreadId
+KERNEL32.dll      2eb        InterlockedDecrement
+KERNEL32.dll      1c4        GetCurrentThread
+KERNEL32.dll      3a7        QueryPerformanceCounter
+KERNEL32.dll      293        GetTickCount
+KERNEL32.dll      1c1        GetCurrentProcessId
+KERNEL32.dll      279        GetSystemTimeAsFileTime
+KERNEL32.dll      466        SetFilePointer
+KERNEL32.dll      19a        GetConsoleCP
+KERNEL32.dll      1ac        GetConsoleMode
+KERNEL32.dll      172        GetCPInfo
+KERNEL32.dll      237        GetOEMCP
+KERNEL32.dll      30a        IsValidCodePage
+KERNEL32.dll      4b2        Sleep
+KERNEL32.dll      120        FatalAppExitA
+KERNEL32.dll       52        CloseHandle
+KERNEL32.dll       88        CreateFileA
+KERNEL32.dll      2d4        HeapSize
+KERNEL32.dll      42d        SetConsoleCtrlHandler
+KERNEL32.dll      162        FreeLibrary
+KERNEL32.dll      33f        LoadLibraryW
+KERNEL32.dll      206        GetLocaleInfoW
+KERNEL32.dll      487        SetStdHandle
+KERNEL32.dll      367        MultiByteToWideChar
+KERNEL32.dll      32d        LCMapStringW
+KERNEL32.dll      157        FlushFileBuffers
+KERNEL32.dll      453        SetEndOfFile
+KERNEL32.dll      24a        GetProcessHeap
+KERNEL32.dll       8f        CreateFileW
+KERNEL32.dll      29b        GetUserDefaultLCID
+KERNEL32.dll      30c        IsValidLocale
+USER32.dll        10a        GetCaretPos
+ADVAPI32.dll       1e        AdjustTokenGroups
+ADVAPI32.dll       56        CloseEventLog
+ADVAPI32.dll      153        GetServiceKeyNameA
+ADVAPI32.dll      12f        GetFileSecurityA
+ADVAPI32.dll       3a        BackupEventLogA
+ADVAPI32.dll      267        RegQueryInfoKeyA
+ADVAPI32.dll      26e        RegQueryValueExW
+ADVAPI32.dll      147        GetSecurityDescriptorControl
+ADVAPI32.dll      158        GetSidSubAuthorityCount
+ADVAPI32.dll      1e3        MapGenericMask
+
+=== Packer / Compiler ===
+
+  MS Visual C++ v8.0

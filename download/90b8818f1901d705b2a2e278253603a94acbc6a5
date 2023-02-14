@@ -1,0 +1,182 @@
+
+=== MZ Header ===
+
+                     signature:                     "MZ"
+           bytes_in_last_block:        144          0x90
+                blocks_in_file:          3             3
+                    num_relocs:          0             0
+             header_paragraphs:          4             4
+          min_extra_paragraphs:          0             0
+          max_extra_paragraphs:      65535        0xffff
+                            ss:          0             0
+                            sp:        184          0xb8
+                      checksum:          0             0
+                            ip:          0             0
+                            cs:          0             0
+            reloc_table_offset:         64          0x40
+                overlay_number:          0             0
+                     reserved0:          0             0
+                        oem_id:          0             0
+                      oem_info:          0             0
+                     reserved2:          0             0
+                     reserved3:          0             0
+                     reserved4:          0             0
+                     reserved5:          0             0
+                     reserved6:          0             0
+                        lfanew:        184          0xb8
+
+=== DOS STUB ===
+
+00000000: 0e 1f ba 0e 00 b4 09 cd  21 b8 01 4c cd 21 54 68  |........!..L.!Th|
+00000010: 69 73 20 70 72 6f 67 72  61 6d 20 63 61 6e 6e 6f  |is program canno|
+00000020: 74 20 62 65 20 72 75 6e  20 69 6e 20 44 4f 53 20  |t be run in DOS |
+00000030: 6d 6f 64 65 2e 0d 0d 0a  24 00 00 00 00 00 00 00  |mode....$.......|
+
+=== RICH Header ===
+
+    LIB_ID        VERSION        TIMES_USED   
+    13   d       8169  1fe9         1   1
+
+=== PE Header ===
+
+                     signature:             "PE\x00\x00"
+
+# IMAGE_FILE_HEADER:
+                       Machine:        332         0x14c  x86
+              NumberOfSections:          3             3
+                 TimeDateStamp:    "2012-07-01 12:33:21"
+          PointerToSymbolTable:          0             0
+               NumberOfSymbols:          0             0
+          SizeOfOptionalHeader:        224          0xe0
+               Characteristics:        271         0x10f  RELOCS_STRIPPED, EXECUTABLE_IMAGE
+                                                          LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED
+                                                          32BIT_MACHINE
+
+# IMAGE_OPTIONAL_HEADER32:
+                         Magic:        267         0x10b  32-bit executable
+                 LinkerVersion:                      6.0
+                    SizeOfCode:      69632       0x11000
+         SizeOfInitializedData:      36864        0x9000
+       SizeOfUninitializedData:          0             0
+           AddressOfEntryPoint:       4444        0x115c
+                    BaseOfCode:       4096        0x1000
+                    BaseOfData:      73728       0x12000
+                     ImageBase:    4194304      0x400000
+              SectionAlignment:       4096        0x1000
+                 FileAlignment:       4096        0x1000
+        OperatingSystemVersion:                      4.0
+                  ImageVersion:                 222.2222
+              SubsystemVersion:                      4.0
+                     Reserved1:          0             0
+                   SizeOfImage:     110592       0x1b000
+                 SizeOfHeaders:       4096        0x1000
+                      CheckSum:      79228       0x1357c
+                     Subsystem:          2             2  WINDOWS_GUI
+            DllCharacteristics:          0             0
+            SizeOfStackReserve:    1048576      0x100000
+             SizeOfStackCommit:       4096        0x1000
+             SizeOfHeapReserve:    1048576      0x100000
+              SizeOfHeapCommit:       4096        0x1000
+                   LoaderFlags:          0             0
+           NumberOfRvaAndSizes:         16          0x10
+
+=== DATA DIRECTORY ===
+
+  EXPORT        rva:0x       0   size:0x        0
+  IMPORT        rva:0x   11344   size:0x       28
+  RESOURCE      rva:0x   1a000   size:0x      968
+  EXCEPTION     rva:0x       0   size:0x        0
+  SECURITY      rva:0x       0   size:0x        0
+  BASERELOC     rva:0x       0   size:0x        0
+  DEBUG         rva:0x       0   size:0x        0
+  ARCHITECTURE  rva:0x       0   size:0x        0
+  GLOBALPTR     rva:0x       0   size:0x        0
+  TLS           rva:0x       0   size:0x        0
+  LOAD_CONFIG   rva:0x       0   size:0x        0
+  Bound_IAT     rva:0x     228   size:0x       20
+  IAT           rva:0x    1000   size:0x       8c
+  Delay_IAT     rva:0x       0   size:0x        0
+  CLR_Header    rva:0x       0   size:0x        0
+                rva:0x       0   size:0x        0
+
+=== SECTIONS ===
+
+  NAME          RVA      VSZ   RAW_SZ  RAW_PTR  nREL  REL_PTR nLINE LINE_PTR     FLAGS
+  .text        1000    10498    11000     1000     0        0     0        0  60000020  R-X CODE
+  .data       12000     75a8        0        0     0        0     0        0  c0000040  RW- IDATA
+  .rsrc       1a000      968     1000    12000     0        0     0        0  40000040  R-- IDATA
+
+=== RESOURCES ===
+
+FILE_OFFSET    CP  LANG     SIZE  TYPE          NAME
+    0x12400  1200     0     1384  ICON          #30001
+    0x123ec  1200     0       20  GROUP_ICON    #1
+    0x120f0  1200 0x409      764  VERSION       #1
+
+=== IMPORTS ===
+
+MODULE_NAME      HINT   ORD  FUNCTION_NAME
+MSVBVM60.DLL            2b2  
+MSVBVM60.DLL        0        MethCallEngine
+MSVBVM60.DLL            204  
+MSVBVM60.DLL            251  
+MSVBVM60.DLL            12c  
+MSVBVM60.DLL            252  
+MSVBVM60.DLL            253  
+MSVBVM60.DLL            257  
+MSVBVM60.DLL            132  
+MSVBVM60.DLL            20d  
+MSVBVM60.DLL            278  
+MSVBVM60.DLL            20e  
+MSVBVM60.DLL        0        EVENT_SINK_AddRef
+MSVBVM60.DLL        0        DllFunctionCall
+MSVBVM60.DLL        0        EVENT_SINK_Release
+MSVBVM60.DLL            258  
+MSVBVM60.DLL        0        EVENT_SINK_QueryInterface
+MSVBVM60.DLL        0        __vbaExceptHandler
+MSVBVM60.DLL            2c7  
+MSVBVM60.DLL            25e  
+MSVBVM60.DLL            2cd  
+MSVBVM60.DLL        0        ProcCallEngine
+MSVBVM60.DLL            219  
+MSVBVM60.DLL            284  
+MSVBVM60.DLL            285  
+MSVBVM60.DLL            288  
+MSVBVM60.DLL            23a  
+MSVBVM60.DLL            23b  
+MSVBVM60.DLL            23d  
+MSVBVM60.DLL             64  
+MSVBVM60.DLL            2b1  
+MSVBVM60.DLL            268  
+MSVBVM60.DLL            269  
+MSVBVM60.DLL            28a  
+
+=== VERSION INFO ===
+
+# VS_FIXEDFILEINFO:
+  FileVersion         :  222.2222.0.2222
+  ProductVersion      :  222.2222.0.2222
+  StrucVersion        :  0x10000
+  FileFlagsMask       :  0
+  FileFlags           :  0
+  FileOS              :  4
+  FileType            :  1
+  FileSubtype         :  0
+
+  VarFileInfo         :  [ 0x409, 0x4b0 ]
+
+# StringTable 040904B0:
+  Comments            :  "SDFSDFS"
+  CompanyName         :  "SDFSDFSDF"
+  FileDescription     :  "CVBCVB"
+  LegalCopyright      :  "ERTEGDFG"
+  LegalTrademarks     :  "WERWERWER"
+  ProductName         :  "DFGDFGDFG"
+  FileVersion         :  "222.2222.2222"
+  ProductVersion      :  "222.2222.2222"
+  InternalName        :  "dddg"
+  OriginalFilename    :  "dddg.exe"
+
+=== Packer / Compiler ===
+
+  MS Visual Basic v5.0/v6.0
